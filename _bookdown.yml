@@ -1,0 +1,5 @@
+book_filename: "little-kids-big-trips"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
