@@ -1,6 +1,5 @@
-preamble
+why-this-book
 criteria-for-reviews
-why
 getting-started
 strategies
 in-town
@@ -29,5 +28,5 @@ pisgah-national-forest-portions
 nantahala-national-forest-portions
 roan-mountain-state-park
 top-lists
-references
 doing-more
+references
