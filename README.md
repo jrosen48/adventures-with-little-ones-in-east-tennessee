@@ -9,7 +9,8 @@ Katie Rosenberg and Joshua Rosenberg
 ### Why are we writing this book?
 
 - We have been taking trips for around two years
-- We did a lot of research, and/but we are only writing about places we have been
+- During the past year, due to COVID, outdoor trips were the main thing we did with our child
+- We have done a lot of research, but we are only writing about places we have visited, hiked, paddled, and camped at with our little one
 
 ### Why this region/area?
 
@@ -18,33 +19,38 @@ Katie Rosenberg and Joshua Rosenberg
 
 ### Tips for getting started
 
-## 15 minutes or less away
+## Trips 15 minutes or less away
 - Ijams
 - William Hastie
 - Lakeshore
 - Sharp's Ridge
 - Concord Park
 
-## Around 30 minutes away
+## Trips around 30 minutes away
 - Cove Lake S.P.
 - Norris Dam S.P.
 - Big Ridge S.P.
 - Seven Islands Birding S.P.
 - House Mountain S.P.
 
-## Around 1 hour away
+## Trips around one hour away
 - Frozen Head S.P.
 - Obed Wild and Scenic River
 - Big South Fork National River and Recreation Area (portions)
 - Great Smoky Mountains National Park (portions)
 - (Cumberland Gap National Historic Park)
 
-## More than 1 hour away
+## Trips more than one hour away but less than two hours away
 - Great Smoky Mountains National Park (portions)
 - Joyce Kilmer Memorial Forest
-- Cherokee National Forest
-- Pisgah National Forest
+- Cherokee National Forest (portions)
+- Pisgah National Forest (portions)
 - (Nantahala National Forest)
+- (Roan Mountain State Park)
+
+## Further
+- (Linville Gorge)
+- (Mount Mitchell State Park)
 
 # Format
 
