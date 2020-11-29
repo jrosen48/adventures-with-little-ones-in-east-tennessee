@@ -4,6 +4,14 @@ Katie Rosenberg and Joshua Rosenberg
 
 # Sections
 
+## Introduction
+
+### Why are we writing this book?
+
+### Why this region/area?
+
+### Tips for getting started
+
 ## 15 minutes or less away
 - Ijams
 - William Hastie
@@ -11,21 +19,21 @@ Katie Rosenberg and Joshua Rosenberg
 - Sharp's Ridge
 - Concord Park
 
-## around 30 minutes away
+## Around 30 minutes away
 - Cove Lake S.P.
 - Norris Dam S.P.
 - Big Ridge S.P.
 - Seven Islands Birding S.P.
 - House Mountain S.P.
 
-## around 1 hour away
+## Around 1 hour away
 - Frozen Head S.P.
 - Obed Wild and Scenic River
 - Big South Fork National River and Recreation Area (portions)
 - Great Smoky Mountains National Park (portions)
 - (Cumberland Gap National Historic Park)
 
-## more than 1 hour away
+## More than 1 hour away
 - Great Smoky Mountains National Park (portions)
 - Joyce Kilmer Memorial Forest
 - Cherokee National Forest
