@@ -52,7 +52,7 @@ Katie Rosenberg and Joshua Rosenberg
 - (Linville Gorge)
 - (Mount Mitchell State Park)
 
-# Format
+# Format for each location
 
 ## Criteria for reviews
 - accessibility
