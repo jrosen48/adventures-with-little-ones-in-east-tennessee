@@ -19,6 +19,10 @@ Katie Rosenberg and Joshua Rosenberg
 
 ### Tips for getting started
 
+### Trips
+
+Parenthesess indicate places not-yet-visited.
+
 ## Trips 15 minutes or less away
 - Ijams
 - William Hastie
@@ -38,14 +42,14 @@ Katie Rosenberg and Joshua Rosenberg
 - Obed Wild and Scenic River
 - Big South Fork National River and Recreation Area (portions)
 - Great Smoky Mountains National Park (portions)
-- (Cumberland Gap National Historic Park)
+- (Cumberland Gap National Historic Park) (portions)
 
 ## Trips more than one hour away but less than two hours away
 - Great Smoky Mountains National Park (portions)
 - Joyce Kilmer Memorial Forest
 - Cherokee National Forest (portions)
 - Pisgah National Forest (portions)
-- (Nantahala National Forest)
+- (Nantahala National Forest) (portions)
 - (Roan Mountain State Park)
 
 ## Further
