@@ -1,5 +1,4 @@
 why-this-book
-criteria-for-reviews
 getting-started
 strategies
 in-town
