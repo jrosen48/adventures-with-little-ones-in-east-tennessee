@@ -8,7 +8,13 @@ Katie Rosenberg and Joshua Rosenberg
 
 ### Why are we writing this book?
 
+- We have been taking trips for around two years
+- We did a lot of research, and/but we are only writing about places we have been
+
 ### Why this region/area?
+
+- Its location is really great ([see here](https://recreationlinks.org/wp-content/uploads/2019/03/Outdoor_RecMap-MapSide__2ndEdition_04jul2018.pdf))
+- It can be under-rated and hard to learn about
 
 ### Tips for getting started
 
@@ -71,7 +77,3 @@ A two paragraph minimum description of each location
 - Best for infants
 - Best for toddlers
 - Best for young children
-
-# Reference
-
-- https://recreationlinks.org/wp-content/uploads/2019/03/Outdoor_RecMap-MapSide__2ndEdition_04jul2018.pdf
