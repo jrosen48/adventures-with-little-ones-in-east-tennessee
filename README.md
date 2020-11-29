@@ -1,6 +1,6 @@
 # Little Kids, Big Trips in East Tennessee
 
-By Katie Rosenberg and Joshua Rosenberg
+Katie Rosenberg and Joshua Rosenberg
 
 # Sections
 
