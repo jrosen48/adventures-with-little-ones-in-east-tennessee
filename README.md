@@ -2,6 +2,10 @@
 
 Katie Rosenberg and Joshua Rosenberg
 
+# Draft of Book
+
+https://little-kids-big-trips.netlify.app/
+
 # Sections
 
 ## Introduction
