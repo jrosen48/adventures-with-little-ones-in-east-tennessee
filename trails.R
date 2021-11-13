@@ -1,6 +1,6 @@
 # Libraries
 
-## credit to Isabella Velásquez for the template for this code: https://github.com/ivelasq
+## credit and thanks to Isabella Velásquez for the template for this code: https://github.com/ivelasq
 
 library(ggmap)
 library(sf)
