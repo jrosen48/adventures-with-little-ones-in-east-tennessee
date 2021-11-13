@@ -1,5 +1,5 @@
 --- 
-title: "Little Kids, Big Trips in East Tennessee"
+title: "Little Kids, Big Trips in Knoxville"
 author: "Katie Rosenberg and Joshua Rosenberg"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,29 +7,9 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a book for parents and caretakers of children looking to take outdoors adventures in and around East Tennessee."
+description: "This is a book for parents and caretakers of children looking to take outdoors adventures in and around Knoxville, in East Tennessee."
 ---
-
-# Why this book?
-
-- We have been taking trips for more than two years
-- During the past year, due to COVID, outdoor trips were the main thing we did with our child
-- We have done a lot of research, but we are only writing about places we have visited, hiked, paddled, and camped at with our little one
-- Its location is really great ([see here](https://recreationlinks.org/wp-content/uploads/2019/03/Outdoor_RecMap-MapSide__2ndEdition_04jul2018.pdf))
-- It can be under-rated and hard to learn about
 
 ```{r, echo = FALSE}
 knitr::include_graphics("img/abrams-family.jpg")
 ```
-
-We use the below criteria for reviewers. For example, consider a close, accessible, family-friendly location that does not have any camping options; these are rated along a 1 (minimal) to 5 (maximum) degree of the following;
-
-|Criterion|Rating|
-|--------|---------:|
-|Accessibility of location|4|
-|Family-friendliness|5|
-|Beauty|3|
-|Proximity to amenities|4|
-|Camping options|NA|
-
-
