@@ -20,27 +20,56 @@ coords <-
 # Let's try it with the first trail
 
 t1 <- coords %>% 
-    filter(L1 == 1)
+    filter(L1 == 203)
 
 # Plot
 
 bb <- getbb("")
-bb[1, 1] <- -83.98 # x min - how far west
-bb[1, 2] <- -83.80 # x max - how far east
-bb[2, 1] <- 35.55 # y min - how far south
-bb[2, 2] <- 35.65 # ymax - how far north
+bb[1, 1] <- min(t1$X) + 2*(min(t1$X) - max(t1$X))  # x min - how far west
+bb[1, 2] <- max(t1$X) - 2*(min(t1$X) - max(t1$X)) # x max - how far east
+bb[2, 1] <- min(t1$Y) + (min(t1$Y) - max(t1$Y)) # y min - how far south
+bb[2, 2] <- max(t1$Y) - (min(t1$Y) - max(t1$Y))# ymax - how far north
 
-m <- get_stamenmap(bb, maptype = "terrain", zoom = 13)
+m <- get_stamenmap(bb, maptype = "terrain", zoom = 14)
 
+mt_wash <- data.frame(x = -71.3036, y = 44.2700)
+ll_prj <- "EPSG:4326"
+
+elev <- get_elev_point(locations = as.data.frame(t1[, ]), prj = ll_prj)
+
+elev <- elev %>% 
+    as_tibble() %>% 
+    mutate(elevation = elevation * 3.28084)
+
+t1 <- t1 %>% 
+    bind_cols(elev)
+    
 ggmap(m) +
     geom_point(data = t1, 
                aes(x = X,
-                   y = Y), 
-               size = .30,
-               color = "#A0522D") +
-    ggtitle("Abrams Falls Trail") +
+                   y = Y,
+                   color = elevation), 
+               size = .30) +
+    geom_point(data = slice(t1, 1),
+               aes(x = X, 
+                   y = Y),
+               color = "black") +
+    ggrepel::geom_label_repel(data = slice(t1, 1),
+               aes(x = X, 
+                   y = Y), label = "Start") +
+    geom_point(data = slice(t1, nrow(t1) - 1),
+               aes(x = X, 
+                   y = Y),
+               color = "black") +
+    ggrepel::geom_label_repel(data = slice(t1, nrow(t1) - 1),
+                              aes(x = X, 
+                                  y = Y), label = "End") +
+    ggtitle("Alum Cave Trail") +
+    scale_color_gradient("Elevation (ft.)", 
+                         low = "gray",
+                         high = "orchid4") + 
     theme_void()
 
 # Save file
 
-ggsave(here::here("output", "abrams-falls-map.png"), dpi = "retina", width = 4, height = 4, units = "in")
+ggsave(here::here("output", "boulevard-map.png"), dpi = "retina", width = 8, height = , units = "in")
