@@ -1,0 +1,14 @@
+--- 
+title: "Little Kids, Big Trips: Learning About and Experiencing the Cumberland Plateau, Tennessee Valley, and Great Smoky Mountains around Knoxville, Tennessee"
+author: "Katie Rosenberg and Joshua Rosenberg"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+```{r, echo = FALSE}
+knitr::include_graphics("img/abrams-family.jpg")
+```

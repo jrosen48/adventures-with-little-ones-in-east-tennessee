@@ -1,0 +1,13 @@
+# General Strategies {#strategies}
+
+There are different trips for different days.
+
+We use the below criteria for reviewers. For example, consider a close, accessible, family-friendly location that does not have any camping options; these are rated along a 1 (minimal) to 5 (maximum) degree of the following;
+
+|Criterion|Rating|
+|--------|---------:|
+|Accessibility of location|4|
+|Family-friendliness|5|
+|Beauty|3|
+|Proximity to amenities|4|
+|Camping options|NA|
