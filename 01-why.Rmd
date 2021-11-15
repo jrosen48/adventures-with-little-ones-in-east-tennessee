@@ -1,5 +1,7 @@
 # Why are we writing this book? {#why}
 
+<img src="img/abrams-family.jpg" alt="Our family at Abrams Falls" width="400"/>
+
 - We have been taking trips for around years
 - During the past year, due to COVID, outdoor trips were the main thing we did with our child
 - We have done a lot of research, but we are only writing about places we have visited, hiked, paddled, and camped at with our little one
@@ -9,4 +11,3 @@
 Principles that motivate this book:
 
 - We write about places we go to regularly; in principle, at least twice, and in many cases, many times more than that.
-
