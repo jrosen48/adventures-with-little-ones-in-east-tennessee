@@ -16,5 +16,5 @@ url: "datascienceineducation.com/"
 Welcome to our book!
 
 ```{r, echo = FALSE, out.width="60%"}
-knitr::include_graphics("img/abrams-family.jpg")
+
 ```
