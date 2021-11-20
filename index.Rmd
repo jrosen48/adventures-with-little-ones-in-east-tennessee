@@ -19,3 +19,9 @@ Welcome to our book!
 ```{r, echo = FALSE, out.width="50%"}
 knitr::include_graphics("img/cades-cover-kid-cars.jpg")
 ```
+
+## Acknowledgments
+
+Thank you to [Daniel Anderson](https://github.com/datalorax) for the basis for [the theme](https://github.com/datalorax/sds-r/blob/main/style.css) for this book. 
+
+Thank you to Samuel Weisbord, Aaron Rosenberg, and Kevin Lane for photos included in this book.
