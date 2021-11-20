@@ -1,5 +1,15 @@
-why-this-book
+why
 getting-started
+gear
+fitness
+weather
+spring
+summer
+fall
+winter
+safety
+where-to-begin
+smokies
 strategies
 in-town
 ijams
@@ -19,6 +29,7 @@ obed-wild-and-scenic-river
 big-south-fork-national-river-and-recreation-area-portions
 great-smoky-mountains-national-park-portions
 cumberland-gap-national-historic-park-portions
+top-lists
 adventure-trips
 great-smoky-mountains-national-park-portions-1
 joyce-kilmer-memorial-forest
@@ -26,6 +37,6 @@ cherokee-national-forest-portions
 pisgah-national-forest-portions
 nantahala-national-forest-portions
 roan-mountain-state-park
-top-lists
 doing-more
 references
+references-1
