@@ -1,3 +1,5 @@
+# (PART) Get Started {-}
+
 # Why are we writing this book? {#why}
 
 <img src="img/abrams-family.jpg" alt="Our family at Abrams Falls" width="400"/>
