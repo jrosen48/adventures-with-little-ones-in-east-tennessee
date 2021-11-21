@@ -1,5 +1,6 @@
 bookdown::gitbook:
   fontfamily: gill
+  fig_caption: false
   css: style.css
   config:
     toc:
