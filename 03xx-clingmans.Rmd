@@ -6,4 +6,4 @@
 <img title="a title" alt="Alt text" src="img/clingmans-sunjpeg" width = "300">
 <img title="a title" alt="Alt text" src="img/clingmans-down.jpeg" width = "300">
 <img title="a title" alt="Alt text" src="img/clingmans-summit.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/spruce-climgmans.jpg" width = "300">"300">
+<img title="a title" alt="Alt text" src="img/spruce-climgmans.jpg" width = "300">
