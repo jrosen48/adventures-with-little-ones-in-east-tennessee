@@ -1,3 +1,5 @@
 # Pickett
 
-test
+
+<img src="img/pickett-arch-rock-2.jpeg" alt="drawing"/>
+<img src="img/pickett-stairs.jpeg" alt="drawing"/>

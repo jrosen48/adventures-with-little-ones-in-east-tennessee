@@ -1,3 +1,10 @@
-# Gatlinburg
+# Gatlinburg and LeConte
 
 <img src="img/alum-caves.jpeg" alt="drawing"/>
+<img src="img/alum-caves-night.jpeg" alt="drawing"/>
+
+
+<img title="a title" alt="Alt text" src="img/kevin-ice-alum.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/kevin-alum.jpeg" width = "300">
+
+<img title="a title" alt="Alt text" src="img/jumpoff-big.jpeg" width = "300">

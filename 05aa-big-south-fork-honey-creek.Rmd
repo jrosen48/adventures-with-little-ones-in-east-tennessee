@@ -1,3 +1,6 @@
 # Big South Fork - Honey Creek
 
-test
+<img title="a title" alt="Alt text" src="img/honey-creek-cliffs.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/honey-creek-forest.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/honey-creek-rock.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/honey-waterfall.jpeg" width = "300">

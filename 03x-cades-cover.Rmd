@@ -1,0 +1,6 @@
+# Cade's Cove
+
+<img title="a title" alt="Alt text" src="img/white-oaks-magic.jpg" width = "300">
+<img title="a title" alt="Alt text" src="img/white-oaks-purple-flowers.jpg" width = "300">
+<img title="a title" alt="Alt text" src="img/white-oaks-yellow-flowers.jpg" width = "300">
+<img title="a title" alt="Alt text" src="img/schoolhouse-gap.jpg" width = "300">"300">
