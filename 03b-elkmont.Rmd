@@ -1,10 +1,18 @@
 # Elkmont
 
-<img title="a title" alt="Alt text" src="img/elkmont-cabin.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/elkmont-lobster.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/elkmont-snow-2.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/elkmont-yellow-flowers.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/jonah-elkmont-pointing-icicle-2.jpeg" width = "300">
+|Criterion|Rating|
+|--------|---------:|
+|Family-friendliness|3.5|
+|Beauty|4.5|
+|Amenities|3|
+|Accessibility|3.5|
+|Camping|5|
 
-<img title="a title" alt="Alt text" src="img/jonah-laurel-tulip-2.jpeg" width = "300">
-<img title="a title" alt="Alt text" src="img/jonah-laurel-paved.jpeg" width = "300">
+<img src="img/elkmont-cabin.jpeg" width = "300">
+<img src="img/elkmont-lobster.jpeg" width = "300">
+<img src="img/elkmont-snow-2.jpeg" width = "300">
+<img src="img/elkmont-yellow-flowers.jpg" width = "300">
+<img src="img/jonah-elkmont-pointing-icicle-2.jpg" width = "300">
+
+<img src="img/jonah-laurel-tulip-2.jpg" width = "300">
+<img src="img/jonah-laurel-paved.jpg" width = "300">
