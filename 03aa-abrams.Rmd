@@ -22,7 +22,7 @@ Abrams Creek is sort of special. I think the reason why it's special is partiall
 
 The drive there is also _mostly_ easy, but with enough excitement to make that part of the adventure interesting. Getting to Abrams Creek involves driving south from the Knoxville past the the Tyson-McGee Airport and then Maryville. Soon after leaving the outskirts of Maryville, the road climbs up <add ridge name> with the Foothills Parkway; the road becomes quite steep, but still accessible. After crossing under the Foothills Parkway, you drive down into the area outside of the Abrams Creek Trailhead and Campground.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="60"}
+```{r, fig.cap="The road to Abrams Creek", out.width="50%"}
 knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
@@ -34,9 +34,13 @@ There are several trails that we enjoy.
 
 ### Little Adventure
 
+```{r, fig.cap="The road to Abrams Creek", out.width="65%"}
+knitr::include_graphics(here("output", "abrams.png"))
+```
+
 A little adventure involves walking from the trailhead to the campground. This may not sound like much, but it's actually a great walk along the creek on a wide, gravel road. Moreover, the campground - like Abrams Creek - is almost never full, apart from prime weekends and holidays, and it's a great spot to rest by picnic tables and hang out around the creek.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="60"}
+```{r, fig.cap="The road to Abrams Creek", out.width="50%"}
 knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 ```
 
@@ -44,15 +48,19 @@ knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 
 A medium-sized adventure involves hiking past the campground along the Cooper Road trail to the Little Bottoms trail to a great place to stop for lunch. This trail is XX miles and involves XX elevation change.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="60"}
+This adventure involves some creek crossings.
+
+```{r, fig.cap="The road to Abrams Creek", out.width="50%"}
 knitr::include_graphics(here("img", "abrams-high-water-crossing.jpeg"))
 ```
 
-```{r, fig.cap="A look at Abrams Creek from the Little Bottoms trail", out.width="60"}
+It also involves some climbing.
+
+```{r, fig.cap="A look at Abrams Creek from the Little Bottoms trail", out.width="50%"}
 knitr::include_graphics(here("img", "abrams-vista.jpg"))
 ```
 
-```{r, fig.cap="Returning to the Creek on the Little Bottoms trail", out.width="60"}
+```{r, fig.cap="Returning to the Creek on the Little Bottoms trail", out.width="50%"}
 knitr::include_graphics(here("img", "abrams-high.jpeg"))
 ```
 
@@ -60,7 +68,7 @@ knitr::include_graphics(here("img", "abrams-high.jpeg"))
 
 A big adventure goes even further along the Little Bottoms trail to one of the prettiest backcountry sites in the park. Not to say that you should stay overnight; instead, this is a great place to stop and relax and to have a big adventure. This trail is XX miles and involves XX elevation change.
 
-```{r, fig.cap="Backpacking along the Little Bottoms trail", out.width="60"}
+```{r, fig.cap="Backpacking along the Little Bottoms trail", out.width="50%"}
 knitr::include_graphics(here("img", "josh-backpacking-abrams.jpeg"))
 ```
 

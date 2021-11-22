@@ -20,7 +20,7 @@ Welcome to our book!
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r}
+```{r, message=FALSE}
 library(here)
 ```
 

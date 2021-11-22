@@ -3,8 +3,8 @@
 ## credit and thanks to Isabella Velásquez for the template for this code: https://github.com/ivelasq
 
 name <- "Abrams"
-long_multiplier <- 1.5
-lat_multiplier <- 1.5
+long_multiplier <- 1.25
+lat_multiplier <- 1.25
 zoom = 15
 
 library(ggmap)
@@ -165,4 +165,4 @@ p
 
 # Save file
 
-# ggsave(here::here("output", str_c(tolower(name), ".png")), dpi = "retina", width = 8, height = , units = "in")
+ggsave(here::here("output", str_c(tolower(name), ".png")), dpi = "retina", width = 8, height = , units = "in")

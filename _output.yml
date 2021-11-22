@@ -6,7 +6,7 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">Little Kids, Big Trips</a></li>
+        <li><a href="./">Little Kids, Big Adventures</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
