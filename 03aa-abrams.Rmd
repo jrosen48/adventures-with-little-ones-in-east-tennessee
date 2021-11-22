@@ -34,7 +34,7 @@ There are several trails that we enjoy.
 
 ### Little Adventure
 
-```{r, fig.cap="The road to Abrams Creek", out.width="65%"}
+```{r, include = FALSE, fig.cap="The road to Abrams Creek", out.width="65%"}
 knitr::include_graphics(here("output", "abrams.png"))
 ```
 
