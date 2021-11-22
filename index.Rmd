@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 library(here)
 ```
 
-```{r}
+```{r, fig.cap = "Playing with cars at the campground"}
 knitr::include_graphics("img/cades-cover-kid-cars.jpg")
 ```
 
