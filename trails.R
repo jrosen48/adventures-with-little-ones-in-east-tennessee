@@ -25,10 +25,20 @@ f <-
     here::here("data", "raw", "gaia", 
                "abrams-trailhead-to-campground.gpx")
 
+f1 <- 
+    here::here("data", "raw", "gaia", 
+               "abrams-to-overlook.gpx")
+
+f2 <- 
+    here::here("data", "raw", "gaia", 
+               "abrams-little-bottoms.gpx")
+
 shp <- st_read(f, layer = "routes")
 
-?st_layers(f)
+shp1 <- st_read(f1, layer = "routes")
 
+shp2 <- st_read(f2, layer = "routes")
+ d
 # my_trail_id <- shp %>% 
 #     filter(str_detect(TRAILNAME, name)) %>% 
 #     pull(OBJECTID)
@@ -44,16 +54,24 @@ t1 <-
     st_coordinates(shp) %>% 
     as_tibble()
 
+t2 <-
+    st_coordinates(shp1) %>% 
+    as_tibble()
+
+t3 <-
+    st_coordinates(shp2) %>% 
+    as_tibble()
+
 # Let's try it with the first trail
 
 # t1 <- coords %>% 
 #     filter(L1 %in% my_trail_id)
 
-start = as.matrix(t1[1, c(1, 2)]) # first row
+# start = as.matrix(t1[1, c(1, 2)]) # first row
 
 # random_point <- as.matrix(t1[1043, c(1, 2)])
 
-all_points <- t1[, c(1, 2)]
+all_points <- t3[, c(1, 2)]
 
 dist_matrix <- distm(all_points) %>% 
     as_tibble()
@@ -84,10 +102,10 @@ mile_markers <- dist_matrix_final %>%
 # Plot
 
 bb <- getbb("")
-bb[1, 1] <- min(t1$X) + long_multiplier*(min(t1$X) - max(t1$X))  # x min - how far west
-bb[1, 2] <- max(t1$X) - long_multiplier*(min(t1$X) - max(t1$X)) # x max - how far east
-bb[2, 1] <- min(t1$Y) + lat_multiplier*(min(t1$Y) - max(t1$Y)) # y min - how far south
-bb[2, 2] <- max(t1$Y) - lat_multiplier*(min(t1$Y) - max(t1$Y))# ymax - how far north
+bb[1, 1] <- min(t3$X) + long_multiplier*(min(t3$X) - max(t3$X))  # x min - how far west
+bb[1, 2] <- max(t3$X) - long_multiplier*(min(t3$X) - max(t3$X)) # x max - how far east
+bb[2, 1] <- min(t3$Y) + lat_multiplier*(min(t3$Y) - max(t3$Y)) # y min - how far south
+bb[2, 2] <- max(t3$Y) - lat_multiplier*(min(t3$Y) - max(t3$Y))# ymax - how far north
 
 m <- get_stamenmap(bb, maptype = "terrain", zoom = zoom)
 
@@ -129,7 +147,9 @@ p <- ggmap(m) +
     #            color = "gray90", 
     #            alpha = .50,
     #            size = .05) +
-    geom_sf(data = shp, inherit.aes = FALSE) +
+    geom_sf(data = shp, inherit.aes = FALSE, color = "green", alpha = .20) +
+    geom_sf(data = shp1, inherit.aes = FALSE, color = "yellow", alpha = .20) +
+    geom_sf(data = shp2, inherit.aes = FALSE, color = "red", alpha = .20) +
     # ≥for waypoints
     # geom_point(data = slice(t1, c(1), aes(x = X, y = Y)) +
                # aes(x = X,
@@ -151,10 +171,10 @@ p <- ggmap(m) +
     #                           alpha = .825,
     #                           box.padding = .75) +
 
-    ggtitle(str_c(name, " Trail (", 
-                  mile_markers %>% slice(nrow(.)) %>% pull(cumulative_distance_mi) %>% round(2),
-                  " mi.)")) +
-    labs(subtitle = "Great Smoky Mountains National Park") +
+    # ggtitle(str_c(name, " Trail (", 
+    #               mile_markers %>% slice(nrow(.)) %>% pull(cumulative_distance_mi) %>% round(2),
+    #               " mi.)")) +
+    # labs(subtitle = "Great Smoky Mountains National Park") +
     scale_color_gradient("Elevation (ft.)", 
                          low = "#dadaeb",
                          high = "#756bb1") + 
