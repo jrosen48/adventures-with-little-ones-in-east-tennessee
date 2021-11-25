@@ -17,11 +17,12 @@ url: "https://littlekidsbigadventures.com"
 Welcome to our book!
 
 ```{r, setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 ```
 
 ```{r, message=FALSE}
 library(here)
+source("gaia-trails.R")
 ```
 
 ```{r, fig.cap = "Playing with cars at the campground"}

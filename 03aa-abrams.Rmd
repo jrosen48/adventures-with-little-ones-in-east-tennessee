@@ -40,25 +40,25 @@ It never seems to become crowded at Abrams Creek, but parking can be _a bit_ con
 
 There are several trails that we enjoy. They are highlighted in the trailmap below. Note that there are three options, each out-and-back trails corresponding to a little, medium-sized, or big adventure.
 
-```{r, create-abrams-trail-map, cache = TRUE}
-t <- create_and_save_trailmap(name = "Abrams", 
+```{r, create-abrams-trail-map, cache = TRUE, include = FALSE}
+t <- create_and_save_trailmap(name = "Abrams Falls", 
                          file_name_1 = "abrams-little-bottoms.gpx",
                          auxiliary_trail_files = "GRSM_TRAILS.shp")
 ```
 
-```{r, fig.cap="Abrams: Big Adventure Trail Map"}
-knitr::include_graphics(here("output", "abrams-trailmap.png"))
+```{r, fig.cap="Abrams Falls Trail Map"}
+knitr::include_graphics(here("output", "Abrams Falls Trailmap.png"))
 ```
 
 ### Little Adventure
 
 ```{r, include = FALSE, fig.cap="The road to Abrams Creek", out.width="70%", fig.align="center"}
-knitr::include_graphics(here("output", "abrams.png"))
+knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
 A little adventure involves walking from the trailhead to the campground. This may not sound like much, but it's actually a great walk along the creek on a wide, gravel road. Moreover, the campground - like Abrams Creek - is almost never full, apart from prime weekends and holidays, and it's a great spot to rest by picnic tables and hang out around the creek.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="70%", fig.align="center", fig.align="center"}
+```{r, fig.cap="The campground at Abrams Creek", out.width="70%", fig.align="center", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 ```
 

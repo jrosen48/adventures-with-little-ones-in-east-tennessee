@@ -1,3 +1,4 @@
+# combine this and the next function into one
 find_cumulative_distance_for_one_point <- function(markers, t, index) {
     
     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
@@ -165,7 +166,6 @@ create_and_save_trailmap <- function(name,
                        label = label)) +
     ylab("Elev. (ft.)") +
         xlab("Distance (mi.)") +
-        labs(caption = "Note that these trails are out-and-back trails; the total distances for the hikes are therefore doubled") +
         theme(text = element_text(family = "special"))
     
     p_path <- ggmap(m) +
@@ -189,6 +189,7 @@ create_and_save_trailmap <- function(name,
                    # alpha = .825,
                    # box.padding = .75,
                    family = "special") +
+        labs(subtitle = name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
         xlab(NULL) + 
@@ -201,7 +202,7 @@ create_and_save_trailmap <- function(name,
     
     p
     
-    ggsave(here::here("output", str_c(tolower(name), "-trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
+    ggsave(here::here("output", str_c(name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
     
     return(p)
     
