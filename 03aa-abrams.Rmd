@@ -40,12 +40,6 @@ It never seems to become crowded at Abrams Creek, but parking can be _a bit_ con
 
 There are several trails that we enjoy. They are highlighted in the trailmap below. Note that there are three options, each out-and-back trails corresponding to a little, medium-sized, or big adventure.
 
-```{r, create-abrams-trail-map, cache = TRUE, include = FALSE}
-t <- create_and_save_trailmap(name = "Abrams Falls", 
-                         file_name_1 = "abrams-little-bottoms.gpx",
-                         auxiliary_trail_files = "GRSM_TRAILS.shp")
-```
-
 ```{r, fig.cap="Abrams Falls Trail Map"}
 knitr::include_graphics(here("output", "Abrams Falls Trailmap.png"))
 ```
