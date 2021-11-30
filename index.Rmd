@@ -41,3 +41,11 @@ Thank you to [Daniel Anderson](https://github.com/datalorax) for the basis for [
 Thank you to Conor Anderson [for the CSS code for the call-out boxes](https://gitlab.com/claut/man_ccia) in this text.
 
 Thank you to Samuel Weisbord, Aaron Rosenberg, and Kevin Lane for photos included in this book.
+
+```{block, type='rmdtip'}
+This is a tip.
+```
+
+```{block, type='rmdcomment'}
+This is a comment.
+```
