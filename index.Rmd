@@ -14,6 +14,10 @@ url: "https://littlekidsbigadventures.com"
 
 # Welcome! {-}
 
+```{block, type='rmddisclaimer'}
+This book is a work-in-progress; it is not even at the rough draft stage yet!
+```
+
 Welcome to our book!
 
 ```{r, setup, include=FALSE}
@@ -33,5 +37,7 @@ knitr::include_graphics("img/cades-cover-kid-cars.jpg")
 Thank you to [Isabella Velásquez](https://ivelasq.rbind.io/) for creating and sharing the R code to create trail maps; this code was essential to being able to create beautiful (we think!) trail maps for this book. 
 
 Thank you to [Daniel Anderson](https://github.com/datalorax) for the basis for [the theme](https://github.com/datalorax/sds-r/blob/main/style.css) for this book. 
+
+Thank you to Conor Anderson [for the CSS code for the call-out boxes](https://gitlab.com/claut/man_ccia) in this text.
 
 Thank you to Samuel Weisbord, Aaron Rosenberg, and Kevin Lane for photos included in this book.

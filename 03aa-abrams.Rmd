@@ -14,17 +14,25 @@ Abrams Creek is a great place to start if you live in or around Knoxville. The t
 
 Though accessible, it's not nothing in terms of scenery: It has what we would think of as "National Park-level" beauty. There are many great trails as well as backcountry camping options; many of both are along the creek. This was the first place we traveled as a family in the Smokies; the best thing I can say about Abrams Creek is that we always seem to have fun when we go there.
 
-## A story
+```{block, type='rmdtip'}
+This is a tip.
+```
 
-Three brief stories about Abrams Creek illustrate how it's not only close, but accessible.
+```{block, type='rmdcomment'}
+This is a comment.
+```
 
-The first was a time Josh and his brother Aaron went hiking soon after Katie and Josh moved to Knoxville. They went hiking - backpacking - with the family meeting the next day. Soon after setting out on the trail, they were surrounded by massive Hemlock. Aaron said to Josh something like, "Dude." That was all that needed to be said. It was a special place.
+<!-- ## A story -->
 
-Another was the next day, on a long trip (a run) to Abrams Falls from the backcountry site. When rounding the corner to approach the falls, one turns a bit away from the trail up toward the waterfall. There was something about it that felt like you were just entering somewhere different. I think this could have to do with the geography of the area in that Abrams is the lowest trailhead in the park. And so in a sense, the area around the trailhead is distinct from the rest of the park. But as you approach Abrams Falls, you approach the Cades Cove area,  the elevation is considerably higher, and it feels a little bit different. Not that the area outside is not special, but it just feels different. I think if I could capture my experience of the Smokies little moments like this where you turn a corner on a hiking trail, and then there's someplace magical.
+<!-- Three brief stories about Abrams Creek illustrate how it's not only close, but accessible. -->
 
-A last time was on Father's Day. We hiked with our son to the Little Bottoms site - the Medium Adventure for Abrams Creek described below. There was something about arriving at the campsite. The creek was pretty, the light was perfect, and we had gone really far together. It was special.
+<!-- The first was a time Josh and his brother Aaron went hiking soon after Katie and Josh moved to Knoxville. They went hiking - backpacking - with the family meeting the next day. Soon after setting out on the trail, they were surrounded by massive Hemlock. Aaron said to Josh something like, "Dude." That was all that needed to be said. It was a special place. -->
 
-Onward to more details on Abrams Creek.
+<!-- Another was the next day, on a long trip (a run) to Abrams Falls from the backcountry site. When rounding the corner to approach the falls, one turns a bit away from the trail up toward the waterfall. There was something about it that felt like you were just entering somewhere different. I think this could have to do with the geography of the area in that Abrams is the lowest trailhead in the park. And so in a sense, the area around the trailhead is distinct from the rest of the park. But as you approach Abrams Falls, you approach the Cades Cove area,  the elevation is considerably higher, and it feels a little bit different. Not that the area outside is not special, but it just feels different. I think if I could capture my experience of the Smokies little moments like this where you turn a corner on a hiking trail, and then there's someplace magical. -->
+
+<!-- A last time was on Father's Day. We hiked with our son to the Little Bottoms site - the Medium Adventure for Abrams Creek described below. There was something about arriving at the campsite. The creek was pretty, the light was perfect, and we had gone really far together. It was special. -->
+
+<!-- Onward to more details on Abrams Creek. -->
 
 ## Getting There and Getting One's Bearings
 
