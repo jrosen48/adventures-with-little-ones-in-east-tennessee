@@ -14,14 +14,6 @@ Abrams Creek is a great place to start if you live in or around Knoxville. The t
 
 Though accessible, it's not nothing in terms of scenery: It has what we would think of as "National Park-level" beauty. There are many great trails as well as backcountry camping options; many of both are along the creek. This was the first place we traveled as a family in the Smokies; the best thing I can say about Abrams Creek is that we always seem to have fun when we go there.
 
-```{block, type='rmdtip'}
-This is a tip.
-```
-
-```{block, type='rmdcomment'}
-This is a comment.
-```
-
 <!-- ## A story -->
 
 <!-- Three brief stories about Abrams Creek illustrate how it's not only close, but accessible. -->

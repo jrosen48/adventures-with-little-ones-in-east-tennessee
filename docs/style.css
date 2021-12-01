@@ -360,6 +360,39 @@ tr:nth-child(even) {
   font-size: 45px;
 }
 
+.rmdhistory {
+  padding: 1em 1em 1em 5em;
+  margin-bottom: 10px;
+  background: #EDBB99;
+  position:relative;
+}
+
+.rmdhistory:before {
+  content: "\f02d";
+  font-family: FontAwesome;
+  left:22px;
+  right:5px;
+  position:absolute;
+  top:0;
+  font-size: 45px;
+}
+
+.rmdscience {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #A9DFBF;
+  position:relative;
+}
+
+.rmdscience:before {
+  content: "\f1bb";
+  font-family: FontAwesome;
+  left:22px;
+  position:absolute;
+  top:0;
+  font-size: 45px;
+}
+
 .rmdtip {
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
@@ -375,36 +408,3 @@ tr:nth-child(even) {
   top:0;
   font-size: 45px;
 }
- 
-.rmdcomment {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  background: #e6e6e6;
-  position:relative;
-}
-
-.rmdcomment:before {
-  content: "\f075";
-  font-family: FontAwesome;
-  left:10px;
-  position:absolute;
-  top:0;
-  font-size: 45px;
-}
- 
-.rmdassignment {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  background: #e6e6e6;
-  position:relative;
-}
-
-.rmdassignment:before {
-  content: "\f0a4";
-  font-family: FontAwesome;
-  left:10px;
-  position:absolute;
-  top:0;
-  font-size: 45px;
-}
-
