@@ -42,16 +42,16 @@ knitr::include_graphics("img/cades-cover-kid-cars.jpg")
 
 ## How to use
 
-```{block, type='rmdhistory'}
-test box for historical facts
+```{block, type='rmdhistory', echo = TRUE}
+This is for human history-related call-outs.
 ```
 
-```{block, type='rmdtip'}
+```{block, type='rmdtip', echo = TRUE}
 This is a tip.
 ```
 
-```{block, type='rmdscience'}
-This is for scientific call-outs.
+```{block, type='rmdscience', echo = TRUE}
+This is for science-related call-outs.
 ```
 
 ## Acknowledgments
