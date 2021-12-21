@@ -12,10 +12,13 @@ library(showtext)
 library(cowplot)
 library(here)
 library(ggspatial)
+library(terra)
+library(ggrepel)
+library(ggsflabel) # devtools::install_github("yutannihilation/ggsflabel")
 
 name = "Abrams Falls" 
 file_name_1 = "abrams-little-bottoms.gpx"
-auxiliary_trail_files = "GRSM_TRAILS.shp"
+# auxiliary_trail_files = "GRSM_TRAILS.shp"
 long_multiplier = .5
 lat_multiplier = 1
 zoom = 15
@@ -28,15 +31,6 @@ fig_width = 8.92
 min_distance_space = 35
 
 t <- create_and_save_trailmap(name = "Abrams Falls", 
-                              file_name_1 = "abrams-little-bottoms.gpx",
-                              auxiliary_trail_files = "GRSM_TRAILS.shp")
+                              file_name_1 = "abrams-little-bottoms.gpx")
 
 t
-
-for_elev_raster <- bb %>% 
-    t() %>% 
-    as.data.frame()
-
-r <- get_elev_raster(locations = for_elev_raster,
-                prj = "EPSG:4326", # WGS84
-                z = 10)

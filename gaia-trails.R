@@ -1,33 +1,32 @@
-library(ceramic)
-roi <- raster::extent(100, 160, -50, 10)
-im <- cc_location(roi)
-raster::plotRGB(im)
-
-tmap::
-e <- cc_elevation(roi)
-
-library(tmap)
-
-tm_shape(poly) +
-    tm_borders() +
-    tmap::tm_raster(e)
-
-poly <- bb %>% 
-    t() %>% 
-    nominatimlite::bbox_to_poly()
-
-library(maptiles)
-
-ei_tiles = get_tiles(bb, provider = "Stamen.Toner", zoom = 12, crop = TRUE)
-
-tmap_mode("plot")
-#> tmap mode set to plotting
-tm_shape(ei_tiles) + 
-    tm_rgb() + 
-    tm_shape(ei_borders) +
-    tm_borders(lwd = 5, col = "lightblue") +
-    tm_credits(get_credit("Stamen.Toner"),
-               bg.color = "white")
+# library(ceramic)
+# roi <- raster::extent(100, 160, -50, 10)
+# im <- cc_location(roi)
+# raster::plotRGB(im)
+# 
+# e <- cc_elevation(roi)
+# 
+# library(tmap)
+# 
+# tm_shape(poly) +
+#     tm_borders() +
+#     tmap::tm_raster(e)
+# 
+# poly <- bb %>% 
+#     t() %>% 
+#     nominatimlite::bbox_to_poly()
+# 
+# library(maptiles)
+# 
+# ei_tiles = get_tiles(bb, provider = "Stamen.Toner", zoom = 12, crop = TRUE)
+# 
+# tmap_mode("plot")
+# #> tmap mode set to plotting
+# tm_shape(ei_tiles) + 
+#     tm_rgb() + 
+#     tm_shape(ei_borders) +
+#     tm_borders(lwd = 5, col = "lightblue") +
+#     tm_credits(get_credit("Stamen.Toner"),
+#                bg.color = "white")
 
 # combine this and the next function into one
 find_cumulative_distance_for_one_point <- function(markers, t, index) {
@@ -66,7 +65,7 @@ find_elev_for_one_point <- function(markers, t, index) {
 
 create_and_save_trailmap <- function(name,
                                      file_name_1, 
-                                     auxiliary_trail_files,
+                                     # auxiliary_trail_files,
                                      long_multiplier = .5,
                                      lat_multiplier = 1,
                                      zoom = 15,
@@ -87,17 +86,17 @@ create_and_save_trailmap <- function(name,
     
     shp <- st_read(f, layer = "routes")
     
-    f_aux <- here::here("data", "raw", "GRSM_TRAILS", 
-                        auxiliary_trail_files)
+    # f_aux <- here::here("data", "raw", "GRSM_TRAILS", 
+    #                     auxiliary_trail_files)
     
-    shp_aux <- st_read(f_aux)
+    # shp_aux <- st_read(f_aux)
     
-    t_aux <-
-        st_coordinates(shp_aux) %>% 
-        as_data_frame()
+    # t_aux <-
+    #     st_coordinates(shp_aux) %>% 
+    #     as_data_frame()
     
     shp = elevation_add(shp) # possibly cut
-
+    
     t <-
         st_coordinates(shp) %>% 
         as_tibble()
@@ -172,43 +171,153 @@ create_and_save_trailmap <- function(name,
         theme(axis.line = element_line(color='black'),
               plot.background = element_blank(),
               panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank(),
+              # panel.grid.minor = element_blank(),
               panel.border = element_blank()) +
-        xlim(0, 5) + 
+        xlim(0, 6) + 
+        ylim(1000, 2000) + 
         geom_point(data = markers,
                    aes(x = cumulative_distance_mi,
                        y = elev * 3.28084),
                    color = "black",
-                   size = 2) +
-        geom_label(data = markers,
-                   aes(x = cumulative_distance_mi,
-                       y = elev * 3.28084 - 25,
-                       label = label)) +
-    ylab("Elev. (ft.)") +
+                   size = 3) +
+        ggrepel::geom_label_repel(data = markers,
+                                  aes(x = cumulative_distance_mi,
+                                      y = elev * 3.28084,
+                                      label = label),
+                                  size = 2.5,
+                                  min.segment.length = 0,
+                                  color = "#595959") +
+        ylab("Elev. (ft.)") +
         xlab("Distance (mi.)") +
-        theme(text = element_text(family = "special"))
+        theme(text = element_text(family = "special")) +
+        theme(plot.margin=unit(c(1.25,1.25,1.25,1.25),"cm")) +
+        scale_y_continuous(label = scales::comma)
+
+    highway = opq(as.vector(bb)) %>% 
+        add_osm_feature("highway") %>% 
+        osmdata_sf()
     
+    highway_lines = st_transform(highway$osm_lines)
+    
+    trails = highway_lines %>% 
+        filter(highway %in% c("path","bridleway"))
+    
+    # labeling other trails
+    
+    trails_coords <- st_coordinates(trails) %>% as_tibble()
+    
+    trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
+    
+    trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
+ 
+    trails_coords <- filter(trails_coords, 
+                            X > bb[1, 1] & X < bb[1, 2] &
+                                Y > bb[2, 1] & Y < bb[2, 2]) 
+    
+    trails_coords <- group_by(trails_coords, L1) %>% 
+        filter(row_number()==ceiling(n()/2))
+    
+    trails_coords <- trails_coords %>% select(X, Y, L1, name) %>% ungroup()
+    
+    # labeling roads
+    
+    # not used
+    
+    roads = highway_lines %>% 
+        filter(highway %in% c("unclassified", "secondary", "tertiary", "residential", "service"))
+    
+    road_coords <- st_coordinates(roads) %>% as_tibble()
+    
+    roads <- roads %>% mutate(L1 = unique(road_coords$L1))
+    
+    road_coords <- road_coords %>% left_join(select(trails, L1, name))
+    
+    road_coords <- filter(road_coords, 
+                            X > bb[1, 1] & X < bb[1, 2] &
+                                Y > bb[2, 1] & Y < bb[2, 2]) 
+    
+    road_coords <- group_by(road_coords, L1) %>% 
+        filter(row_number()==ceiling(n()/2))
+    
+    road_coords <- road_coords %>% select(X, Y, L1, name) %>% ungroup()
+    
+    # footpaths
+    
+    footpaths = highway_lines %>% 
+        filter(highway %in% c("footway"))
+    
+    # water
+    
+    water_lines = opq(as.vector(bb)) %>% 
+        add_osm_feature("waterway") %>% 
+        osmdata_sf()
+    
+    water_lines = st_transform(water_lines$osm_lines)
+    
+    # polygons
+    
+    parking = opq(as.vector(bb)) %>% 
+        add_osm_feature("parking") %>% 
+        osmdata_sf() 
+    
+    building = opq(as.vector(bb)) %>% 
+        add_osm_feature("building") %>% 
+        osmdata_sf() 
+    
+    tourism = opq(as.vector(bb)) %>% 
+        add_osm_feature("tourism") %>% 
+        osmdata_sf() 
+    
+    parking_poly = st_transform(parking$osm_polygons)
+    building_poly = st_transform(building$osm_polygons)
+    tourism_poly = st_transform(tourism$osm_polygons)
+    # return(highway_lines)
+    # trails_points = st_transform(highway_lines$osm_points)
+    
+    # sites_poly = tourism_poly %>% 
+    #     filter(tourism %in% c("picnic_site", "camp_site"))
+
     p_path <- ggmap(m) +
-        geom_point(data = t_aux, 
-                   aes(x = X,
-                       y = Y),
-                   color = "gray90",
-                   alpha = .50,
-                   size = .05) +
-        geom_sf(data = shp, inherit.aes = FALSE) +
+        # geom_point(data = t_aux, 
+        #            aes(x = X,
+        #                y = Y),
+        #            color = "gray90",
+        #            alpha = .50,
+        #            size = .05) +
+        geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE) +
+        geom_sf(data = trails, size = .75, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
+        # geom_sf_label_repel(data = trails, aes(label = name), inherit.aes = FALSE,
+        #                     color = "#595959",
+        #                     family = "special",
+        #                     size = .75) +
+        geom_sf(data = footpaths, size = 1.25, color = "ligthgray", inherit.aes = FALSE) +
+        geom_sf(data = roads, color = "red", inherit.aes = FALSE) +
+        geom_sf(data = shp, size = 1.25, color = "white", inherit.aes = FALSE) +
+        geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
+        geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
+        geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
         geom_point(data = markers,
+                   size = 2,
                    aes(x = X,
                        y = Y),
-                   color = "black",
-                   size = 2) +
-        geom_label(data = markers,
-                   aes(x = X,
-                       y = Y - .00125,
-                       label = label),
-                   # alpha = .825,
-                   # box.padding = .75,
-                   family = "special") +
-        labs(subtitle = name) +
+                   color = "black") +
+        geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
+                                  min.segment.length = 0,
+                   family = "special", color = "black", size = 2.5) +
+        # geom_text_repel(data = road_coords, aes(x = X, y = Y, label = name),
+        #                 min.segment.length = 0,
+        #                 family = "special", color = "black", size = 2) +
+        ggrepel::geom_label_repel(data = markers,
+                                  aes(x = X,
+                                      y = Y,
+                                      label = label),
+                                  color = "#595959",
+                                  # alpha = .825,
+                                  # box.padding = .75,
+                                  size = 3,
+                                  min.segment.length = 0,
+                                  family = "special") +
+        labs(title = name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
         annotation_scale(location = "tl", unit_category = "imperial", style = "ticks")  +
@@ -218,10 +327,8 @@ create_and_save_trailmap <- function(name,
         xlab(NULL) + 
         ylab(NULL)
     
-    return(p_path)
-    
     p <- plot_grid(p_path, p_slope, ncol = 1,
-                   rel_widths = c(1, .75),
+                   rel_widths = c(1, .65),
                    rel_heights = c(grid_plot_height, grid_slope_height),
                    align = "v")
     
