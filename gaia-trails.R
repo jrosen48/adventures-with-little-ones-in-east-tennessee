@@ -150,7 +150,6 @@ create_and_save_trailmap <- function(name,
         ~label, ~Y,  ~X,
         "Start", pull(t[1, "Y"]), pull(t[1, "X"]), 
         "Little Turn-Around", 35.61608, -83.92791,
-        "Medium Turn-Around", 35.61816, -83.92236,
         "Big Turn-Around", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
     
@@ -332,10 +331,10 @@ create_and_save_trailmap <- function(name,
                    rel_heights = c(grid_plot_height, grid_slope_height),
                    align = "v")
     
-    p
+    p_path
     
     ggsave(here::here("output", str_c(name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
     
-    return(p)
+    return(p_path)
     
 }

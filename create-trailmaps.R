@@ -30,7 +30,7 @@ fig_height = 9.47
 fig_width = 8.92
 min_distance_space = 35
 
-t <- create_and_save_trailmap(name = "Abrams Falls", 
+t <- create_and_save_trailmap(name = "Abrams Creek", 
                               file_name_1 = "abrams-little-bottoms.gpx")
 
 t
