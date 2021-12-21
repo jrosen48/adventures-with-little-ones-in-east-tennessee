@@ -41,7 +41,7 @@ It never seems to become crowded at Abrams Creek, but parking can be _a bit_ con
 There are several trails that we enjoy. They are highlighted in the trailmap below. Note that there are three options, each out-and-back trails corresponding to a little, medium-sized, or big adventure.
 
 ```{r, fig.cap="Abrams Falls Trail Map"}
-knitr::include_graphics(here("output", "Abrams Falls Trailmap.png"))
+knitr::include_graphics(here("output", "Abrams Creek Trailmap.png"))
 ```
 
 ### Little Adventure
