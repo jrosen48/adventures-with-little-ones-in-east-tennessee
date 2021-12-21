@@ -331,10 +331,10 @@ create_and_save_trailmap <- function(name,
                    rel_heights = c(grid_plot_height, grid_slope_height),
                    align = "v")
     
-    p_path
+    p
     
     ggsave(here::here("output", str_c(name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
     
-    return(p_path)
+    return(p)
     
 }
