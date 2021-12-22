@@ -75,7 +75,10 @@ create_and_save_trailmap <- function(name,
                                      grid_slope_height = .35,
                                      fig_height = 9.47,
                                      fig_width = 8.92,
-                                     min_distance_space = 35) {
+                                     min_distance_space = 35,
+                                     markers = NULL,
+                                     loop_trail = TRUE,
+                                     turn_around_is_end = TRUE) {
     
     font_add_google("Special Elite", family = "special")
     
@@ -145,13 +148,30 @@ create_and_save_trailmap <- function(name,
     
     t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
     
-    # will have to abstract this out
-    markers <- tribble(
+    my_markers <- tribble(
         ~label, ~Y,  ~X,
         "Start", pull(t[1, "Y"]), pull(t[1, "X"]), 
-        "Little Turn-Around", 35.61608, -83.92791,
-        "Big Turn-Around", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
+    
+    my_markers_end <- tribble(
+        ~label, ~Y,  ~X,
+        "End", pull(t[1, "Y"]), pull(t[1, "X"]), 
+    )
+    
+    my_markers_turn_around <- tribble(
+        ~label, ~Y,  ~X,
+        "Turn-Around", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
+    )
+    
+    markers <- bind_rows(my_markers, markers)
+
+    if (loop_trail == TRUE) {
+        markers <- bind_rows(markers, my_markers_end)
+    }
+    
+    if (turn_around_is_end == TRUE) {
+        markers <- bind_rows(markers, my_markers_turn_around)
+    }
     
     markers <- markers %>% 
         mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
@@ -164,33 +184,33 @@ create_and_save_trailmap <- function(name,
     my_ymin <- min(t$elev * 3.28084) - 200
     my_ymax <- max(t$elev * 3.28084) + 200
     
-    p_slope <- ggplot(t, aes(x = cumulative_distance_mi, y = elev * 3.28084)) +
-        geom_line() +
-        theme_minimal() +
-        theme(axis.line = element_line(color='black'),
-              plot.background = element_blank(),
-              panel.grid.major = element_blank(),
-              # panel.grid.minor = element_blank(),
-              panel.border = element_blank()) +
-        xlim(0, 6) + 
-        ylim(1000, 2000) + 
-        geom_point(data = markers,
-                   aes(x = cumulative_distance_mi,
-                       y = elev * 3.28084),
-                   color = "black",
-                   size = 3) +
-        ggrepel::geom_label_repel(data = markers,
-                                  aes(x = cumulative_distance_mi,
-                                      y = elev * 3.28084,
-                                      label = label),
-                                  size = 2.5,
-                                  min.segment.length = 0,
-                                  color = "#595959") +
-        ylab("Elev. (ft.)") +
-        xlab("Distance (mi.)") +
-        theme(text = element_text(family = "special")) +
-        theme(plot.margin=unit(c(1.25,1.25,1.25,1.25),"cm")) +
-        scale_y_continuous(label = scales::comma)
+    # p_slope <- ggplot(t, aes(x = cumulative_distance_mi, y = elev * 3.28084)) +
+    #     geom_line() +
+    #     theme_minimal() +
+    #     theme(axis.line = element_line(color='black'),
+    #           plot.background = element_blank(),
+    #           panel.grid.major = element_blank(),
+    #           # panel.grid.minor = element_blank(),
+    #           panel.border = element_blank()) +
+    #     xlim(0, 6) + 
+    #     ylim(1000, 2000) + 
+    #     geom_point(data = markers,
+    #                aes(x = cumulative_distance_mi,
+    #                    y = elev * 3.28084),
+    #                color = "black",
+    #                size = 3) +
+    #     ggrepel::geom_label_repel(data = markers,
+    #                               aes(x = cumulative_distance_mi,
+    #                                   y = elev * 3.28084,
+    #                                   label = label),
+    #                               size = 2.5,
+    #                               min.segment.length = 0,
+    #                               color = "#595959") +
+    #     ylab("Elev. (ft.)") +
+    #     xlab("Distance (mi.)") +
+    #     theme(text = element_text(family = "special")) +
+    #     theme(plot.margin=unit(c(1.25,1.25,1.25,1.25),"cm")) +
+    #     scale_y_continuous(label = scales::comma)
 
     highway = opq(as.vector(bb)) %>% 
         add_osm_feature("highway") %>% 
@@ -326,15 +346,17 @@ create_and_save_trailmap <- function(name,
         xlab(NULL) + 
         ylab(NULL)
     
-    p <- plot_grid(p_path, p_slope, ncol = 1,
-                   rel_widths = c(1, .65),
-                   rel_heights = c(grid_plot_height, grid_slope_height),
-                   align = "v")
+    # p <- plot_grid(p_path, p_slope, ncol = 1,
+    #                rel_widths = c(1, .65),
+    #                rel_heights = c(grid_plot_height, grid_slope_height),
+    #                align = "v")
+    # 
+    # p
     
-    p
+    p_path
     
     ggsave(here::here("output", str_c(name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
     
-    return(p)
+    return(p_path)
     
 }

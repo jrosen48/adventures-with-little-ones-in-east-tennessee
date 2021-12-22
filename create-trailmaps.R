@@ -29,8 +29,14 @@ grid_slope_height = .35
 fig_height = 9.47
 fig_width = 8.92
 min_distance_space = 35
+my_markers <- tribble(
+    ~label, ~Y,  ~X,
+    "Creek", 35.61608, -83.92791,
+    "Backcountry Site", 35.619, -83.925,
+)
 
 t <- create_and_save_trailmap(name = "Abrams Creek", 
-                              file_name_1 = "abrams-little-bottoms.gpx")
+                              file_name_1 = "abrams-little-bottoms.gpx",
+                              markers = my_markers)
 
 t
