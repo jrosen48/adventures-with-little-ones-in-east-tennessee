@@ -50,13 +50,7 @@ Our aim in writing this is primarily to serve as an accessible guide to others l
 
 It will also have elements that will be of interest to those with more knowledge about and experience exploring the outdoors around Knoxville. For example, we've included detailed trail maps for each location and we include historical and scientific information to add context to the areas we describe. 
 
-```{r, setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE)
-```
-
-```{r, message=FALSE}
-library(here)
-```
+Another key part of our adiu
 
 ```{r, fig.cap = "Playing with cars at the campground"}
 knitr::include_graphics("img/cades-cover-kid-cars.jpg")
