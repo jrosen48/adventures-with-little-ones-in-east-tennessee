@@ -12,6 +12,14 @@ github-repo: "jrosen48/little-kids-big-adventures"
 url: "https://littlekidsbigadventures.com"
 ---
 
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+```
+
+```{r, message=FALSE}
+library(here)
+```
+
 # Welcome! {-}
 
 ```{block, type='rmddisclaimer'}
@@ -50,27 +58,47 @@ Our aim in writing this is primarily to serve as an accessible guide to others l
 
 It will also have elements that will be of interest to those with more knowledge about and experience exploring the outdoors around Knoxville. For example, we've included detailed trail maps for each location and we include historical and scientific information to add context to the areas we describe. 
 
-Another key part of our adiu
+Another key part of our audience is adults caring for kids. In fact, this is core to our boke. This isn't a generic book on exploring the outdoors; it's one with an eye toward adventures that can be done with children. That's not to say the adventures lack ambition: kids can do a lot! But, it also means that the focus is, for the most part, on trips that kids can enjoy. We think that other readers will still find elements to take away from this book, but we note that our focus is on this particular audience.
 
 ```{r, fig.cap = "Playing with cars at the campground"}
 knitr::include_graphics("img/cades-cover-kid-cars.jpg")
 ```
 
+Lastly, hiking is not in the title of our book, but our focus is mostly on walks and hikes to explore the outdoors. We do mention other activities often. When we first moved to Knoxville, we were surprised by how many people mentioned hiking as something they do---or, at least, as something they've done. There are certainly other activities to do: paddling (on a paddle board, kayak, or canoe), run (and trail run), and camp and backpack, to begin. We do mention opportunities to do these, but focus on hiking as an activity that is accessible to many.
+
+To sum up the above, this is a book *primarily* but not exclusively for those looking to explore the outdoors around Knoxville, TN who hope to do so with children. No experience with exploring the outdoors, in general, nor with the outdoors around Knoxville, is assumed. We focus on hiking, but mention other activities when relevant. Having established the audience, we next turn to some *other* aspects of the book.
+
 ## How to use
+
+This book has a slight educational bent---perhaps a result of our backgrounds as educators. This is also because this region is so rich with historical (human and natural) chances to learn about the world. Accordingly, we call out history-related elements of the areas in this book with the following call-out.
 
 ```{block, type='rmdhistory', echo = TRUE}
 This is for human history-related call-outs.
 ```
 
-```{block, type='rmdtip', echo = TRUE}
-This is a tip.
-```
+We use the following call-out for scientific tid-bits: those related to living and non-living aspects of the environment that have been studied scientifically, such as the names of plants and animals or the types of rock underfoot.
 
 ```{block, type='rmdscience', echo = TRUE}
 This is for science-related call-outs.
 ```
 
-## Acknowledgments
+Lastly, a big part of exploring is finding your own tips and tricks and ways to navigate particular places. We highlight some of our tips with this type of call-out.
+
+```{block, type='rmdtip', echo = TRUE}
+This is a tip.
+```
+
+## How this book was created
+
+### Overview
+
+This book is initially being written in the "open"; this means that others can and have made suggestions that have improved it. Thank you to those who read and provided feedback on the book. We used the bookdown R package to render the book and GitHub pages to host the book. 
+
+Unless mentioned, we have taken all of the photos used in this book. 
+
+We have also created all of the maps used in this book using publicly-available data. We acknowledge those publicly-available sources next.
+
+### Acknowledgments
 
 Thank you to [Isabella Velásquez](https://ivelasq.rbind.io/) for creating and sharing the R code to create trail maps; this code was essential to being able to create beautiful (we think!) trail maps for this book. 
 
@@ -82,7 +110,7 @@ Thank you to Conor Anderson [for the CSS code for the call-out boxes](https://gi
 
 Thank you to Samuel Weisbrod, Aaron Rosenberg, and Kevin Lane for photos included in this book.
 
-## Credits
+### Credits
 
 [Open Street Map](https://www.openstreetmap.org/copyright) data is used to create the trail maps. 
 
