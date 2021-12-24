@@ -89,15 +89,6 @@ create_and_save_trailmap <- function(name,
     
     shp <- st_read(f, layer = "routes")
     
-    # f_aux <- here::here("data", "raw", "GRSM_TRAILS", 
-    #                     auxiliary_trail_files)
-    
-    # shp_aux <- st_read(f_aux)
-    
-    # t_aux <-
-    #     st_coordinates(shp_aux) %>% 
-    #     as_data_frame()
-    
     shp = elevation_add(shp) # possibly cut
     
     t <-
