@@ -1,3 +1,4 @@
+# combine this and the next function into one
 find_cumulative_distance_for_one_point <- function(markers, t, index) {
     
     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
