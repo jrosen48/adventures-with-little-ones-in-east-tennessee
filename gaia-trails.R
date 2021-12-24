@@ -1,34 +1,3 @@
-# library(ceramic)
-# roi <- raster::extent(100, 160, -50, 10)
-# im <- cc_location(roi)
-# raster::plotRGB(im)
-# 
-# e <- cc_elevation(roi)
-# 
-# library(tmap)
-# 
-# tm_shape(poly) +
-#     tm_borders() +
-#     tmap::tm_raster(e)
-# 
-# poly <- bb %>% 
-#     t() %>% 
-#     nominatimlite::bbox_to_poly()
-# 
-# library(maptiles)
-# 
-# ei_tiles = get_tiles(bb, provider = "Stamen.Toner", zoom = 12, crop = TRUE)
-# 
-# tmap_mode("plot")
-# #> tmap mode set to plotting
-# tm_shape(ei_tiles) + 
-#     tm_rgb() + 
-#     tm_shape(ei_borders) +
-#     tm_borders(lwd = 5, col = "lightblue") +
-#     tm_credits(get_credit("Stamen.Toner"),
-#                bg.color = "white")
-
-# combine this and the next function into one
 find_cumulative_distance_for_one_point <- function(markers, t, index) {
     
     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
