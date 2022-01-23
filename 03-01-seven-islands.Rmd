@@ -2,6 +2,8 @@
 
 ## Trail Information
 
+### Ratings
+
 ```{r, echo = FALSE, message = FALSE}
 library(tidyverse)
 
@@ -14,13 +16,15 @@ dd %>%
     knitr::kable()
 ```
 
+### Basic Characteristics
+
 ```{r}
 str_c("Location: :", dd$Location)
 str_c("Region: ", dd$Region)
 str_c("Distance: ", dd$`Distance (Shorter Option)`)
 ```
 
-```{r}
+```{r, eval = FALSE, echo = FALSE}
 dd$`Mountain Vista`
 dd$Waterfall
 dd$`Mountain Biking`
