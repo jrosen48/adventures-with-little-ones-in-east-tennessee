@@ -1,25 +1,28 @@
-Hike Name,Location,Region,Distance (Shorter Option),Beauty,Accessibility,Amenities,Challenge,Camping,Mountain Vista,Waterfall,Mountain Biking,Paddling,Recommended for Very Young Children,Most Highly Recommended,Big Adventure,Ascend (Shorter Option),Max. Elevation (Shorter Option)
-Knox/Blount Greenway,Cherokee Farm,The Tennessee Valley,1.54,2,5,2,1,NA,NA,NA,NA,NA,x,NA,NA,78,859
-Margaret Road,William Hastie Natural Area,The Tennessee Valley,0.91,3,4,2,1,NA,NA,NA,NA,x,x,NA,NA,59,991
-Seven Islands Island Loop,Seven Islands State Birding Park,The Tennessee Valley,2.39,5,4,4,2,NA,x,NA,NA,x,x,x,NA,191,959
-Ijams Overlook,Ijams Nature Center,The Tennessee Valley,1.51,3,5,5,2,NA,NA,NA,x,x,NA,NA,NA,181,"1,000"
-Lakeshore Loop,Lakeshore Park,The Tennessee Valley,2.33,4,4,4,2,NA,NA,NA,NA,x,x,NA,NA,194,921
-House Mountain Overlook,House Mountain State Natural Area,The Tennessee Valley,2.5,3,4,1,4,NA,x,NA,NA,NA,NA,NA,NA,912,"2,031"
-Songbird Trail,Norris Dam State Park,The Tennessee Valley,2.41,3,4,4,2,x,NA,NA,x,x,NA,NA,NA,186,872
-Schoolhouse Gap and Whiteoak Sinks,Great Smoky Mountains National Park,The Smokies and Beyond,4.61,5,3,3,3,x,NA,NA,NA,NA,NA,NA,NA,896,"1,869"
-Abrams Creek,Great Smoky Mountains National Park,The Smokies and Beyond,5.78 (2.75),4,2,3,2,x,NA,NA,NA,NA,NA,NA,NA,991 (368),"1,425 (1,257)"
-Middle Prong,Great Smoky Mountains National Park,The Smokies and Beyond,7.73 (1.38),4,3,3,2,x,NA,x,NA,NA,NA,x,NA,"1,272 (307)","3,155 (2,237)"
-Big Creek,Great Smoky Mountains National Park,The Smokies and Beyond,4.01,5,2,2,3,x,NA,x,NA,NA,NA,NA,NA,821,"2,359"
-Little River Loop,Great Smoky Mountains National Park,The Smokies and Beyond,5.49,4,3,3,3,x,NA,x,NA,NA,NA,NA,NA,996,"3,042"
-Abrams Falls,Great Smoky Mountains National Park,The Smokies and Beyond,4.97,4,3,3,4,x,NA,x,NA,NA,NA,NA,x,846,"1,801"
-Andrews Bald,Great Smoky Mountains National Park,The Smokies and Beyond,3.57,5,1,3,3,x,x,NA,NA,NA,NA,NA,x,927,"6,307"
-Roan Mountain,Cherokee and Pisgah National Forest,The Smokies and Beyond,2.68,5,2,3,3,x,x,NA,NA,NA,NA,NA,x,715,"5,835"
-Black Balsam Knob,Pisgah National Forest,The Smokies and Beyond,1.43,5,1,2,3,x,x,NA,x,NA,NA,NA,x,492,"6,206"
-Cosby Nature Trail,Great Smoky Mountains National Park,The Smokies and Beyond,0.79,4,3,4,2,x,NA,x,NA,NA,NA,NA,NA,124,"2,390"
-Bandy Creek,Big South Fork National River and Recreation Area,The Cumberland Plateau,3.67,4,2,4,3,x,NA,x,x,x,NA,NA,NA,363,"1,601"
-Interpretive Trail,Frozen Head State Park,The Cumberland Plateau,0.62,4,3,4,1,x,NA,NA,NA,NA,NA,NA,NA,41,"1,469"
-Emory Falls,Frozen Head State Park,The Cumberland Plateau,2.43,4,3,4,2,x,NA,x,NA,NA,NA,NA,NA,480,"2,036"
-Angel Falls Overlook,Big South Fork National River and Recreation Area,The Cumberland Plateau,2.81,4,2,3,3,x,x,x,NA,x,NA,NA,x,523,"1,462"
-Honey Creek,Big South Fork National River and Recreation Area,The Cumberland Plateau,4.4,5,2,1,5,x,NA,x,NA,x,NA,NA,x,962,"1,587"
-Twin Arches Loop,Twin Arches State Recreation Area,The Cumberland Plateau,1.15,5,2,2,3,x,NA,NA,NA,x,NA,NA,NA,297,"1,574"
-Obed Point,Obed Wild & Scenic River,The Cumberland Plateau,3.6,5,3,3,4,x,NA,NA,NA,x,NA,x,NA,761,"1,361"
+Name,Type,Source(s),Associated Hike,Notes
+Eastern Hemlock,Tree,NA,Abrams Creek,NA
+Rosebay Rhododendron,Tree,NA,Big Creek,NA
+Mountain Laurel,Tree,NA,Andrews Bald,NA
+Tulip Poplar,Tree,NA,NA,NA
+Frasier Fir,Tree,NA,Andrews Bald,NA
+Red Spruce,Tree,NA,Andrews Bald,NA
+Brook Trout,Fish,NA,Middle Prong,NA
+Black Bear,Mammal,NA,Big Creek,NA
+Coyote,Mammal,NA,NA,NA
+White-tailed Deer,Mammal,NA,?,NA
+Trillium,Wildflower,NA,NA,NA
+Blue Phlox,Wildflower,NA,NA,NA
+Thyme-Leaved Bluets,Wildflower,NA,NA,NA
+Trout-Lily,Wildflower,NA,NA,NA
+Downy Woodpecker,Bird,NA,NA,NA
+Eastern Screech Owl,Bird,NA,NA,NA
+Carolina Chickadee,Bird,NA,NA,NA
+Eastern Box Turtle,Reptile,NA,NA,NA
+Northern Copperhead,Reptile,NA,NA,NA
+Timber Rattlesnake,Reptile,NA,NA,https://www.nps.gov/grsm/learn/nature/reptiles.htm
+Eastern Hellbender,Amphibian,NA,NA,NA
+Blue Ridge Two-Lined Salamander,Amphibian,NA,NA,NA
+Jordans Red Cheek,Amphibian,NA,NA,NA
+Tardigrade,Micro-Animal,NA,NA,NA
+Anakeesta Formation,Geological,NA,NA,NA
+Thunderhead Formation,Geological,NA,NA,NA
+Sandstone,Geological,NA,NA,NA
