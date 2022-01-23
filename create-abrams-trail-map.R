@@ -1,5 +1,5 @@
 my_name = "Abrams Creek" 
-file_name = "abrams-creek-revised.gpx"
+file_name = "abrams-creek.gpx"
 lon_multiplier = .4
 lat_multiplier = 1.1
 zoom = 15

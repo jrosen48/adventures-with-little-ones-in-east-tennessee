@@ -21,10 +21,29 @@ source("gaia-trails.R")
 
 # tn valley
 source("create-seven-islands-map.R")
+source("create-ijams-crag-map.R")
+source("create-house-mountain-overlook-map.R")
+source("create-knox-blount-map.R")
+source("create-william-hastie-map.R")
+source("create-lakeshore-map.R")
 
 # smokies
-source("create-tremont-trail-map.R")
+source("create-middle-prong-trail-map.R")
 source("create-abrams-trail-map.R")
+source("create-abrams-falls-map.R")
+source("create-roan-mountain-map.R")
+source("create-cosby-map.R")
+source("create-big-creek-map.R")
+source("create-andrews-bald-map.R")
+source("create-black-balsam-map.R")
+source("create-little-river-loop-trail-map.R")
 
-# emory falls
+# cumberland
+source("create-songbird-loop-map.R")
 source("create-emory-falls-map.R")
+source("create-interpretive-trail-map.R")
+source("create-angel-falls-overlook-map.R")
+source("create-bandy-creek-map.R")
+source("create-honey-creek-map.R")
+source("create-obed-point-trail-map.R")
+source("create-twin-arches-map.R")

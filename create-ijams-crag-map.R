@@ -1,5 +1,5 @@
-my_name = "William Hastie" 
-file_name = "margaret-road.gpx"
+my_name = "Ijams Crag Overlook" 
+file_name = "ijams-crag.gpx"
 lon_multiplier = 1
 lat_multiplier = 1
 zoom = 15

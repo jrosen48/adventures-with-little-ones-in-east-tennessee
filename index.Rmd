@@ -59,7 +59,7 @@ The following trails are included:
 d <- read_csv("trail-info.csv")
 
 d %>% 
-    select(1:3) %>% 
+    select(1:3, `Distance (Shorter Option)`, `Ascend (Shorter Option)`, `Max. Elevation (Shorter Option)`) %>% 
     knitr::kable()
 ```
 
@@ -68,7 +68,7 @@ d %>%
 The following species and topics are discussed:
 
 ```{r}
-read_csv(here::here("data", "raw", "science.csv")) %>% 
+read_csv("sci-info.csv") %>% 
     select(1:2) %>% 
     knitr::kable()
 ```

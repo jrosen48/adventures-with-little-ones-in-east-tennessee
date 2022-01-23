@@ -8,7 +8,7 @@ library(tidyverse)
 
 d <- read_csv("trail-info.csv")
 
-d %>% filter(str_detect(`Hike Name`, "Abrams")) %>% 
+d %>% filter(str_detect(`Hike Name`, "Abrams Creek")) %>% 
     knitr::kable()
 ```
 
@@ -25,7 +25,7 @@ The drive there is also _mostly_ easy, but with enough excitement to make that p
 ## Map
 
 ```{r, fig.cap="Abrams Creek Trail Map"}
-knitr::include_graphics(here("output", "abrams-creek-revised-map.png"))
+knitr::include_graphics(here("output", "abrams-creek-map.png"))
 ```
 
 ## Trail Description
