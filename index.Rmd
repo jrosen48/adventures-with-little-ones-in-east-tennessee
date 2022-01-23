@@ -33,11 +33,7 @@ This book is not yet even at the rough draft stage; proceed with caution!
 
 ## How to use
 
-This book has a slight educational bent---perhaps a result of our backgrounds as educators. This is also because this region is so rich with historical (human and natural) chances to learn about the world. Accordingly, we call out history-related elements of the areas in this book with the following call-out.
-
-```{block, type='rmdhistory', echo = TRUE}
-This is for human history-related call-outs.
-```
+This book has a slight educational bent---perhaps a result of our backgrounds as educators. This is also because this region is so rich with historical (human and natural) chances to learn about the world. 
 
 We use the following call-out for scientific tid-bits: those related to living and non-living aspects of the environment that have been studied scientifically, such as the names of plants and animals or the types of rock underfoot.
 
@@ -49,6 +45,12 @@ Lastly, a big part of exploring is finding your own tips and tricks and ways to 
 
 ```{block, type='rmdtip', echo = TRUE}
 This is a tip.
+```
+
+Though we have more expertise in science, we call-out history-related elements of the areas in this book with the following:
+
+```{block, type='rmdhistory', echo = TRUE}
+This is for human history-related call-outs.
 ```
 
 ## Trails
