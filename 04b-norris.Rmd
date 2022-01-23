@@ -1,4 +1,0 @@
-# Norris Dam
-
-<img src="img/norris-dam-2.jpeg" alt="drawing"/>
-<img src="img/norris-leaves.jpeg" alt="drawing"/>

@@ -34,19 +34,20 @@ find_elev_for_one_point <- function(markers, t, index) {
 }
 
 create_and_save_trailmap_sp <- function(my_name,
-                                     file_name, 
-                                     lon_multiplier = .5,
-                                     lat_multiplier = 1,
-                                     zoom = 15,
-                                     lon_denom = 50,
-                                     lat_denom = 15,
-                                     fig_height = 9.47,
-                                     fig_width = 8.92,
-                                     min_distance_space = 35,
-                                     markers = NULL,
-                                     loop_trail = TRUE,
-                                     turn_around_is_end = TRUE,
-                                     include_roads = FALSE) {
+                                        file_name, 
+                                        lon_multiplier = .5,
+                                        lat_multiplier = 1,
+                                        zoom = 15,
+                                        lon_denom = 50,
+                                        lat_denom = 15,
+                                        fig_height = 9.47,
+                                        fig_width = 8.92,
+                                        min_distance_space = 35,
+                                        markers = NULL,
+                                        loop_trail = TRUE,
+                                        turn_around_is_end = TRUE,
+                                        include_roads = FALSE,
+                                        include_water = FALSE) {
     
     font_add_google("Special Elite", family = "special")
     
@@ -127,7 +128,7 @@ create_and_save_trailmap_sp <- function(my_name,
         ~label, ~Y,  ~X,
         "Turn-around spot", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
-
+    
     if (loop_trail == TRUE) {
         markers <- bind_rows(my_markers_loop, markers) # could add end, but probably better this way
     } else {
@@ -137,7 +138,7 @@ create_and_save_trailmap_sp <- function(my_name,
     if (turn_around_is_end == TRUE) {
         markers <- bind_rows(markers, my_markers_turn_around)
     }
-
+    
     # markers <- markers %>% 
     #     mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
     #                map_dbl(find_cumulative_distance_for_one_point, markers = markers, t = t))
@@ -148,7 +149,7 @@ create_and_save_trailmap_sp <- function(my_name,
     
     my_ymin <- min(t$elev * 3.28084) - 200
     my_ymax <- max(t$elev * 3.28084) + 200
-
+    
     highway = opq(as.vector(bb)) %>% 
         add_osm_feature("highway") %>% 
         osmdata_sf()
@@ -159,7 +160,7 @@ create_and_save_trailmap_sp <- function(my_name,
         filter(highway %in% c("path","bridleway"))
     
     # labeling other trails
-
+    
     ## not sure why this is necessary for L1 later 
     
     # return(trails)
@@ -185,10 +186,10 @@ create_and_save_trailmap_sp <- function(my_name,
     
     roads = highway_lines %>%
         filter(highway %in% c("unclassified", "secondary", "tertiary", "residential", "service"))
-
+    
     # return(roads)
     road_coords <- st_coordinates(roads) %>% as_tibble()
-
+    
     # roads <- roads %>% mutate(L1 = unique(road_coords$L1))
     # 
     # road_coords <- road_coords %>% left_join(select(trails, L1, name))
@@ -208,11 +209,13 @@ create_and_save_trailmap_sp <- function(my_name,
     
     # water
     
-    water_lines = opq(as.vector(bb)) %>% 
-        add_osm_feature("waterway") %>% 
-        osmdata_sf()
-    
-    water_lines = st_transform(water_lines$osm_lines)
+    if(include_water) {
+        water_lines = opq(as.vector(bb)) %>% 
+            add_osm_feature("waterway") %>% 
+            osmdata_sf()
+        
+        water_lines = st_transform(water_lines$osm_lines)
+    }
     
     # polygons
     
@@ -236,10 +239,10 @@ create_and_save_trailmap_sp <- function(my_name,
     
     # sites_poly = tourism_poly %>% 
     #     filter(tourism %in% c("picnic_site", "camp_site"))
-
+    
     p_path <- ggmap(m) +
         # additional details
-        geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE) +
+        {if(include_water)geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE)}+
         #geom_sf(data = trails, size = .625, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
         geom_sf(data = footpaths, size = 1.25, color = "lightgray", inherit.aes = FALSE) +
         {if(include_roads)geom_sf(data = roads, color = "darkgray", inherit.aes = FALSE, alpha = .5)}+
@@ -277,7 +280,7 @@ create_and_save_trailmap_sp <- function(my_name,
                                width = unit(1.0, "cm")) +
         xlab(NULL) + 
         ylab(NULL)
-
+    
     p_path
     
     # ggsave(here::here("output", str_c(my_name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")

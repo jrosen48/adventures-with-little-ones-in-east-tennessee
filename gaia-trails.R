@@ -45,7 +45,8 @@ create_and_save_trailmap <- function(my_name,
                                      min_distance_space = 35,
                                      markers = NULL,
                                      loop_trail = TRUE,
-                                     turn_around_is_end = TRUE) {
+                                     turn_around_is_end = TRUE,
+                                     include_roads = FALSE) {
     
     font_add_google("Special Elite", family = "special")
     
@@ -235,7 +236,7 @@ create_and_save_trailmap <- function(my_name,
         geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE) +
         geom_sf(data = trails, size = .625, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
         geom_sf(data = footpaths, size = 1.25, color = "lightgray", inherit.aes = FALSE) +
-        # geom_sf(data = roads, color = "purple", inherit.aes = FALSE, alpha = .5) +
+        {if(include_roads)geom_sf(data = roads, color = "purple", inherit.aes = FALSE, alpha = .5)}+
         geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
         geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
         geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +

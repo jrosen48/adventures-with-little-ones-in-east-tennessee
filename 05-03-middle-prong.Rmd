@@ -1,0 +1,24 @@
+# Middle Prong Trail
+
+## Trail Information
+
+```{r, echo = FALSE, message = FALSE}
+library(tidyverse)
+
+d <- read_csv("trail-info.csv")
+
+d %>% filter(str_detect(`Hike Name`, "Middle")) %>% 
+    knitr::kable()
+```
+
+## Overview
+
+## Map
+
+```{r, fig.cap="Middle Prong Trail Map"}
+knitr::include_graphics(here("output", "middle-prong-map.png"))
+```
+
+## Trail Description
+
+## Nearby

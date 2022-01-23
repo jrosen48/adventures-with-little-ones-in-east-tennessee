@@ -1,0 +1,29 @@
+# Emory Falls
+
+<img title="a title" alt="Alt text" src="img/frozen-head-amphi.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/frozen-head-falls.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/frozen-head-rock.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/frozen-head-fire-toons.jpeg" width = "300">
+
+## Trail Information
+
+```{r, echo = FALSE, message = FALSE}
+library(tidyverse)
+
+d <- read_csv("trail-info.csv")
+
+d %>% filter(str_detect(`Hike Name`, "Emory")) %>% 
+    knitr::kable()
+```
+
+## Overview
+
+## Map
+
+```{r, fig.cap="Emory Falls Trail Map"}
+knitr::include_graphics(here("output", "emory-falls-map.png"))
+```
+
+## Trail Description
+
+## Nearby
