@@ -30,7 +30,7 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)
 
 ## Map
 
-```{r, fig.cap="Seven Islands Loop Trail Map", eval = FALSE}
+```{r, fig.cap="Seven Islands Loop Trail Map", eval = TRUE}
 knitr::include_graphics(here("output", "twin-arches-loop-map.png"))
 ```
 

@@ -31,7 +31,7 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)
 ## Map
 
 ```{r, fig.cap="Seven Islands Loop Trail Map"}
-knitr::include_graphics(here("output", "seven-islands-loop-map.png"))
+knitr::include_graphics(here("output", "songbird-loop-map.png"))
 ```
 
 ## Trail Description

@@ -1,5 +1,5 @@
 my_name = "Little River Loop Trail" 
-file_name = "little-river.gpx"
+file_name = "little-river-loop.gpx"
 lon_multiplier = 1
 lat_multiplier = 1
 zoom = 14

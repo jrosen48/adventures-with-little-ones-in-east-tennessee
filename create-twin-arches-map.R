@@ -1,8 +1,8 @@
-my_name = "Bandy Creek (Big South Fork)" 
-file_name = "bandy-creek-fall-branch-falls.gpx"
+my_name = "Twin Arches" 
+file_name = "twin-arches-loop.gpx"
 lon_multiplier = 1
 lat_multiplier = 1
-zoom = 15
+zoom = 13
 fig_height = 9.47
 fig_width = 8.92
 min_distance_space = 35
@@ -14,7 +14,7 @@ my_markers <- tribble(
 loop_trail <- TRUE
 turn_around_is_end <- FALSE
 
-t <- create_and_save_trailmap_sp(
+t <- create_and_save_trailmap(
     my_name = my_name,
     file_name = file_name,
     lon_multiplier = lon_multiplier,

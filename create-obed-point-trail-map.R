@@ -14,7 +14,7 @@ my_markers <- tribble(
 loop_trail <- TRUE
 turn_around_is_end <- FALSE
 
-t <- create_and_save_trailmap_sp(
+t <- create_and_save_trailmap(
     my_name = my_name,
     file_name = file_name,
     lon_multiplier = lon_multiplier,
