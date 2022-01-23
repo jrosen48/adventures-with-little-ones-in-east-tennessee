@@ -33,16 +33,13 @@ find_elev_for_one_point <- function(markers, t, index) {
     
 }
 
-create_and_save_trailmap <- function(name,
-                                     file_name_1, 
-                                     # auxiliary_trail_files,
-                                     long_multiplier = .5,
+create_and_save_trailmap <- function(my_name,
+                                     file_name, 
+                                     lon_multiplier = .5,
                                      lat_multiplier = 1,
                                      zoom = 15,
                                      lon_denom = 50,
                                      lat_denom = 15,
-                                     grid_plot_height = .65,
-                                     grid_slope_height = .35,
                                      fig_height = 9.47,
                                      fig_width = 8.92,
                                      min_distance_space = 35,
@@ -55,7 +52,7 @@ create_and_save_trailmap <- function(name,
     showtext_auto()
     
     f <- here::here("data", "raw", "gaia", 
-                    file_name_1)
+                    file_name)
     
     shp <- st_read(f, layer = "routes")
     
@@ -87,8 +84,8 @@ create_and_save_trailmap <- function(name,
                                     lead(cumulative_distance_mi_trunc), 0))
     
     bb <- getbb("")
-    bb[1, 1] <- min(t$X) + long_multiplier*(min(t$X) - max(t$X))  # x min - how far west
-    bb[1, 2] <- max(t$X) - long_multiplier*(min(t$X) - max(t$X)) # x max - how far east
+    bb[1, 1] <- min(t$X) + lon_multiplier*(min(t$X) - max(t$X))  # x min - how far west
+    bb[1, 2] <- max(t$X) - lon_multiplier*(min(t$X) - max(t$X)) # x max - how far east
     bb[2, 1] <- min(t$Y) + lat_multiplier*(min(t$Y) - max(t$Y)) # y min - how far south
     bb[2, 2] <- max(t$Y) - lat_multiplier*(min(t$Y) - max(t$Y))# ymax - how far north
     
@@ -100,12 +97,14 @@ create_and_save_trailmap <- function(name,
     t <- t %>%
         bind_cols(mile_markers) # removed for now
     
+    # print(count(t, L1))
+    
     total_long <- bb[1, 2] - bb[1, 1]
     total_lat <- bb[2, 1] - bb[2, 2]
     
-    v <- c(bb[1, 2] + total_long/lon_denom, bb[2, 1] - total_lat/lat_denom)
-    
-    names(v) <- c("x", "y")
+    # v <- c(bb[1, 2] + total_long/lon_denom, bb[2, 1] - total_lat/lat_denom)
+    # 
+    # names(v) <- c("x", "y")
     
     t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
     
@@ -114,64 +113,36 @@ create_and_save_trailmap <- function(name,
         "Start", pull(t[1, "Y"]), pull(t[1, "X"]), 
     )
     
-    my_markers_end <- tribble(
+    my_markers_loop <- tribble(
         ~label, ~Y,  ~X,
-        "End", pull(t[1, "Y"]), pull(t[1, "X"]), 
+        "Start/end (and parking)", pull(t[1, "Y"]), pull(t[1, "X"]), 
     )
     
     my_markers_turn_around <- tribble(
         ~label, ~Y,  ~X,
-        "Turn-Around", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
+        "Turn-around spot", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
-    
-    markers <- bind_rows(my_markers, markers)
 
     if (loop_trail == TRUE) {
-        markers <- bind_rows(markers, my_markers_end)
+        markers <- bind_rows(my_markers_loop, markers) # could add end, but probably better this way
+    } else {
+        markers <- bind_rows(my_markers, markers)
     }
     
     if (turn_around_is_end == TRUE) {
         markers <- bind_rows(markers, my_markers_turn_around)
     }
-    
-    markers <- markers %>% 
-        mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
-                   map_dbl(find_cumulative_distance_for_one_point, markers = markers, t = t))
-    
-    markers <- markers %>% 
-        mutate(elev = seq(nrow(markers)) %>% 
-                   map_dbl(find_elev_for_one_point, markers = markers, t = t))
+
+    # markers <- markers %>% 
+    #     mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
+    #                map_dbl(find_cumulative_distance_for_one_point, markers = markers, t = t))
+    # 
+    # markers <- markers %>% 
+    #     mutate(elev = seq(nrow(markers)) %>% 
+    #                map_dbl(find_elev_for_one_point, markers = markers, t = t))
     
     my_ymin <- min(t$elev * 3.28084) - 200
     my_ymax <- max(t$elev * 3.28084) + 200
-    
-    # p_slope <- ggplot(t, aes(x = cumulative_distance_mi, y = elev * 3.28084)) +
-    #     geom_line() +
-    #     theme_minimal() +
-    #     theme(axis.line = element_line(color='black'),
-    #           plot.background = element_blank(),
-    #           panel.grid.major = element_blank(),
-    #           # panel.grid.minor = element_blank(),
-    #           panel.border = element_blank()) +
-    #     xlim(0, 6) + 
-    #     ylim(1000, 2000) + 
-    #     geom_point(data = markers,
-    #                aes(x = cumulative_distance_mi,
-    #                    y = elev * 3.28084),
-    #                color = "black",
-    #                size = 3) +
-    #     ggrepel::geom_label_repel(data = markers,
-    #                               aes(x = cumulative_distance_mi,
-    #                                   y = elev * 3.28084,
-    #                                   label = label),
-    #                               size = 2.5,
-    #                               min.segment.length = 0,
-    #                               color = "#595959") +
-    #     ylab("Elev. (ft.)") +
-    #     xlab("Distance (mi.)") +
-    #     theme(text = element_text(family = "special")) +
-    #     theme(plot.margin=unit(c(1.25,1.25,1.25,1.25),"cm")) +
-    #     scale_y_continuous(label = scales::comma)
 
     highway = opq(as.vector(bb)) %>% 
         add_osm_feature("highway") %>% 
@@ -183,20 +154,22 @@ create_and_save_trailmap <- function(name,
         filter(highway %in% c("path","bridleway"))
     
     # labeling other trails
+
+    ## not sure why this is necessary for L1 later 
     
     trails_coords <- st_coordinates(trails) %>% as_tibble()
-    
+
     trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
-    
+
     trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
- 
-    trails_coords <- filter(trails_coords, 
+
+    trails_coords <- filter(trails_coords,
                             X > bb[1, 1] & X < bb[1, 2] &
-                                Y > bb[2, 1] & Y < bb[2, 2]) 
-    
-    trails_coords <- group_by(trails_coords, L1) %>% 
+                                Y > bb[2, 1] & Y < bb[2, 2])
+
+    trails_coords <- group_by(trails_coords, L1) %>%
         filter(row_number()==ceiling(n()/2))
-    
+
     trails_coords <- trails_coords %>% select(X, Y, L1, name) %>% ungroup()
     
     # labeling roads
@@ -258,46 +231,36 @@ create_and_save_trailmap <- function(name,
     #     filter(tourism %in% c("picnic_site", "camp_site"))
 
     p_path <- ggmap(m) +
-        # geom_point(data = t_aux, 
-        #            aes(x = X,
-        #                y = Y),
-        #            color = "gray90",
-        #            alpha = .50,
-        #            size = .05) +
+        # additional details
         geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE) +
-        geom_sf(data = trails, size = .75, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
-        # geom_sf_label_repel(data = trails, aes(label = name), inherit.aes = FALSE,
-        #                     color = "#595959",
-        #                     family = "special",
-        #                     size = .75) +
-        geom_sf(data = footpaths, size = 1.25, color = "ligthgray", inherit.aes = FALSE) +
-        geom_sf(data = roads, color = "red", inherit.aes = FALSE) +
-        geom_sf(data = shp, size = 1.25, color = "white", inherit.aes = FALSE) +
+        geom_sf(data = trails, size = .625, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
+        geom_sf(data = footpaths, size = 1.25, color = "lightgray", inherit.aes = FALSE) +
+        # geom_sf(data = roads, color = "purple", inherit.aes = FALSE, alpha = .5) +
         geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
         geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
         geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
+        # trail
+        geom_sf(data = shp, size = .75, linetype = "dashed", color = "white", inherit.aes = FALSE) +
+        geom_sf(data = shp, size = 1.35, color = "red", inherit.aes = FALSE) +
+        # trail details
         geom_point(data = markers,
                    size = 2,
                    aes(x = X,
                        y = Y),
                    color = "black") +
-        geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-                                  min.segment.length = 0,
-                   family = "special", color = "black", size = 2.5) +
-        # geom_text_repel(data = road_coords, aes(x = X, y = Y, label = name),
-        #                 min.segment.length = 0,
-        #                 family = "special", color = "black", size = 2) +
+        # geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
+        #                           min.segment.length = 0,
+        #            family = "special", color = "black", size = 3) +
         ggrepel::geom_label_repel(data = markers,
                                   aes(x = X,
                                       y = Y,
                                       label = label),
-                                  color = "#595959",
-                                  # alpha = .825,
-                                  # box.padding = .75,
-                                  size = 3,
+                                  alpha = .8,
+                                  box.padding = .75,
+                                  size = 3.5,
                                   min.segment.length = 0,
                                   family = "special") +
-        labs(title = name) +
+        labs(title = my_name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
         annotation_scale(location = "tl", unit_category = "imperial", style = "ticks")  +
@@ -306,17 +269,8 @@ create_and_save_trailmap <- function(name,
                                width = unit(1.0, "cm")) +
         xlab(NULL) + 
         ylab(NULL)
-    
-    # p <- plot_grid(p_path, p_slope, ncol = 1,
-    #                rel_widths = c(1, .65),
-    #                rel_heights = c(grid_plot_height, grid_slope_height),
-    #                align = "v")
-    # 
-    # p
-    
+
     p_path
-    
-    ggsave(here::here("output", str_c(name, " Trailmap.png")), dpi = "retina", width = fig_width, height = fig_height, units = "in")
     
     return(p_path)
     

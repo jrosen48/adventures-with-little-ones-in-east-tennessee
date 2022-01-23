@@ -14,5 +14,11 @@ library(terra)
 library(ggrepel)
 library(ggsflabel) # devtools::install_github("yutannihilation/ggsflabel")
 
+set.seed(20210122)
+
+source("gaia-trails-sp.R")
 source("gaia-trails.R")
-source("create_abrams-trail-map.R")
+
+source("create-seven-islands-map.R")
+source("create-tremont-trail-map.R")
+source("create-abrams-trail-map.R")
