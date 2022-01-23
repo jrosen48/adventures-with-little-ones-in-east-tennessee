@@ -1,5 +1,7 @@
 bookdown::gitbook:
   fontfamily: gill
+  includes:
+    in_header: google_analytics.html
   fig_caption: true
   css: style.css
   config:
