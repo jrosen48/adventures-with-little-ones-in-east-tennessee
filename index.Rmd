@@ -75,6 +75,16 @@ read_csv("sci-info.csv") %>%
     knitr::kable()
 ```
 
+## History
+
+The following historical topics and events are discussed:
+
+```{r}
+read_csv("history-info.csv") %>% 
+    select(1:2) %>% 
+    knitr::kable()
+```
+
 ## How this book was created
 
 ### Overview
