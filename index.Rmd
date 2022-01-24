@@ -51,11 +51,15 @@ This book is the result of these experiences. It resulted from a lot of *learnin
 
 **First and foremost, please note that this book is a work-in-progress; it is not even at the rough draft stage yet!**
 
-The book is organized around trails. 
-
 ## Trails Index
 
-The following trails are included:
+The book is organized around trails in three regions: the Tennessee Valley, Cumberland Plateau, and Smokies. An overview of all of the trails included in the book are below.
+
+Related to trails, a big part of exploring is finding your own tips and tricks and ways to navigate particular places. We highlight some of our tips with this type of call-out.
+
+```{block, type='rmdtip', echo = TRUE}
+This is a tip.
+```
 
 ```{r, echo = FALSE, message = FALSE}
 d <- read_csv("trail-info.csv")
@@ -63,12 +67,6 @@ d <- read_csv("trail-info.csv")
 d %>% 
     select(1:3, `Distance (Shorter Option)`, `Ascend (Shorter Option)`, `Max. Elevation (Shorter Option)`) %>% 
     knitr::kable()
-```
-
-Related to trails, a big part of exploring is finding your own tips and tricks and ways to navigate particular places. We highlight some of our tips with this type of call-out.
-
-```{block, type='rmdtip', echo = TRUE}
-This is a tip.
 ```
 
 ## Science-Related Elements
