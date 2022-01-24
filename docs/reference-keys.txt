@@ -14,12 +14,12 @@ fig:unnamed-chunk-33
 fig:unnamed-chunk-35
 fig:unnamed-chunk-37
 fig:unnamed-chunk-39
-fig:unnamed-chunk-41
+fig:unnamed-chunk-40
 fig:unnamed-chunk-42
+fig:unnamed-chunk-43
 fig:unnamed-chunk-44
 fig:unnamed-chunk-45
 fig:unnamed-chunk-46
-fig:unnamed-chunk-47
 fig:unnamed-chunk-48
 fig:unnamed-chunk-50
 fig:unnamed-chunk-52
@@ -27,4 +27,3 @@ fig:unnamed-chunk-54
 fig:unnamed-chunk-56
 fig:unnamed-chunk-58
 fig:unnamed-chunk-60
-fig:unnamed-chunk-62

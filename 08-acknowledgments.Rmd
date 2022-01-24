@@ -1,0 +1,29 @@
+# About the Book and Acknowledgments and Credits
+
+## How this book was created
+
+This book is initially being written in the "open"; this means that others can and have made suggestions that have improved it. Thank you to those who read and provided feedback on the book. We used the bookdown R package to render the book and GitHub pages to host the book. 
+
+Unless mentioned, we have taken all of the photos used in this book. 
+
+We have also created all of the maps used in this book using publicly-available data. We acknowledge those publicly-available sources next.
+
+### Acknowledgments
+
+Thank you to [Isabella Velásquez](https://ivelasq.rbind.io/) for creating and sharing the R code to create trail maps; this code was essential to being able to create beautiful (we think!) trail maps for this book. 
+
+Thanks to [Tyler Morgan-Wall](https://www.tylermw.com/), whose [tutorial on creating trail maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) was also instrumental.
+
+Thank you to [Daniel Anderson](https://github.com/datalorax) for the basis for [the theme](https://github.com/datalorax/sds-r/blob/main/style.css) for this book. 
+
+Thank you to Conor Anderson [for the CSS code for the call-out boxes](https://gitlab.com/claut/man_ccia) in this text.
+
+Thank you to Samuel Weisbrod, Aaron Rosenberg, and Kevin Lane for photos included in this book.
+
+Thank you to Amanda Hendricks and Anthony Schmidt for trail and science-related suggestions.
+
+### Credits
+
+[Open Street Map](https://www.openstreetmap.org/copyright) data is used to create the trail maps. 
+
+Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.

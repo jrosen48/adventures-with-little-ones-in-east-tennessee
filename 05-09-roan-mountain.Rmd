@@ -1,5 +1,9 @@
 # Roan Mountain
 
+<img title="a title" alt="Alt text" src="img/roan-mom.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/roan-fir-forest.jpeg" width = "300">
+<img title="a title" alt="Alt text" src="img/roan-creek.jpeg" width = "300">
+
 ## Trail Information
 
 ### Ratings

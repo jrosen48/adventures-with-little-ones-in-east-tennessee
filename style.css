@@ -344,21 +344,6 @@ tr:nth-child(even) {
 /* from: https://gitlab.com/claut/man_ccia/-/blob/main/css/style.css
 */
 
-.rmddisclaimer {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  background: #ffb4b4;
-  position:relative;
-}
-
-.rmddisclaimer:before {
-  content: "\f12a";
-  font-family: FontAwesome;
-  left:22px;
-  position:absolute;
-  top:0;
-  font-size: 45px;
-}
 
 .rmdhistory {
   padding: 1em 1em 1em 5em;

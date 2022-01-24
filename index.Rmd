@@ -21,39 +21,39 @@ library(here)
 library(tidyverse)
 ```
 
-# Introduction {-}
+# Preamble
 
-```{block, type='rmddisclaimer'}
-This book is a work-in-progress; it is not even at the rough draft stage yet!
-```
+## Welcome
 
-## Status
+Welcome to our book! This book is intended to serve as a resource for anyone looking to learn about or experience the outdoors around Knoxville, Tennessee.
 
-This book is not yet even at the rough draft stage; proceed with caution!
+Our aim in writing this is primarily to serve as an accessible guide to others looking to learn more about the outdoors around Knoxville. It is written with someone either new to Knoxville or someone who is looking to learn about the outdoors areas around Knoxville. For example, we take care to explain what we mean when we point to locations like the Cumberland Plateau (and how locations like *The Plateau* are different from the Smokies and the area in which Knoxville may be found, the Tennessee Valley.)
 
-## How to use
+It will also have elements that will be of interest to those with more knowledge about and experience exploring the outdoors around Knoxville. For example, we've included detailed trail maps for each location and we include historical and scientific information to add context to the areas we describe. 
 
-This book has a slight educational bent---perhaps a result of our backgrounds as educators. This is also because this region is so rich with historical (human and natural) chances to learn about the world. 
+To sum up the above, this is a book *primarily* but not exclusively for those looking to explore the outdoors around Knoxville, Tennessee who hope to do so with children. No experience with exploring the outdoors, in general, nor with the outdoors around Knoxville, is assumed. We focus on hiking, but mention other activities when relevant. Having established the audience, we next turn to some *other* aspects of the book.
 
-We use the following call-out for scientific tid-bits: those related to living and non-living aspects of the environment that have been studied scientifically, such as the names of plants and animals or the types of rock underfoot.
+## Prologue
 
-```{block, type='rmdscience', echo = TRUE}
-This is for science-related call-outs.
-```
+We moved to Knoxville from Michigan in 2018. When we moved, we knew about the Smokies - it's hard not to read about them when reading about Knoxville. But, the Smokies are *huge* - and while there is a lot of information about the Smokies available, it can be hard to parse. Are these recommended places also the most busy? Where are the hidden gems - the places locals go? hat's practical to make it to on a day trip from Knoxville? It's too easy to end up on a busy trail (or, much worse, stuck in traffic) in the amazing place that is the Smokies, instead of enjoying one of the most incredible outdoors areas in the world (really!). 
 
-Lastly, a big part of exploring is finding your own tips and tricks and ways to navigate particular places. We highlight some of our tips with this type of call-out.
+We didn't know about much besides the Smokies. We heard a bit about the Urban Wilderness and Ijams, both a few minutes from downtown. At the same time, there seemed to be even more to do, including in the direction away from the Smokies. What is the Obed river? And Big South Fork? 
 
-```{block, type='rmdtip', echo = TRUE}
-This is a tip.
-```
+Then, there was the pandemic. Especially with a young child in the early days of the pandemic, there were not many activities to do: even events outdoors (and, early on, even playgrounds!) were closed.
 
-Though we have more expertise in science, we call-out history-related elements of the areas in this book with the following:
+Collectively, the above reasons invited us to start to learn more about the outdoors areas around Knoxville. We started slow - a trip to the part of the Smokies closest to Knoxville, Abrams Creek; a drive out to Obed Wild & Scenic River on a whim; hearing about Seven Islands Birding State Park within 30 minutes of our house and taking a morning excursion there. The results were good. We liked the places we went.
 
-```{block, type='rmdhistory', echo = TRUE}
-This is for human history-related call-outs.
-```
+As we spent more time exploring (and the COVID-19 pandemic did not relent), we explored more, returning to the same places - Abrams Creek in the Smokies, Obed Wild & Scenic River, Seven Islands State Birding Park - and traveling to new places---places across the Smokies, places nearer to our house in the Tennessee Valley (that includes Knoxville), and places to the other side of the Smokies, on and around what we learned is termed the Cumberland Plateau. We started to make memories as a family and individually - trips around holidays and birthdays for which the weather was just right, we were happy to be together, and we started to feel like we liked this place.
 
-## Trails
+This book is the result of these experiences. It resulted from a lot of *learning about* and *experiencing* the places around Knoxville.
+
+## How to Use
+
+**First and foremost, please note that this book is a work-in-progress; it is not even at the rough draft stage yet!**
+
+The book is organized around trails. 
+
+## Trails Index
 
 The following trails are included:
 
@@ -65,7 +65,19 @@ d %>%
     knitr::kable()
 ```
 
-## Science 
+Related to trails, a big part of exploring is finding your own tips and tricks and ways to navigate particular places. We highlight some of our tips with this type of call-out.
+
+```{block, type='rmdtip', echo = TRUE}
+This is a tip.
+```
+
+## Science-Related Elements
+
+We use the following call-out for scientific tid-bits: those related to living and non-living aspects of the environment that have been studied scientifically, such as the names of plants and animals or the types of rock underfoot.
+
+```{block, type='rmdscience', echo = TRUE}
+This is for science-related call-outs.
+```
 
 The following species and topics are discussed:
 
@@ -75,7 +87,13 @@ read_csv("sci-info.csv") %>%
     knitr::kable()
 ```
 
-## History
+## History-Related Elements
+
+Though we have more expertise in science, we call-out history-related elements of the areas in this book with the following:
+
+```{block, type='rmdhistory', echo = TRUE}
+This is for human history-related call-outs.
+```
 
 The following historical topics and events are discussed:
 
@@ -85,32 +103,6 @@ read_csv("history-info.csv") %>%
     knitr::kable()
 ```
 
-## How this book was created
+## Onward!
 
-### Overview
-
-This book is initially being written in the "open"; this means that others can and have made suggestions that have improved it. Thank you to those who read and provided feedback on the book. We used the bookdown R package to render the book and GitHub pages to host the book. 
-
-Unless mentioned, we have taken all of the photos used in this book. 
-
-We have also created all of the maps used in this book using publicly-available data. We acknowledge those publicly-available sources next.
-
-### Acknowledgments
-
-Thank you to [Isabella Velásquez](https://ivelasq.rbind.io/) for creating and sharing the R code to create trail maps; this code was essential to being able to create beautiful (we think!) trail maps for this book. 
-
-Thanks to [Tyler Morgan-Wall](https://www.tylermw.com/), whose [tutorial on creating trail maps](https://www.tylermw.com/adding-open-street-map-data-to-rayshader-maps-in-r/) was also instrumental.
-
-Thank you to [Daniel Anderson](https://github.com/datalorax) for the basis for [the theme](https://github.com/datalorax/sds-r/blob/main/style.css) for this book. 
-
-Thank you to Conor Anderson [for the CSS code for the call-out boxes](https://gitlab.com/claut/man_ccia) in this text.
-
-Thank you to Samuel Weisbrod, Aaron Rosenberg, and Kevin Lane for photos included in this book.
-
-Thank you to Amanda Hendricks and Anthony Schmidt for trail and science-related suggestions.
-
-### Credits
-
-[Open Street Map](https://www.openstreetmap.org/copyright) data is used to create the trail maps. 
-
-Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.
+If you're ready to start to look at trails head straight to sections two, three, or four, about trails in the Tennessee Valley, on the Cumberland Plateau, and in and around the Smokies. If you would like a bit more background, we recommend you head first to the next section on getting started.
