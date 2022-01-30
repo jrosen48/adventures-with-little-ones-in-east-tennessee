@@ -20,10 +20,11 @@ ddd <- dd %>% janitor::clean_names()
 
 ### Basic Characteristics
 
-Location: `r dd$Location` Region: `r dd$Region` Distance: `r
-ddd$distance_shorter_option` (mi.)  Elevation (Ascend): `r
-ddd$ascend_shorter_option` (ft.)  Max. Elevation: `r
-ddd$max_elevation_shorter_option` (ft.)
+Location: `r dd$Location`  
+Region: `r dd$Region`  
+Distance: `r ddd$distance_shorter_option` (mi.)  
+Elevation (Ascend): `r ddd$ascend_shorter_option`  (ft.)  
+Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)  
 
 ## Highlights
 
