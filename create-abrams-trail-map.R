@@ -10,9 +10,10 @@ my_markers <- tribble(
     ~label, ~Y,  ~X,
     "Creek", 35.61608, -83.92791,
     "Backcountry Site #1", 35.61917, -83.92329, 
-    "Backcountry Site #17", 35.61157, -83.90491
+    "Backcountry Site #17", 35.61157, -83.90491,
+    "Campground", 35.61091, -83.93321
 )
-loop_trail <- TRUE
+loop_trail <- FALSE
 turn_around_is_end <- TRUE
 
 t <- create_and_save_trailmap(
@@ -30,7 +31,7 @@ t <- create_and_save_trailmap(
     loop_trail = loop_trail,
     turn_around_is_end = turn_around_is_end)
 
-t + geom_label(data = data.frame(x = -83.9298996151657, y = 35.6120295619088,
+t + geom_label(data = data.frame(x = -83.93869, y = 35.61289,
                                label = "Cooper Road Trail"),
              mapping = aes(x = x, y = y, label = label),
              inherit.aes = FALSE, family = "special", color = "#595959", alpha = .8, size = 2.25,
