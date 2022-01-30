@@ -11,8 +11,8 @@ d <- read_csv("trail-info.csv")
 
 dd <- d %>% filter(str_detect(`Hike Name`, "Abrams Falls"))
 
-dd %>% 
-    select(c(1, 5:8)) %>% 
+dd %>%
+    select(c(1, 5:8)) %>%
     knitr::kable()
 
 ddd <- dd %>% janitor::clean_names()
@@ -20,11 +20,10 @@ ddd <- dd %>% janitor::clean_names()
 
 ### Basic Characteristics
 
-Location: `r dd$Location`  
-Region: `r dd$Region`  
-Distance: `r ddd$distance_shorter_option` (mi.)  
-Elevation (Ascend): `r ddd$ascend_shorter_option`  (ft.)  
-Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)  
+Location: `r dd$Location` Region: `r dd$Region` Distance: `r
+ddd$distance_shorter_option` (mi.)  Elevation (Ascend): `r
+ddd$ascend_shorter_option` (ft.)  Max. Elevation: `r
+ddd$max_elevation_shorter_option` (ft.)
 
 ## Highlights
 
@@ -34,17 +33,39 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)
 
 ## Overview
 
-Abrams Creek is a great place to start if you live in or around Knoxville. Though accessible, it's also beautiful. This was the first place we traveled as a family in the Smokies. The single best thing we can say about Abrams Creek is that we always seem to have fun when we go there.
+Abrams Creek is a great place to start if you live in or around Knoxville.
+Though accessible, it's also beautiful. This was the first place we traveled as
+a family in the Smokies. The single best thing we can say about Abrams Creek is
+that we always seem to have fun when we go there.
 
-This trail is listed as a quite long---`r ddd$distance_shorter_option` miles. But, there are many ways to shorten the hike, and we often head to the Creek or Backcountry Site (listed on the map), at 1.0 and 1.3 miles from the start of the hike, respectively. Both include plenty of highlights. The full hike ends at _another_ backcountry site; it's one of the finest in the entire national park to camp overnight, and it also makes a great place to rest, snack or picnic, and hang out. 
+This trail is listed as a quite long---`r ddd$distance_shorter_option` miles.
+But, there are many ways to shorten the hike, and we often head to the Creek or
+Backcountry Site (listed on the map), at 1.0 and 1.3 miles from the start of
+the hike, respectively. Both include plenty of highlights. The full hike ends
+at _another_ backcountry site; it's one of the finest in the entire national
+park to camp overnight, and it also makes a great place to rest, snack or
+picnic, and hang out.
 
 ## Getting there
 
-The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving south from the Knoxville past the the Tyson-McGee Airport and then Maryville. Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite steep, but it is---of course---paved and is still accessible. After crossing under the Foothills Parkway, you drive down into the area outside of the Abrams Creek Trail head and Campground.
+The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving
+south from the Knoxville past the the Tyson-McGee Airport and then Maryville.
+Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee
+Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite
+steep, but it is---of course---paved and is still accessible. After crossing
+under the Foothills Parkway, you drive down into the area outside of the Abrams
+Creek Trail head and Campground.
 
-The most reliable way to find the trail head via Google Maps or other mapping tools is to search for 'Abrams Creek Campground' in Tallassee, TN. 
+The most reliable way to find the trail head via Google Maps or other mapping
+tools is to search for 'Abrams Creek Campground' in Tallassee, TN.
 
-It never seems to become crowded at Abrams Creek, but parking can be _a bit_ confusing. This is because the campground is further along the same road the trail head is on. Also, there are two areas to park for the trail head: One is near the large sign with maps of this area of the National Park, and the other is right before the gate that is closed when the campground closes (usually right around December 1; it opens for the year around April 1, though these dates change slightly from year to year). We usually park by the gate.
+It never seems to become crowded at Abrams Creek, but parking can be _a bit_
+confusing. This is because the campground is further along the same road the
+trail head is on. Also, there are two areas to park for the trail head: One is
+near the large sign with maps of this area of the National Park, and the other
+is right before the gate that is closed when the campground closes (usually
+right around December 1; it opens for the year around April 1, though these
+dates change slightly from year to year). We usually park by the gate.
 
 ```{block, type='rmdhistory', echo = TRUE}
 You might be thinking - like we did - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry who lived in and around the area as 'Old Abram'.
@@ -58,18 +79,26 @@ knitr::include_graphics(here("output", "abrams-creek-map.png"))
 
 ## Trail Description
 
-Starting from the parking area, walk along the road beside Abrams Creek. The campground is so small (and almost never full), and it is very rare that you will encounter a car on the walk along the road.
+Starting from the parking area, walk along the road beside Abrams Creek. The
+campground is so small (and almost never full), and it is very rare that you
+will encounter a car on the walk along the road.
 
 ```{r, fig.cap="The road to Abrams Creek", out.width="50%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
-The littlest adventure involves walking from the trail head to the *Campground* (see the map). This may not sound like much, but it's actually a great walk along the creek on a wide, gravel road. Moreover, the campground as the campground- like Abrams Creek - is almost never busy, and it's a great spot to rest by picnic tables and hang out around the creek. The campground is around **.40 miles** from the parking area, making a trip there and back a little less than a mile. 
+The littlest adventure involves walking from the trail head to the *Campground*
+(see the map). This may not sound like much, but it's actually a great walk
+along the creek on a wide, gravel road. Moreover, the campground as the
+campground- like Abrams Creek - is almost never busy, and it's a great spot to
+rest by picnic tables and hang out around the creek. The campground is around
+**.40 miles** from the parking area, making a trip there and back a little less
+than a mile.
 
 ```{block, type='rmdscience', echo = TRUE}
 Do you see the tall pine trees here at the campground? Many of them are **Eastern Hemlocks**, one of the tallest trees in the Eastern United States. Hemlocks can be identified by their _flat_ needles that exhibit a _flat_ arrangement on the trees' branches. They can take 250 to 300 years to reach maturity and can live for an astonishing 800 years or more. They can grow to far taller than 150 feet. The tallest Eastern Hemlock in the world is in the Smokies and [is around 170 feet tall](https://www.monumentaltrees.com/en/trees/tsugacanadensis/records/)! You can learn more about Eastern Hemlocks here: https://www.srs.fs.usda.gov/pubs/misc/ag_654/volume_1/tsuga/canadensis.htm
 
-You may notice that some of the trees have what appears to be a painted marking on their base. The National Park Service who manage the national park have undertaken an effort to treat Eastern Hemlock trees to prevent them from being infected by the *Hemlock Wooly Adelgid*, an insect that is considered to be an invasive species--and one that harms many (untreated) Hemlock trees. 
+You may notice that some of the trees have what appears to be a painted marking on their base. The National Park Service who manage the national park have undertaken an effort to treat Eastern Hemlock trees to prevent them from being infected by the *Hemlock Wooly Adelgid*, an insect that is considered to be an invasive species--and one that harms many (untreated) Hemlock trees.
 
 Fortunately, the treatment is relatively easy to administer to trees; a chemical very similar to that in anti-tick sprays for pets (like dogs) is dissolved in water, the needles and soil around the base of the trees (which is known as "duff") is lightly moved, and around a gallon or more of the solution is poured along the base. This treatment is effective at preventing the trees from being infected for five or more years. The park service has treated more than 200,000 trees in this way. Learn more about the Hemlock Wooly Adelgid and its prevention at: https://www.nps.gov/grsm/learn/nature/hemlock-woolly-adelgid.htm
 ```
@@ -78,51 +107,103 @@ Fortunately, the treatment is relatively easy to administer to trees; a chemical
 knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 ```
 
-Walking on from the campground, you will enter a densely wooded area, covered by the branches and needles of tall pine trees. Soon, you'll gently ascend an incline, but the climbing is never protracted. After climbing, you'll descend to the first crossing with Kingfisher Creek at **1.0 mile**. 
+Walking on from the campground, you will enter a densely wooded area, covered
+by the branches and needles of tall pine trees. Soon, you'll gently ascend an
+incline, but the climbing is never protracted. After climbing, you'll descend
+to the first crossing with Kingfisher Creek at **1.0 mile**.
 
 ```{r, fig.cap="Crossing Kingfisher Creek", out.width="50%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-high-water-crossing.jpeg"))
 ```
 
-This is a fun place to rest and snack. To continue on, you'll need to cross the creek; sometimes, higher water here means we stop here and turn around. At its highest, the water is about six inches deep - nothing dangerous, but it can be difficult to safely and easily walk across the rocks or branches there that ease the crossing.
+This is a fun place to rest and snack. To continue on, you'll need to cross the
+creek; sometimes, higher water here means we stop here and turn around. At its
+highest, the water is about six inches deep - nothing dangerous, but it can be
+difficult to safely and easily walk across the rocks or branches there that
+ease the crossing.
 
 ```{block, type='rmdtip', echo = TRUE}
 One way to make creek crossings easier is to grab a large stick to help you to maintain balance as you walk across rocks or logs. Trekking polls (available at outdoors stores) are also great for this purpose, but a stick will do just fine.
 ```
 
-After crossing Kingfisher Creek for the first time, another crossing (of this same creek) awaits around 100 yards further from the first crossing. This one is sometimes a little bit easier than the first crossing.
+After crossing Kingfisher Creek for the first time, another crossing (of this
+same creek) awaits around 100 yards further from the first crossing. This one
+is sometimes a little bit easier than the first crossing.
 
-The trail continues to *Backcountry Site #1* at **1.3 miles** from the trail head. The '#1' refers to this site's number among all of the backcountry sites in the park: there are around 70, total (the number changes as sites are added, removed, or moved to ensure that the areas around the sites are not impacted too negatively by their frequent use), and this one happens to be numbered as the first! This is a fairly frequently-used backcountry campsite, one used by those backpacking and camping overnight; the national park only allows camping at designated backcountry sites (such as this one) or sites at frontcountry campgrounds--like the one you passed earlier.
+The trail continues to *Backcountry Site #1* at **1.3 miles** from the trail
+head. The '#1' refers to this site's number among all of the backcountry sites
+in the park: there are around 70, total (the number changes as sites are added,
+removed, or moved to ensure that the areas around the sites are not impacted
+too negatively by their frequent use), and this one happens to be numbered as
+the first! This is a fairly frequently-used backcountry campsite, one used by
+those backpacking and camping overnight; the national park only allows camping
+at designated backcountry sites (such as this one) or sites at frontcountry
+campgrounds--like the one you passed earlier.
 
-This is another great place to stop and rest. If you so choose, you can continue from here. Note the trail sign that is immediately before the backcountry site; it marks the intersection between the *Cooper Road Trail*, which you have been on, and the *Little Bottoms Trail*, which branches from the Cooper Road Trail here. To continue further, take the Little Bottoms Trail. You'll soon cross a (small) creek and begin to climb---the steepest climb of this entire trail, and a quite steep (albeit brief) climb by any metric. At the top of the climb atop this ridge, you'll find another good spot to stop to rest at **1.5 miles**.
+This is another great place to stop and rest. If you so choose, you can
+continue from here. Note the trail sign that is immediately before the
+backcountry site; it marks the intersection between the *Cooper Road Trail*,
+which you have been on, and the *Little Bottoms Trail*, which branches from the
+Cooper Road Trail here. To continue further, take the Little Bottoms Trail.
+You'll soon cross a (small) creek and begin to climb---the steepest climb of
+this entire trail, and a quite steep (albeit brief) climb by any metric. At the
+top of the climb atop this ridge, you'll find another good spot to stop to rest
+at **1.5 miles**.
 
-Continue onward along the ridge that you just climbed, soon reaching an overlook at **1.6 miles**. 
+Continue onward along the ridge that you just climbed, soon reaching an
+overlook at **1.6 miles**.
 
 ```{r, fig.cap="A look at Abrams Creek from the overlook along Little Bottoms trail", out.width="50%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-vista.jpg"))
 ```
 
-From here, one of the most prominent peaks in this part of the Smokies---Gregory Bald---is available in the distance. Thereafter, you'll head down a fairly steep path. At **2.0 miles*, you'll return to Abrams Creek for the first time since walking alongside it along the road near the campground! This is - again - a great place to stop, rest, and relax---and to splash in Abrams Creek or the small creek (Buckshank Branch) that feeds into it.
+From here, one of the most prominent peaks in this part of the
+Smokies---Gregory Bald---is available in the distance. Thereafter, you'll head
+down a fairly steep path. At **2.0 miles*, you'll return to Abrams Creek for
+the first time since walking alongside it along the road near the campground!
+This is - again - a great place to stop, rest, and relax---and to splash in
+Abrams Creek or the small creek (Buckshank Branch) that feeds into it.
 
-From this point onward, the trail mostly follows Abrams Creek. There are some ups and downs, and the trail can be rocky, but the hiking is mostly free of the ascent and descent you just completed. Around **2.5 miles**, you'll enter an area that was once a farm.
+From this point onward, the trail mostly follows Abrams Creek. There are some
+ups and downs, and the trail can be rocky, but the hiking is mostly free of the
+ascent and descent you just completed. Around **2.5 miles**, you'll enter an
+area that was once a farm.
 
 ```{block, type='rmdhistory', echo = TRUE}
 The 'bottom land' (that was enriched by the run-off and occasional flooding of Abrams Creek) that was better for farming and that gives the Little Bottoms trail its name.
 ```
 
-Finally, at **2.9 miles**, reach _Backcountry Site #17_. As we mentioned earlier, this is a great place to rest after a strenuous hike. 
+Finally, at **2.9 miles**, reach _Backcountry Site #17_. As we mentioned
+earlier, this is a great place to rest after a strenuous hike.
 
 
 ```{r, fig.cap="Campers at Backcountry Site #17", out.width="50%", fig.align="center"}
 knitr::include_graphics(here("img", "little-bottoms.jpeg"))
 ```
 
-From here, turn-around and return to the parking at the start, hopping along creeks larger and smaller perhaps a little more quickly on the way back than on the way you headed out.
+From here, turn-around and return to the parking at the start, hopping along
+creeks larger and smaller perhaps a little more quickly on the way back than on
+the way you headed out.
 
 ### Nearby
 
-A great trip nearby Abrams Creek is _Look Rock_ and the _Look Rock Overlook_. It only adds five-ten minutes to the drive and is one of the best overlooks (one that is a little under-rated) in the national park. This is not strictly near the trail head; instead, it's nearby the drive back, involving a turn-off just as you pass under the Foothills Parkway (and Chilhowee Mountain) on the return home from Abrams Creek. Search for "Look Rock Tower" or navigate to 7210 Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.
+A great trip nearby Abrams Creek is _Look Rock_ and the _Look Rock Overlook_.
+It only adds five-ten minutes to the drive and is one of the best overlooks
+(one that is a little under-rated) in the national park. This is not strictly
+near the trail head; instead, it's nearby the drive back, involving a turn-off
+just as you pass under the Foothills Parkway (and Chilhowee Mountain) on the
+return home from Abrams Creek. Search for "Look Rock Tower" or navigate to 7210
+Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.
 
-A true adventure---one that could take all day---is to continue on the Little Bottoms Trail past Backcountry Site #17. Doing so eventually leads further (2.5 miles, one-way) to one of the most-loved waterfalls in the park, Abrams Falls. Note that the total distance of the hike from where you started (at the Abrams Creek Trail head) to this waterfall would be around 11 miles, with some notable ascents and descents along the way. See the Abrams Falls trail entry in this book for another, shorter route to the Abrams Falls waterfall, if interested.
+A true adventure---one that could take all day---is to continue on the Little
+Bottoms Trail past Backcountry Site #17. Doing so eventually leads further (2.5
+miles, one-way) to one of the most-loved waterfalls in the park, Abrams Falls.
+Note that the total distance of the hike from where you started (at the Abrams
+Creek Trail head) to this waterfall would be around 11 miles, with some notable
+ascents and descents along the way. See the Abrams Falls trail entry in this
+book for another, shorter route to the Abrams Falls waterfall, if interested.
 
-Of course, you can make a reservation to stay at either of the backcountry sites passed along this trail (Backcountry Sites #1 and #17). See the reservation system on the National Park Service's website for details; reservations must be made prior to the trip and are $4 per person. 
+Of course, you can make a reservation to stay at either of the backcountry
+sites passed along this trail (Backcountry Sites #1 and #17). See the
+reservation system on the National Park Service's website for details;
+reservations must be made prior to the trip and are $4 per person.
