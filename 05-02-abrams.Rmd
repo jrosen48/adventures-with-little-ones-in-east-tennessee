@@ -15,7 +15,7 @@ ddd <- dd %>% janitor::clean_names()
 Location: `r dd$Location`  
 Region: `r dd$Region`  
 Distance: `r ddd$distance_shorter_option` mi.  
-Elevation (Ascend): `r ddd$ascend_shorter_option` ft.  
+Ascent: `r ddd$ascend_shorter_option` ft.  
 Max. Elevation: `r ddd$max_elevation_shorter_option` ft.  
 
 ### Highlights
@@ -23,6 +23,12 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` ft.
 - Accessible, beautiful location in the national park
 - Mostly flat walking along a large water (practically a river), Abrams Creek
 - Many opportunities to splash around in Abrams Creek or smaller creeks that criss-cross the trail
+
+### Trail Map
+
+```{r, fig.cap="Abrams Creek Trail Map"}
+knitr::include_graphics(here("output", "abrams-creek-map.png"))
+```
 
 ### Ratings
 
@@ -49,6 +55,10 @@ at _another_ backcountry site; it's one of the best in the entire national
 park to camp overnight, and it also makes a great place to rest, snack or
 picnic, and hang out.
 
+```{block, type='rmdhistory', echo = TRUE}
+You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
+```
+
 ## Getting There
 
 The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving
@@ -73,15 +83,6 @@ dates change slightly from year to year)
 
 We usually park by the gate.
 
-```{block, type='rmdhistory', echo = TRUE}
-You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
-```
-
-## Trail Map
-
-```{r, fig.cap="Abrams Creek Trail Map"}
-knitr::include_graphics(here("output", "abrams-creek-map.png"))
-```
 
 ## Trail Description
 
