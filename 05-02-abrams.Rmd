@@ -17,6 +17,7 @@ dd %>%
     kable_styling()
 
 ddd <- dd %>% janitor::clean_names()
+
 ```
 
 ### Basic Characteristics
