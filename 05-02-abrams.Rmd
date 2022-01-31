@@ -44,7 +44,7 @@ This trail is listed as a quite long---`r ddd$distance_shorter_option` miles.
 But, there are many ways to shorten the hike, and we often head to the Creek or
 Backcountry Site (listed on the map), at 1.0 and 1.3 miles from the start of
 the hike, respectively. Both include plenty of highlights. The full hike ends
-at _another_ backcountry site; it's one of the finest in the entire national
+at _another_ backcountry site; it's one of the best in the entire national
 park to camp overnight, and it also makes a great place to rest, snack or
 picnic, and hang out.
 
@@ -63,17 +63,20 @@ tools is to search for 'Abrams Creek Campground' in Tallassee, TN.
 
 It never seems to become crowded at Abrams Creek, but parking can be _a bit_
 confusing. This is because the campground is further along the same road the
-trail head is on. Also, there are two areas to park for the trail head: One is
-near the large sign with maps of this area of the National Park, and the other
-is right before the gate that is closed when the campground closes (usually
+trail head is on. Also, there are two areas to park for the trail head: 
+
+- One place to park is near the large sign with maps of this area of the National Park  
+- The other is right before the gate that is closed when the campground closes (usually
 right around December 1; it opens for the year around April 1, though these
-dates change slightly from year to year). We usually park by the gate.
+dates change slightly from year to year)
+
+We usually park by the gate.
 
 ```{block, type='rmdhistory', echo = TRUE}
 You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
 ```
 
-## Map
+## Trail Map
 
 ```{r, fig.cap="Abrams Creek Trail Map"}
 knitr::include_graphics(here("output", "abrams-creek-map.png"))

@@ -176,7 +176,7 @@ basic-characteristics-15
 highlights
 overview-15
 getting-there
-map-15
+trail-map
 trail-description-15
 nearby-15
 middle-prong-trail
@@ -184,7 +184,7 @@ trail-information-16
 ratings-11
 basic-characteristics-16
 overview-16
-map-16
+map-15
 trail-description-16
 nearby-16
 big-creek
@@ -192,7 +192,7 @@ trail-information-17
 ratings-12
 basic-characteristics-17
 overview-17
-map-17
+map-16
 trail-description-17
 nearby-17
 abrams-falls
@@ -200,7 +200,7 @@ trail-information-18
 ratings-13
 basic-characteristics-18
 overview-18
-map-18
+map-17
 trail-description-18
 nearby-18
 cosby
@@ -208,7 +208,7 @@ trail-information-19
 ratings-14
 basic-characteristics-19
 overview-19
-map-19
+map-18
 trail-description-19
 nearby-19
 andrews-bald
@@ -216,7 +216,7 @@ trail-information-20
 ratings-15
 basic-characteristics-20
 overview-20
-map-20
+map-19
 trail-description-20
 nearby-20
 black-balsam
@@ -224,7 +224,7 @@ trail-information-21
 ratings-16
 basic-characteristics-21
 overview-21
-map-21
+map-20
 trail-description-21
 nearby-21
 roan-mountain
@@ -232,7 +232,7 @@ trail-information-22
 ratings-17
 basic-characteristics-22
 overview-22
-map-22
+map-21
 trail-description-22
 nearby-22
 top-lists
@@ -240,9 +240,3 @@ doing-more
 learning-more
 giving-back
 credits
-fig:unnamed-chunk-3
-fig:unnamed-chunk-4
-fig:unnamed-chunk-6
-fig:unnamed-chunk-7
-fig:unnamed-chunk-8
-fig:unnamed-chunk-10
