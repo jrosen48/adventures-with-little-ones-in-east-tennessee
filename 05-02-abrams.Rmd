@@ -62,7 +62,7 @@ You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek 
 ## Getting There
 
 The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving
-south from the Knoxville past the the Tyson-McGee Airport and then Maryville.
+south from Knoxville past the Tyson-McGee Airport and then Maryville.
 Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee
 Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite
 steep, but it is---of course---paved and is still accessible. After crossing
@@ -77,7 +77,7 @@ confusing. This is because the campground is further along the same road the
 trailhead is on. Also, there are two areas to park for the trailhead: 
 
 - One place to park is near the large sign with maps of this area of the national park  
-- The other is right by the gate to the the campground  
+- The other is right by the gate to the campground  
 
 We usually park by the gate.
 
@@ -90,7 +90,7 @@ Starting from the parking area, walk along the road beside Abrams Creek. The
 campground is so small (and almost never full), and it is very rare that you
 will encounter a car on the walk along the road.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="70%", fig.align="center"}
+```{r, fig.cap="The road to Abrams Creek", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
@@ -105,28 +105,28 @@ than a mile.
 ```{block, type='rmdscience', echo = TRUE}
 Do you see the tall pine trees here at the campground? Many of them are **Eastern Hemlocks**, one of the tallest trees in the Eastern United States. Hemlocks can be identified by their _flat_ needles that exhibit a _flat_ arrangement on the trees' branches. They can take 250 to 300 years to reach maturity and can live for an astonishing 800 years or more. They can grow to far taller than 150 feet. The tallest Eastern Hemlock in the world is in the Smokies and [is around 170 feet tall](https://www.monumentaltrees.com/en/trees/tsugacanadensis/records/)! 
 
-You may notice that some of the trees have what appears to be a painted marking on their base. The National Park Service who manage the national park have undertaken an effort to treat Eastern Hemlock trees to prevent them from being infected by the *Hemlock Wooly Adelgid*, an insect that is considered to be an invasive species--and one that harms many (untreated) Hemlock trees.
+You may notice that some of the trees have what appears to be a painted marking on their base. The National Park Service (who manage the national park) has undertaken an effort to treat Eastern Hemlock trees to prevent them from being infected by the *Hemlock Wooly Adelgid*, an insect that is considered to be an invasive species--and one that harms many (untreated) Hemlock trees.
 
-Fortunately, the treatment is relatively easy to administer to trees; a chemical very similar to that in anti-tick sprays for pets (like dogs) is dissolved in water, the needles and soil around the base of the trees (which is known as "duff") is lightly moved, and around a gallon or more of the solution is poured along the base. This treatment is effective at preventing the trees from being infected for five or more years. The park service has treated more than 200,000 trees in this way. Learn more about the Hemlock Wooly Adelgid and its prevention in @nps_hwa.
+Fortunately, the treatment is relatively easy to administer to trees; a chemical very similar to that in anti-tick sprays for pets (like dogs) is dissolved in water, the needles and soil around the base of the trees (which is known as "duff") are lightly moved, and around a gallon or more of the solution is poured along the base. This treatment is effective at preventing the trees from being infected for five or more years. The park service has treated more than 200,000 trees in this way. Learn more about the Hemlock Wooly Adelgid and its prevention in @nps_hwa.
 
 Learn more about Eastern Hemlocks in @godman2021hemlock.
 ```
 
-```{r, fig.cap="The campground at Abrams Creek", out.width="70%", fig.align="center", fig.align="center"}
+```{r, fig.cap="The campground at Abrams Creek", out.width="90%", fig.align="center", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 ```
 
-Walking on from the campground, you will enter a densely wooded area, covered
+Walking on from the campground, you will enter a densely wooded area covered
 by the branches and needles of tall pine trees. Soon, you'll gently ascend an
 incline, but the climbing is never protracted. 
 
-```{r, fig.cap="The Cane Creek Trail exiting the campground", out.width="70%", fig.align="center"}
+```{r, fig.cap="The Cane Creek Trail exiting the campground", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-hike-clear.jpeg"))
 ```
 
 After climbing, you'll descend to the first crossing with Kingfisher Creek at **1.0 mile** (labeled as "Creek" on the map).
 
-```{r, fig.cap="Crossing Kingfisher Creek", out.width="70%", fig.align="center"}
+```{r, fig.cap="Crossing Kingfisher Creek", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-high-water-crossing.jpeg"))
 ```
 
@@ -160,18 +160,18 @@ backcountry site; it marks the intersection between the *Cooper Road Trail*,
 which you have been on, and the *Little Bottoms Trail*, which branches from the
 Cooper Road Trail here. To continue further, take the Little Bottoms Trail.
 You'll soon cross a (small) creek and begin to climb---the steepest climb of
-this entire trail, and a quite steep (albeit brief) climb by any metric. At the
+this entire trail and a quite steep (albeit brief) climb by any metric. At the
 top of the climb atop this ridge, you'll find another good spot to stop to rest
 at **1.5 miles**.
 
-```{r, fig.cap="Spot to rest on top of the ridge", out.width="70%", fig.align="center"}
+```{r, fig.cap="Spot to rest on top of the ridge", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-log.jpeg"))
 ```
 
 Continue onward along the ridge that you just climbed, soon reaching an
 overlook at **1.6 miles**.
 
-```{r, fig.cap="A look at Abrams Creek from the overlook along Little Bottoms trail", out.width="70%", fig.align="center"}
+```{r, fig.cap="A look at Abrams Creek from the overlook along Little Bottoms trail", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-vista.jpg"))
 ```
 
@@ -188,18 +188,18 @@ ascent and descent you just completed. Around **2.5 miles**, you'll enter an
 area that was once a farm.
 
 ```{block, type='rmdhistory', echo = TRUE}
-The 'bottom land' (that was enriched by the run-off and occasional flooding of Abrams Creek) that was better for farming and that gives the Little Bottoms trail its name.
+The 'bottom land' that was enriched by the run-off from and occasional flooding of Abrams Creek was better for farming (and was---prior to the formation of national park---farmland). This feature gives the Little Bottoms trail its name.
 ```
 
 Finally, at **2.9 miles**, reach _Backcountry Site #17_. As we mentioned
 earlier, this is a great place to rest after a strenuous hike.
 
-```{r, fig.cap="Campers at Backcountry Site #17", out.width="70%", fig.align="center"}
+```{r, fig.cap="Backcountry Site #17", out.width="90%", fig.align="center"}
 knitr::include_graphics(here("img", "little-bottoms-site.jpeg"))
 ```
 
 From here, turn-around and return to the parking at the start, hopping along
-creeks larger and smaller perhaps a little more quickly on the way back than on
+creeks larger and smaller, perhaps a little more quickly on the way back than on
 the way you headed out.
 
 ## Nearby
@@ -213,7 +213,7 @@ return home from Abrams Creek. Search for "Look Rock Tower" or navigate to 7210
 Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.  
 
 - A true adventure---one that could take all day---is to continue on the Little
-Bottoms Trail past Backcountry Site #17. Doing so eventually leads further (2.5
+Bottoms Trail past Backcountry Site #17. Doing so leads further (2.5
 miles, one-way) to one of the most-loved waterfalls in the park, **Abrams Falls**.
 Note that the total distance of the hike from where you started (at the Abrams
 Creek Trailhead) to this waterfall would be around 11 miles, with some notable
