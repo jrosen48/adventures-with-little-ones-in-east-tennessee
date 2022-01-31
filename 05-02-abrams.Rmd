@@ -1,26 +1,16 @@
 # Abrams Creek
 
-## Trail Information
-
-### Ratings
-
 ```{r, echo = FALSE, message = FALSE}
-library(tidyverse)
-
 d <- read_csv("trail-info.csv")
 
-dd <- d %>% filter(str_detect(`Hike Name`, "Abrams Falls"))
-
-dd %>%
-    select(c(1, 5:8)) %>%
-    kbl() %>%
-    kable_styling()
+dd <- d %>% filter(str_detect(`Hike Name`, "Abrams Creek"))
 
 ddd <- dd %>% janitor::clean_names()
-
 ```
 
-### Basic Characteristics
+## Basic Information
+
+### Characteristics
 
 Location: `r dd$Location`  
 Region: `r dd$Region`  
@@ -28,13 +18,23 @@ Distance: `r ddd$distance_shorter_option` mi.
 Elevation (Ascend): `r ddd$ascend_shorter_option` ft.  
 Max. Elevation: `r ddd$max_elevation_shorter_option` ft.  
 
-## Highlights
+### Highlights
 
 - Accessible, beautiful location in the national park
 - Mostly flat walking along a large water (practically a river), Abrams Creek
 - Many opportunities to splash around in Abrams Creek or smaller creeks that criss-cross the trail
 
-## Overview
+### Ratings
+
+```{r, echo = FALSE, message = FALSE}
+dd %>%
+    select(c(1, 5:8)) %>%
+    kbl() %>%
+    kable_styling()
+
+```
+
+## Trail Overview
 
 Abrams Creek is a great place to start if you live in or around Knoxville.
 Though accessible, it's also beautiful. This was the first place we traveled as
@@ -49,7 +49,7 @@ at _another_ backcountry site; it's one of the best in the entire national
 park to camp overnight, and it also makes a great place to rest, snack or
 picnic, and hang out.
 
-## Getting there
+## Getting There
 
 The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving
 south from the Knoxville past the the Tyson-McGee Airport and then Maryville.
@@ -57,14 +57,14 @@ Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee
 Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite
 steep, but it is---of course---paved and is still accessible. After crossing
 under the Foothills Parkway, you drive down into the area outside of the Abrams
-Creek Trail head and Campground.
+Creek Trailhead and Campground.
 
-The most reliable way to find the trail head via Google Maps or other mapping
+The most reliable way to find the trailhead via Google Maps or other mapping
 tools is to search for 'Abrams Creek Campground' in Tallassee, TN.
 
 It never seems to become crowded at Abrams Creek, but parking can be _a bit_
 confusing. This is because the campground is further along the same road the
-trail head is on. Also, there are two areas to park for the trail head: 
+trailhead is on. Also, there are two areas to park for the trailhead: 
 
 - One place to park is near the large sign with maps of this area of the National Park  
 - The other is right before the gate that is closed when the campground closes (usually
@@ -85,6 +85,9 @@ knitr::include_graphics(here("output", "abrams-creek-map.png"))
 
 ## Trail Description
 
+This trail is an out-and-back, starting at the trailhead parking area and heading out as far
+along the trail as you wish---then returning back to the beginning.
+
 Starting from the parking area, walk along the road beside Abrams Creek. The
 campground is so small (and almost never full), and it is very rare that you
 will encounter a car on the walk along the road.
@@ -93,8 +96,8 @@ will encounter a car on the walk along the road.
 knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
-The littlest adventure involves walking from the trail head to the *Campground*
-(see the map). This may not sound like much, but it's actually a great walk
+The littlest adventure involves walking from the trailhead to the *Campground*
+(see the marker on the map). This may not sound like much, but it's actually a great walk
 along the creek on a wide, gravel road. Moreover, the campground as the
 campground- like Abrams Creek - is almost never busy, and it's a great spot to
 rest by picnic tables and hang out around the creek. The campground is around
@@ -123,7 +126,7 @@ incline, but the climbing is never protracted.
 knitr::include_graphics(here("img", "abrams-hike-clear.jpeg"))
 ```
 
-After climbing, you'll descend to the first crossing with Kingfisher Creek at **1.0 mile**.
+After climbing, you'll descend to the first crossing with Kingfisher Creek at **1.0 mile** (labeled as "Creek" on the map).
 
 ```{r, fig.cap="Crossing Kingfisher Creek", out.width="70%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-high-water-crossing.jpeg"))
@@ -201,12 +204,12 @@ From here, turn-around and return to the parking at the start, hopping along
 creeks larger and smaller perhaps a little more quickly on the way back than on
 the way you headed out.
 
-### Nearby
+## Nearby
 
 - A great trip nearby Abrams Creek is _Look Rock_ and the **Look Rock Overlook**.
 It only adds five-ten minutes to the drive and is one of the best overlooks
 (one that is a little under-rated) in the national park. This is not strictly
-near the trail head; instead, it's nearby the drive back, involving a turn-off
+near the trailhead; instead, it's nearby the drive back, involving a turn-off
 just as you pass under the Foothills Parkway (and Chilhowee Mountain) on the
 return home from Abrams Creek. Search for "Look Rock Tower" or navigate to 7210
 Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.  
@@ -215,7 +218,7 @@ Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.
 Bottoms Trail past Backcountry Site #17. Doing so eventually leads further (2.5
 miles, one-way) to one of the most-loved waterfalls in the park, **Abrams Falls**.
 Note that the total distance of the hike from where you started (at the Abrams
-Creek Trail head) to this waterfall would be around 11 miles, with some notable
+Creek Trailhead) to this waterfall would be around 11 miles, with some notable
 ascents and descents along the way. See the Abrams Falls trail entry in this
 book for another, shorter route to the Abrams Falls waterfall, if interested.  
 

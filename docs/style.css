@@ -397,3 +397,7 @@ tr:nth-child(even) {
 #highlights li {
   font-family: 'Nunito', sans-serif;
 }
+
+.csl-entry {
+  font-family: 'Nunito', sans-serif;
+}

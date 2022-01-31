@@ -14,7 +14,7 @@ my_markers <- tribble(
     "Campground", 35.61091, -83.93321
 )
 loop_trail <- FALSE
-turn_around_is_end <- TRUE
+turn_around_is_end <- FALSE
 
 t <- create_and_save_trailmap(
     my_name = my_name,
