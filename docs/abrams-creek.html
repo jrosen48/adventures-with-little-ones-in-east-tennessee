@@ -65,6 +65,70 @@
 </script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -338,8 +402,8 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="24.1.1" data-path="abrams-creek.html"><a href="abrams-creek.html#characteristics"><i class="fa fa-check"></i><b>24.1.1</b> Characteristics</a></li>
 <li class="chapter" data-level="24.1.2" data-path="abrams-creek.html"><a href="abrams-creek.html#highlights"><i class="fa fa-check"></i><b>24.1.2</b> Highlights</a></li>
-<li class="chapter" data-level="24.1.3" data-path="abrams-creek.html"><a href="abrams-creek.html#trail-map"><i class="fa fa-check"></i><b>24.1.3</b> Trail Map</a></li>
-<li class="chapter" data-level="24.1.4" data-path="abrams-creek.html"><a href="abrams-creek.html#ratings-10"><i class="fa fa-check"></i><b>24.1.4</b> Ratings</a></li>
+<li class="chapter" data-level="24.1.3" data-path="abrams-creek.html"><a href="abrams-creek.html#ratings-10"><i class="fa fa-check"></i><b>24.1.3</b> Ratings</a></li>
+<li class="chapter" data-level="24.1.4" data-path="abrams-creek.html"><a href="abrams-creek.html#trail-map"><i class="fa fa-check"></i><b>24.1.4</b> Trail Map</a></li>
 </ul></li>
 <li class="chapter" data-level="24.2" data-path="abrams-creek.html"><a href="abrams-creek.html#trail-overview"><i class="fa fa-check"></i><b>24.2</b> Trail Overview</a></li>
 <li class="chapter" data-level="24.3" data-path="abrams-creek.html"><a href="abrams-creek.html#getting-there"><i class="fa fa-check"></i><b>24.3</b> Getting There</a></li>
@@ -474,8 +538,8 @@ div.csl-indent {
 <p>Location: Great Smoky Mountains National Park<br />
 Region: The Smokies and Beyond<br />
 Distance: 5.78 mi.<br />
-Ascent: 991 (368) ft.<br />
-Max. Elevation: 1,425 (1,257) ft.</p>
+Ascent: 991 ft.<br />
+Max. Elevation: 1425 ft.</p>
 </div>
 <div id="highlights" class="section level3" number="24.1.2">
 <h3><span class="header-section-number">24.1.2</span> Highlights</h3>
@@ -485,17 +549,8 @@ Max. Elevation: 1,425 (1,257) ft.</p>
 <li>Many opportunities to splash around in Abrams Creek or the smaller creeks that criss-cross the trail</li>
 </ul>
 </div>
-<div id="trail-map" class="section level3" number="24.1.3">
-<h3><span class="header-section-number">24.1.3</span> Trail Map</h3>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
-<img src="output/abrams-creek-map.png" alt="Abrams Creek Trail Map" width="2854" />
-<p class="caption">
-Figure 24.1: Abrams Creek Trail Map
-</p>
-</div>
-</div>
-<div id="ratings-10" class="section level3" number="24.1.4">
-<h3><span class="header-section-number">24.1.4</span> Ratings</h3>
+<div id="ratings-10" class="section level3" number="24.1.3">
+<h3><span class="header-section-number">24.1.3</span> Ratings</h3>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -537,10 +592,20 @@ Abrams Creek
 </tbody>
 </table>
 </div>
+<div id="trail-map" class="section level3" number="24.1.4">
+<h3><span class="header-section-number">24.1.4</span> Trail Map</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="abrams-creek.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;output&quot;</span>, <span class="st">&quot;abrams-creek-map.png&quot;</span>))</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="output/abrams-creek-map.png" alt="Abrams Creek Trail Map" width="2854" />
+<p class="caption">
+Figure 24.1: Abrams Creek Trail Map
+</p>
+</div>
+</div>
 </div>
 <div id="trail-overview" class="section level2" number="24.2">
 <h2><span class="header-section-number">24.2</span> Trail Overview</h2>
-<p>Abrams Creek is a great place to start if you live in or around Knoxville.
+<p>Abrams Creek is a great place to start exploring if you live in or around Knoxville.
 Though accessible, it’s also beautiful. This was the first place we traveled as
 a family in the Smokies. The single best thing we can say about Abrams Creek is
 that we always seem to have fun when we go there.</p>
@@ -572,11 +637,9 @@ tools is to search for ‘Abrams Creek Campground’ in Tallassee, TN.</p>
 confusing. This is because the campground is further along the same road the
 trailhead is on. Also, there are two areas to park for the trailhead:</p>
 <ul>
-<li>One place to park is near the large sign with maps of this area of the National Park<br />
+<li>One place to park is near the large sign with maps of this area of the national park<br />
 </li>
-<li>The other is right before the gate that is closed when the campground closes (usually
-right around December 1; it opens for the year around April 1, though these
-dates change slightly from year to year)</li>
+<li>The other is right by the gate to the the campground</li>
 </ul>
 <p>We usually park by the gate.</p>
 </div>
@@ -587,7 +650,8 @@ along the trail as you wish—then returning back to the beginning.</p>
 <p>Starting from the parking area, walk along the road beside Abrams Creek. The
 campground is so small (and almost never full), and it is very rare that you
 will encounter a car on the walk along the road.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="abrams-creek.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-road.jpg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="img/abrams-road.jpg" alt="The road to Abrams Creek" width="70%" />
 <p class="caption">
 Figure 24.2: The road to Abrams Creek
@@ -614,7 +678,8 @@ Fortunately, the treatment is relatively easy to administer to trees; a chemical
 Learn more about Eastern Hemlocks in <span class="citation"><span class="citation"><a href="#ref-godman2021hemlock" role="doc-biblioref">Godman and Lancaster</a> (<a href="#ref-godman2021hemlock" role="doc-biblioref">n.d.</a>)</span></span>.
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-44"></span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="abrams-creek.html#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-campground-walking.jpeg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="img/abrams-campground-walking.jpeg" alt="The campground at Abrams Creek" width="70%" />
 <p class="caption">
 Figure 24.3: The campground at Abrams Creek
@@ -623,14 +688,16 @@ Figure 24.3: The campground at Abrams Creek
 <p>Walking on from the campground, you will enter a densely wooded area, covered
 by the branches and needles of tall pine trees. Soon, you’ll gently ascend an
 incline, but the climbing is never protracted.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-45"></span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="abrams-creek.html#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-hike-clear.jpeg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="img/abrams-hike-clear.jpeg" alt="The Cane Creek Trail exiting the campground" width="70%" />
 <p class="caption">
 Figure 24.4: The Cane Creek Trail exiting the campground
 </p>
 </div>
 <p>After climbing, you’ll descend to the first crossing with Kingfisher Creek at <strong>1.0 mile</strong> (labeled as “Creek” on the map).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-46"></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="abrams-creek.html#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-high-water-crossing.jpeg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
 <img src="img/abrams-high-water-crossing.jpeg" alt="Crossing Kingfisher Creek" width="70%" />
 <p class="caption">
 Figure 24.5: Crossing Kingfisher Creek
@@ -667,7 +734,8 @@ You’ll soon cross a (small) creek and begin to climb—the steepest climb of
 this entire trail, and a quite steep (albeit brief) climb by any metric. At the
 top of the climb atop this ridge, you’ll find another good spot to stop to rest
 at <strong>1.5 miles</strong>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-48"></span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="abrams-creek.html#cb6-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-log.jpeg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-11"></span>
 <img src="img/abrams-log.jpeg" alt="Spot to rest on top of the ridge" width="70%" />
 <p class="caption">
 Figure 24.6: Spot to rest on top of the ridge
@@ -675,7 +743,8 @@ Figure 24.6: Spot to rest on top of the ridge
 </div>
 <p>Continue onward along the ridge that you just climbed, soon reaching an
 overlook at <strong>1.6 miles</strong>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="abrams-creek.html#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;abrams-vista.jpg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
 <img src="img/abrams-vista.jpg" alt="A look at Abrams Creek from the overlook along Little Bottoms trail" width="70%" />
 <p class="caption">
 Figure 24.7: A look at Abrams Creek from the overlook along Little Bottoms trail
@@ -698,7 +767,8 @@ The ‘bottom land’ (that was enriched by the run-off and occasional flooding 
 </div>
 <p>Finally, at <strong>2.9 miles</strong>, reach <em>Backcountry Site #17</em>. As we mentioned
 earlier, this is a great place to rest after a strenuous hike.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="abrams-creek.html#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">&quot;img&quot;</span>, <span class="st">&quot;little-bottoms-site.jpeg&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
 <img src="img/little-bottoms-site.jpeg" alt="Campers at Backcountry Site #17" width="70%" />
 <p class="caption">
 Figure 24.8: Campers at Backcountry Site #17

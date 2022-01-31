@@ -1,7 +1,6 @@
 # Abrams Creek
 
 ```{r, echo = FALSE, message = FALSE}
-library(dplyr)
 d <- read_csv("trail-info.csv")
 
 dd <- d %>% filter(str_detect(`Hike Name`, "Abrams Creek"))
@@ -25,12 +24,6 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` ft.
 - Mostly flat walking along a large waterway (practically a river), Abrams Creek
 - Many opportunities to splash around in Abrams Creek or the smaller creeks that criss-cross the trail
 
-### Trail Map
-
-```{r, fig.cap="Abrams Creek Trail Map"}
-knitr::include_graphics(here("output", "abrams-creek-map.png"))
-```
-
 ### Ratings
 
 ```{r, echo = FALSE, message = FALSE}
@@ -41,9 +34,15 @@ dd %>%
 
 ```
 
+### Trail Map
+
+```{r, fig.cap="Abrams Creek Trail Map"}
+knitr::include_graphics(here("output", "abrams-creek-map.png"))
+```
+
 ## Trail Overview
 
-Abrams Creek is a great place to start if you live in or around Knoxville.
+Abrams Creek is a great place to start exploring if you live in or around Knoxville.
 Though accessible, it's also beautiful. This was the first place we traveled as
 a family in the Smokies. The single best thing we can say about Abrams Creek is
 that we always seem to have fun when we go there.
@@ -77,13 +76,10 @@ It never seems to become crowded at Abrams Creek, but parking can be _a bit_
 confusing. This is because the campground is further along the same road the
 trailhead is on. Also, there are two areas to park for the trailhead: 
 
-- One place to park is near the large sign with maps of this area of the National Park  
-- The other is right before the gate that is closed when the campground closes (usually
-right around December 1; it opens for the year around April 1, though these
-dates change slightly from year to year)
+- One place to park is near the large sign with maps of this area of the national park  
+- The other is right by the gate to the the campground  
 
 We usually park by the gate.
-
 
 ## Trail Description
 
