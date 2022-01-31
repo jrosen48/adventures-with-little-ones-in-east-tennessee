@@ -393,3 +393,7 @@ tr:nth-child(even) {
   top:0;
   font-size: 45px;
 }
+
+#highlights li {
+  font-family: 'Nunito', sans-serif;
+}

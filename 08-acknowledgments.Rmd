@@ -1,6 +1,6 @@
-# About the Book and Acknowledgments and Credits
+# About the Book and Acknowledgments and Credits {-}
 
-## How this book was created
+## How this book was created {-}
 
 This book is initially being written in the "open"; this means that others can and have made suggestions that have improved it. Thank you to those who read and provided feedback on the book. We used the bookdown R package to render the book and GitHub pages to host the book. 
 
@@ -8,7 +8,7 @@ Unless mentioned, we have taken all of the photos used in this book.
 
 We have also created all of the maps used in this book using publicly-available data. We acknowledge those publicly-available sources next.
 
-### Acknowledgments
+### Acknowledgments {-}
 
 Thank you to [Isabella Velásquez](https://ivelasq.rbind.io/) for creating and sharing the R code to create trail maps; this code was essential to being able to create beautiful (we think!) trail maps for this book. 
 

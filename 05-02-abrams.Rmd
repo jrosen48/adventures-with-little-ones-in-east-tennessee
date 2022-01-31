@@ -13,7 +13,8 @@ dd <- d %>% filter(str_detect(`Hike Name`, "Abrams Falls"))
 
 dd %>%
     select(c(1, 5:8)) %>%
-    knitr::kable()
+    kbl() %>%
+    kable_styling()
 
 ddd <- dd %>% janitor::clean_names()
 ```
@@ -22,9 +23,9 @@ ddd <- dd %>% janitor::clean_names()
 
 Location: `r dd$Location`  
 Region: `r dd$Region`  
-Distance: `r ddd$distance_shorter_option` (mi.)  
-Elevation (Ascend): `r ddd$ascend_shorter_option`  (ft.)  
-Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)  
+Distance: `r ddd$distance_shorter_option` mi.  
+Elevation (Ascend): `r ddd$ascend_shorter_option` ft.  
+Max. Elevation: `r ddd$max_elevation_shorter_option` ft.  
 
 ## Highlights
 
@@ -69,7 +70,7 @@ right around December 1; it opens for the year around April 1, though these
 dates change slightly from year to year). We usually park by the gate.
 
 ```{block, type='rmdhistory', echo = TRUE}
-You might be thinking - like we did - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry who lived in and around the area as 'Old Abram'.
+You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
 ```
 
 ## Map
@@ -84,7 +85,7 @@ Starting from the parking area, walk along the road beside Abrams Creek. The
 campground is so small (and almost never full), and it is very rare that you
 will encounter a car on the walk along the road.
 
-```{r, fig.cap="The road to Abrams Creek", out.width="50%", fig.align="center"}
+```{r, fig.cap="The road to Abrams Creek", out.width="70%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-road.jpg"))
 ```
 
@@ -97,23 +98,30 @@ rest by picnic tables and hang out around the creek. The campground is around
 than a mile.
 
 ```{block, type='rmdscience', echo = TRUE}
-Do you see the tall pine trees here at the campground? Many of them are **Eastern Hemlocks**, one of the tallest trees in the Eastern United States. Hemlocks can be identified by their _flat_ needles that exhibit a _flat_ arrangement on the trees' branches. They can take 250 to 300 years to reach maturity and can live for an astonishing 800 years or more. They can grow to far taller than 150 feet. The tallest Eastern Hemlock in the world is in the Smokies and [is around 170 feet tall](https://www.monumentaltrees.com/en/trees/tsugacanadensis/records/)! You can learn more about Eastern Hemlocks here: https://www.srs.fs.usda.gov/pubs/misc/ag_654/volume_1/tsuga/canadensis.htm
+Do you see the tall pine trees here at the campground? Many of them are **Eastern Hemlocks**, one of the tallest trees in the Eastern United States. Hemlocks can be identified by their _flat_ needles that exhibit a _flat_ arrangement on the trees' branches. They can take 250 to 300 years to reach maturity and can live for an astonishing 800 years or more. They can grow to far taller than 150 feet. The tallest Eastern Hemlock in the world is in the Smokies and [is around 170 feet tall](https://www.monumentaltrees.com/en/trees/tsugacanadensis/records/)! 
 
 You may notice that some of the trees have what appears to be a painted marking on their base. The National Park Service who manage the national park have undertaken an effort to treat Eastern Hemlock trees to prevent them from being infected by the *Hemlock Wooly Adelgid*, an insect that is considered to be an invasive species--and one that harms many (untreated) Hemlock trees.
 
-Fortunately, the treatment is relatively easy to administer to trees; a chemical very similar to that in anti-tick sprays for pets (like dogs) is dissolved in water, the needles and soil around the base of the trees (which is known as "duff") is lightly moved, and around a gallon or more of the solution is poured along the base. This treatment is effective at preventing the trees from being infected for five or more years. The park service has treated more than 200,000 trees in this way. Learn more about the Hemlock Wooly Adelgid and its prevention at: https://www.nps.gov/grsm/learn/nature/hemlock-woolly-adelgid.htm
+Fortunately, the treatment is relatively easy to administer to trees; a chemical very similar to that in anti-tick sprays for pets (like dogs) is dissolved in water, the needles and soil around the base of the trees (which is known as "duff") is lightly moved, and around a gallon or more of the solution is poured along the base. This treatment is effective at preventing the trees from being infected for five or more years. The park service has treated more than 200,000 trees in this way. Learn more about the Hemlock Wooly Adelgid and its prevention in @nps_hwa.
+
+Learn more about Eastern Hemlocks in @godman2021hemlock.
 ```
 
-```{r, fig.cap="The campground at Abrams Creek", out.width="50%", fig.align="center", fig.align="center"}
+```{r, fig.cap="The campground at Abrams Creek", out.width="70%", fig.align="center", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-campground-walking.jpeg"))
 ```
 
 Walking on from the campground, you will enter a densely wooded area, covered
 by the branches and needles of tall pine trees. Soon, you'll gently ascend an
-incline, but the climbing is never protracted. After climbing, you'll descend
-to the first crossing with Kingfisher Creek at **1.0 mile**.
+incline, but the climbing is never protracted. 
 
-```{r, fig.cap="Crossing Kingfisher Creek", out.width="50%", fig.align="center"}
+```{r, fig.cap="The Cane Creek Trail exiting the campground", out.width="70%", fig.align="center"}
+knitr::include_graphics(here("img", "abrams-hike-clear.jpeg"))
+```
+
+After climbing, you'll descend to the first crossing with Kingfisher Creek at **1.0 mile**.
+
+```{r, fig.cap="Crossing Kingfisher Creek", out.width="70%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-high-water-crossing.jpeg"))
 ```
 
@@ -151,10 +159,14 @@ this entire trail, and a quite steep (albeit brief) climb by any metric. At the
 top of the climb atop this ridge, you'll find another good spot to stop to rest
 at **1.5 miles**.
 
+```{r, fig.cap="Spot to rest on top of the ridge", out.width="70%", fig.align="center"}
+knitr::include_graphics(here("img", "abrams-log.jpeg"))
+```
+
 Continue onward along the ridge that you just climbed, soon reaching an
 overlook at **1.6 miles**.
 
-```{r, fig.cap="A look at Abrams Creek from the overlook along Little Bottoms trail", out.width="50%", fig.align="center"}
+```{r, fig.cap="A look at Abrams Creek from the overlook along Little Bottoms trail", out.width="70%", fig.align="center"}
 knitr::include_graphics(here("img", "abrams-vista.jpg"))
 ```
 
@@ -177,9 +189,8 @@ The 'bottom land' (that was enriched by the run-off and occasional flooding of A
 Finally, at **2.9 miles**, reach _Backcountry Site #17_. As we mentioned
 earlier, this is a great place to rest after a strenuous hike.
 
-
-```{r, fig.cap="Campers at Backcountry Site #17", out.width="50%", fig.align="center"}
-knitr::include_graphics(here("img", "little-bottoms.jpeg"))
+```{r, fig.cap="Campers at Backcountry Site #17", out.width="70%", fig.align="center"}
+knitr::include_graphics(here("img", "little-bottoms-site.jpeg"))
 ```
 
 From here, turn-around and return to the parking at the start, hopping along
@@ -188,23 +199,23 @@ the way you headed out.
 
 ### Nearby
 
-A great trip nearby Abrams Creek is _Look Rock_ and the _Look Rock Overlook_.
+- A great trip nearby Abrams Creek is _Look Rock_ and the **Look Rock Overlook**.
 It only adds five-ten minutes to the drive and is one of the best overlooks
 (one that is a little under-rated) in the national park. This is not strictly
 near the trail head; instead, it's nearby the drive back, involving a turn-off
 just as you pass under the Foothills Parkway (and Chilhowee Mountain) on the
 return home from Abrams Creek. Search for "Look Rock Tower" or navigate to 7210
-Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.
+Flats Rd., Tallassee, TN 37878 to find the parking for the overlook.  
 
-A true adventure---one that could take all day---is to continue on the Little
+- A true adventure---one that could take all day---is to continue on the Little
 Bottoms Trail past Backcountry Site #17. Doing so eventually leads further (2.5
-miles, one-way) to one of the most-loved waterfalls in the park, Abrams Falls.
+miles, one-way) to one of the most-loved waterfalls in the park, **Abrams Falls**.
 Note that the total distance of the hike from where you started (at the Abrams
 Creek Trail head) to this waterfall would be around 11 miles, with some notable
 ascents and descents along the way. See the Abrams Falls trail entry in this
-book for another, shorter route to the Abrams Falls waterfall, if interested.
+book for another, shorter route to the Abrams Falls waterfall, if interested.  
 
-Of course, you can make a reservation to stay at either of the backcountry
-sites passed along this trail (Backcountry Sites #1 and #17). See the
+- Of course, you can make a reservation to stay at either of the **backcountry
+sites** passed along this trail (Backcountry Sites #1 and #17). See the
 reservation system on the National Park Service's website for details;
-reservations must be made prior to the trip and are $4 per person.
+reservations must be made prior to the trip and are $4 per person.  

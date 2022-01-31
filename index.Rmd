@@ -5,7 +5,7 @@ author: "Katie Rosenberg and Joshua Rosenberg"
 date: "Last updated: `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
+bibliography: [references.bib]
 biblio-style: "apalike"
 link-citations: yes
 github-repo: "jrosen48/little-kids-big-adventures"
@@ -19,11 +19,12 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE)
 ```{r, message=FALSE}
 library(here)
 library(tidyverse)
+library(kableExtra)
 ```
 
-# Preamble
+# Preamble {-}
 
-## Welcome
+## Welcome {-}
 
 Welcome to our book! This book is intended to serve as a resource for anyone looking to learn about or experience the outdoors around Knoxville, Tennessee.
 
@@ -33,7 +34,7 @@ It will also have elements that will be of interest to those with more knowledge
 
 To sum up the above, this is a book *primarily* but not exclusively for those looking to explore the outdoors around Knoxville, Tennessee who hope to do so with children. No experience with exploring the outdoors, in general, nor with the outdoors around Knoxville, is assumed. We focus on hiking, but mention other activities when relevant. Having established the audience, we next turn to some *other* aspects of the book.
 
-## Prologue
+## Prologue {-}
 
 We moved to Knoxville from Michigan in 2018. When we moved, we knew about the Smokies - it's hard not to read about them when reading about Knoxville. But, the Smokies are *huge* - and while there is a lot of information about the Smokies available, it can be hard to parse. Are these recommended places also the most busy? Where are the hidden gems - the places locals go? hat's practical to make it to on a day trip from Knoxville? It's too easy to end up on a busy trail (or, much worse, stuck in traffic) in the amazing place that is the Smokies, instead of enjoying one of the most incredible outdoors areas in the world (really!). 
 
@@ -47,11 +48,11 @@ As we spent more time exploring (and the COVID-19 pandemic did not relent), we e
 
 This book is the result of these experiences. It resulted from a lot of *learning about* and *experiencing* the places around Knoxville.
 
-## How to Use
+## How to Use {-}
 
 **First and foremost, please note that this book is a work-in-progress; it is not even at the rough draft stage yet!**
 
-## Trails Index
+## Trails Index {-}
 
 The book is organized around trails in three regions: the Tennessee Valley, Cumberland Plateau, and Smokies. An overview of all of the trails included in the book are below.
 
@@ -66,10 +67,11 @@ d <- read_csv("trail-info.csv")
 
 d %>% 
     select(1:3, `Distance (Shorter Option)`, `Ascend (Shorter Option)`, `Max. Elevation (Shorter Option)`) %>% 
-    knitr::kable()
+    kbl() %>%
+    kable_styling()
 ```
 
-## Science-Related Elements
+## Science-Related Elements {-}
 
 We use the following call-out for scientific tid-bits: those related to living and non-living aspects of the environment that have been studied scientifically, such as the names of plants and animals or the types of rock underfoot.
 
@@ -82,10 +84,11 @@ The following species and topics are discussed:
 ```{r}
 read_csv("sci-info.csv") %>% 
     select(1:2) %>% 
-    knitr::kable()
+    kbl() %>%
+    kable_styling()
 ```
 
-## History-Related Elements
+## History-Related Elements {-}
 
 Though we have more expertise in science, we call-out history-related elements of the areas in this book with the following:
 
@@ -98,9 +101,10 @@ The following historical topics and events are discussed:
 ```{r}
 read_csv("history-info.csv") %>% 
     select(1:2) %>% 
-    knitr::kable()
+    kbl() %>%
+    kable_styling()
 ```
 
-## Onward!
+## Onward! {-}
 
 If you're ready to start to look at trails head straight to sections two, three, or four, about trails in the Tennessee Valley, on the Cumberland Plateau, and in and around the Smokies. If you would like a bit more background, we recommend you head first to the next section on getting started.

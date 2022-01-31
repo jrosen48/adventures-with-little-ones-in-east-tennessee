@@ -10,11 +10,14 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Little Kids, Big Adventures</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li>Katie Rosenberg</li>
+        <li><a href="https://www.joshuamrosenberg.com/">Joshua Rosenberg</a></li>
     download: ["pdf", "epub"]
     fig_height: 5.3
     fig_width: 8.5
-  number_sections: false
+    edit:
+      link: https://github.com/jmrosen48/little-kids-big-adventures/edit/master/%s
+  number_sections: true
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
