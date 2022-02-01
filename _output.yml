@@ -25,3 +25,8 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
+bookdown::word_document2:
+  toc: yes
+  fontfamily: serif
+  fig_height: 5.3
+  fig_width: 8.5

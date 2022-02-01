@@ -23,6 +23,9 @@ Max. Elevation: `r ddd$max_elevation_shorter_option` ft.
 - Accessible, beautiful location in the national park
 - Mostly flat walking along a large waterway (practically a river), Abrams Creek
 - Many opportunities to splash around in Abrams Creek or the smaller creeks that criss-cross the trail
+- A turn-around at one of the best backcountry sites in the entire national
+park to camp overnight; it is also a great place to rest, snack or
+picnic, and just hang out before returning to the start.
 
 ### Ratings
 
@@ -43,43 +46,30 @@ knitr::include_graphics(here("output", "abrams-creek-map.png"))
 ## Trail Overview
 
 Abrams Creek is a great place to start exploring if you live in or around Knoxville.
-Though accessible, it's also beautiful. This was the first place we traveled as
-a family in the Smokies. The single best thing we can say about Abrams Creek is
+Though accessible, it's also beautiful.The single best thing we can say about Abrams Creek is
 that we always seem to have fun when we go there.
 
 This trail is listed as a quite long---`r ddd$distance_shorter_option` miles.
 But, there are many ways to shorten the hike, and we often head to the Creek or
-Backcountry Site (listed on the map), at 1.0 and 1.3 miles from the start of
-the hike, respectively. Both include plenty of highlights. The full hike ends
-at _another_ backcountry site; it's one of the best in the entire national
-park to camp overnight, and it also makes a great place to rest, snack or
-picnic, and hang out.
+Backcountry Site (listed on the map), at 1.0 and 1.3 miles from the start, respectively.
 
 ```{block, type='rmdhistory', echo = TRUE}
-You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
+You might be thinking - as we were - that the 'Abrams' in the name Abrams Creek was a reference to Abraham (of the Old Testament). But that's not the case---at least not directly. Many sources note that Abrams Creek is named for a Cherokee Chief who was colloquially known by the individuals of European ancestry as 'Old Abram'. He was a chief for an area around Chilhowee, an important Cherokee village, around the end of the 18th century. See @fink1934smoky (cited in @dunn1976cades) for more information.
 ```
 
 ## Getting There
 
-The drive there is also _mostly_ easy. Getting to Abrams Creek involves driving
-south from Knoxville past the Tyson-McGee Airport and then Maryville.
-Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee
-Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite
-steep, but it is---of course---paved and is still accessible. After crossing
-under the Foothills Parkway, you drive down into the area outside of the Abrams
-Creek Trailhead and Campground.
+The drive to Abrams Creek is _mostly_ easy. Getting to Abrams Creek involves driving
+south from Knoxville past the Tyson-McGee Airport and then Maryville, the largest city immediately to the south of Knoxville. Soon after leaving the outskirts of Maryville, the road climbs up Chilhowee Mountain, atop which is the beautiful Foothills Parkway; the road becomes quite steep, but it is---of course---paved and is still accessible. 
+
+After crossing under the Foothills Parkway (an incredible road for a scenic drive!), you drive down into the area outside of the Abrams Creek Trailhead and Campground.
 
 The most reliable way to find the trailhead via Google Maps or other mapping
 tools is to search for 'Abrams Creek Campground' in Tallassee, TN.
 
 It never seems to become crowded at Abrams Creek, but parking can be _a bit_
 confusing. This is because the campground is further along the same road the
-trailhead is on. Also, there are two areas to park for the trailhead: 
-
-- One place to park is near the large sign with maps of this area of the national park  
-- The other is right by the gate to the campground  
-
-We usually park by the gate.
+trailhead is on. Also, there are two areas to park for the trailhead. We usually park by the gate to the campground, but you can also park near the large sign with maps of this area of the national park.
 
 ## Trail Description
 
@@ -145,14 +135,13 @@ same creek) awaits around 100 yards further from the first crossing. This one
 is sometimes a little bit easier than the first crossing.
 
 The trail continues to *Backcountry Site #1* at **1.3 miles** from the trail
-head. The '#1' refers to this site's number among all of the backcountry sites
-in the park: there are around 70, total (the number changes as sites are added,
-removed, or moved to ensure that the areas around the sites are not impacted
-too negatively by their frequent use), and this one happens to be numbered as
-the first! This is a fairly frequently-used backcountry campsite, one used by
+head. This is a fairly frequently-used backcountry campsite, one used by
 those backpacking and camping overnight; the national park only allows camping
 at designated backcountry sites (such as this one) or sites at frontcountry
-campgrounds--like the one you passed earlier.
+campgrounds--like the one you passed earlier. 
+
+The '#1' refers to this site's number among all of the backcountry sites
+in the park: there are around 70, total and this one happens to be numbered as the first! The number changes as sites are added, removed, or moved to ensure that the areas around the sites are not impacted too negatively by their frequent use
 
 This is another great place to stop and rest. If you so choose, you can
 continue from here. Note the trail sign that is immediately before the
@@ -177,14 +166,20 @@ knitr::include_graphics(here("img", "abrams-vista.jpg"))
 
 From here, one of the most prominent peaks in this part of the
 Smokies---Gregory Bald---is available in the distance. Thereafter, you'll head
-down a fairly steep path. At **2.0 miles*, you'll return to Abrams Creek for
+down a fairly steep path. 
+
+At **2.0 miles**, you'll return to Abrams Creek for
 the first time since walking alongside it along the road near the campground!
 This is - again - a great place to stop, rest, and relax---and to splash in
 Abrams Creek or the small creek (Buckshank Branch) that feeds into it.
 
+```{r, fig.cap="Meeting Abrams Creek at its intersection with Buckshank Branch", out.width="90%", fig.align="center"}
+knitr::include_graphics(here("img", "abrams-high.jpeg"))
+```
+
 From this point onward, the trail mostly follows Abrams Creek. There are some
 ups and downs, and the trail can be rocky, but the hiking is mostly free of the
-ascent and descent you just completed. Around **2.5 miles**, you'll enter an
+ascending and descending you just completed. Around **2.5 miles**, you'll enter an
 area that was once a farm.
 
 ```{block, type='rmdhistory', echo = TRUE}
