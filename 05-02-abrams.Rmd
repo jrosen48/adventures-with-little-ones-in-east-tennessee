@@ -166,7 +166,7 @@ knitr::include_graphics(here("img", "abrams-vista.jpg"))
 
 From here, one of the most prominent peaks in this part of the
 Smokies---Gregory Bald---is available in the distance. Thereafter, you'll head
-down a fairly steep path. 
+down a fairly steep path. Addition
 
 At **2.0 miles**, you'll return to Abrams Creek for
 the first time since walking alongside it along the road near the campground!
