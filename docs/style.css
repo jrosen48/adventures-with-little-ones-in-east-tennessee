@@ -394,6 +394,23 @@ tr:nth-child(even) {
   font-size: 45px;
 }
 
+.rmdcaution {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+  background: #a64452 ;
+  position:relative;
+}
+
+.rmdcaution:before {
+  content: "\f06a";
+  font-family: FontAwesome;
+  left:10px;
+  position:absolute;
+  top:0;
+  font-size: 45px;
+}
+
 #highlights li {
   font-family: 'Nunito', sans-serif;
 }

@@ -25,6 +25,10 @@ library(kableExtra)
 
 # Preamble {-}
 
+```{block, type='rmdcaution', echo = TRUE}
+This book is in rough draft form; at present, only the chapter for Abrams Creek is drafted!
+```
+
 ## Welcome {-}
 
 Welcome to our book! This book is intended to serve as a resource for anyone looking to learn about or experience the outdoors around Knoxville, Tennessee.

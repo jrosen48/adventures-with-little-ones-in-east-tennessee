@@ -1,5 +1,7 @@
 # Climate and Weather
 
+
+
 ## Weather
 
 Many guides describe the Tennessee weather in a way like the following:
