@@ -42,7 +42,7 @@ winter-1
 safety
 where-to-begin
 gear-1
-planning
+planning-your-first-hike
 science-primer
 history-primer
 introduction-to-the-three-regions

@@ -404,6 +404,7 @@ tr:nth-child(even) {
 
 .rmdcaution:before {
   content: "\f06a";
+  color: #FFFFFF;
   font-family: FontAwesome;
   left:10px;
   position:absolute;
