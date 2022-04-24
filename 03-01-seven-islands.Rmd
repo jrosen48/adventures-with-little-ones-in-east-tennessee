@@ -8,7 +8,7 @@ dd <- d %>% filter(str_detect(`Hike Name`, "Seven"))
 ddd <- dd %>% janitor::clean_names()
 ```
 
-```{r, fig.cap="Meadow and Former Farm Pasture at Seven Islands"}
+```{r, fig.cap="Meadowland at Seven Islands State Birding Park"}
 knitr::include_graphics(here("img", "seven-islands-meadow.jpg"))
 ```
 
@@ -47,10 +47,10 @@ knitr::include_graphics(here("output", "seven-islands-loop-map.png"))
 
 By the time we had lived in Knoxville for several months, we had taken a trip to the Abrams Creek area of the Smokies and, closer to home, to Ijams (see the chapters on Abrams Creek and the Ijams Quarry and Ijams Loop trails). One of us (Katie) had heard about Seven Islands---a state park close in Knox County. We learned a bit about it online but still had questions. For example, what is a *birding* park? Is it just some farmland with a couple birds? And should we not instead take a trip back to the *Smokies*?
 
-Upon our first visit, we fell for *Seven Islands State Birding Park*, also known as Seven Islands. If we had to pick one trail to recommend to friends around Knoxville who are new to hiking, it would be this one at this location. More wild locations, more expansive vistas, and locales with more amenities are accessible from Knoxville. However, few have so many positive features in one place: a beautiful location on the *French Broad River*, views of *Mt. LeConte* in the Smokies, and several ways to extend the hike. Furthermore, the trail is a 30-minute drive from downtown Knoxville. 
+Upon our first visit, we fell for *Seven Islands State Birding Park*, also known as Seven Islands. If we had to pick one trail to recommend to friends around Knoxville who are new to hiking, it would be this one at this location. More wild locations, more expansive vistas, and locales with more amenities are accessible from Knoxville. However, few have so many positive features in one place: a beautiful location on the *French Broad River*, views of *Mt. LeConte* in the Smokies, and several ways to extend the hike. Furthermore, the trail is just a 30-minute drive from downtown Knoxville. 
 
 ```{block, type='rmdscience', echo = TRUE}
-The French Broad River starts to the east and south of Seven Islands, just south of Asheville, NC. It passes through Asheville, NC, collecting streams and creeks that flow from the Pisgah National Forest that surrounds that city. Finally, it enters Tennessee and collects rivers and streams that flow from the Smokies, including the Pigeon River that accompanies I-40 on its route between Asheville and Knoxville, and the West Prong of the Little Pigeon River that passes through Pigeon Forge and Sevierville. When the water is especially clear in the French Broad River, it is easy to envision its sources in the mountains that can be seen not far away on the horizon.
+The French Broad River starts far away to the east and south of Seven Islands, just south of Asheville, NC. It passes through Asheville, collecting streams and creeks that flow from the Pisgah National Forest that surrounds that city. Finally, it enters Tennessee and collects rivers and streams that flow from the Smokies, including the Pigeon River that accompanies I-40 on its route between Asheville and Knoxville, and the West Prong of the Little Pigeon River that passes through Pigeon Forge and Sevierville. When the water is especially clear in the French Broad River, it is easy to envision its sources in the mountains that can be seen not far away on the horizon.
 ```
 
 The trail we highlight is a particularly accessible yet also highlight-rich one. There are two primary trailheads at the state park, one near an open barn at the start of a long, paved path; the other is on the French Broad River and is the place to start paddling on the river. We start at the trailhead near the open barn---not the one near the river. 
@@ -61,7 +61,7 @@ This trail is excellent for families with young children or for taking older fam
 
 ## Getting There and Parking
 
-The drive from Knoxville is easy. Follow I-40 east, until one leaves the interstate at exit 402 and drives around two miles Midway Road. Here, though brief, the drive can become a bit confusing. Turn left onto Maple Road, staying on this road for just under one mile. Then, turn right onto Kodak Road, turning left onto Kelly Road to arrive at the parking lot. Park in the large lot. We have never had trouble finding a spot even on the busiest of days.  
+The drive from Knoxville is easy. Follow I-40 east, until one leaves the interstate at exit 402 and drives around two miles Midway Road. Here, though brief, the drive can become a bit confusing. Turn left onto Maple Road, staying on this road for just under one mile. Then, turn right onto Kodak Road, turning left onto Kelly Road to arrive at the parking lot. Park in the large lot. We have never had trouble finding a spot even on the busiest of days. The address of the parking lot at Seven Islands is: 
 
 ## Trail Description
 
@@ -75,12 +75,12 @@ Note that there are bathrooms on the left just past the barn. They are usually c
 
 Walking past the two side trails we mentioned and the bathrooms, continue along the paved path, noticing that the grad of the path starts to decline slightly. You will have walked a total of **.40** miles when the trail begins to flatten---and turn to the right. Note the bench to catch a quick rest at this bend in the path. This is a great spot right at the forest's edge to view birds. From spring through last summer, much of the time, see wildflowers in or at the edge of the meadows.
 
-```{r, fig.cap="The Trail Toward Hickory Ridge"}
+```{r, fig.cap="Wildflowers in Bloom in Late Summer at Seven Islands"}
 knitr::include_graphics(here("img", "seven-islands-flowers.jpeg"))
 ```
 
 ```{block, type='rmdscience', echo = TRUE}
-According to the naturalists at the state park, over 190 unique species of birds have been identified at Seven Islands State Park [@sevenislandsbirds].
+According to naturalists at Seven Islands, over 190 unique species of birds have been identified at the park [@sevenislandsbirds].
 
 There is a great supporters group, https://friendsofsevenislands.com. They have a bird of the year. For 2022, that is the *Eastern Bluebird*. Eastern Bluebirds are commonly found along pastures and open fields, like the one you just walked along. While many birds stop over at Seven Islands and areas like that on their migratory routes south (in the fall) and north (in the spring), the Eastern Bluebird is a year-round resident. Smaller than another year-round resident---the *Blue Jay*---and with a much smaller beak. The Eastern Bluebird also has a rounded head, whereas the Blue Jay has a *crest*, a pointy tuft of feathers on top of its head.
 
@@ -105,27 +105,27 @@ The path curves off the bridge and reaches a sign that signifies that here, at l
 
 There is a special spot soon after you turn right: a paw paw grove! Paw paws are a native fruit related to bananas. When resting by the river, we once saw a family reach up to graba and then enjoy several paw paws. If you are interested in learning more about Paw Paws, check out an excellent podcast about this (now) uncommon but native fruit by @pawpawpod.
 
-```{r, fig.cap="Paw Paws growing on the island"}
+```{r, fig.cap="Paw Paws growing on Newman's Island"}
 knitr::include_graphics(here("img", "seven-islands-paw-paw.jpeg"))
 ```
 
 The path here is near the water, and this area and the river beside it are nearly always tranquil.
 
-```{r, fig.cap="On the Island"}
+```{r, fig.cap="The Trail on Newman's Island"}
 knitr::include_graphics(here("img", "seven-islands-on-the-loop.jpg"))
 ```
 
 Note that there are several benches and many short, unofficial (sometimes called "social") paths leading to the river. 
 
-Continue to a spot that can be fun with younger children---a stick house at **1.0** miles that has stood the test of time, at least for several years. 
+Continue to a spot that can be fun with younger children---a stick house at **1.0** miles that has stood the test of time (at least since we started visiting Seven Islands around three years ago through the time of writing). If it's not there when you visit, consider constructing a new one!
 
-```{r, fig.cap="Balance Log"}
+```{r, fig.cap="Playing in a Stick House"}
 knitr::include_graphics(here("img", "seven-islands-walk-on-balance-log.jpg"))
 ```
 
 At **1.20** miles, arrive at the island's tip, where the two channels of the river made by the island meet again. The channel on the side along which you have been walking was larger than the channel on the other side; here, the river almost appears to be a small stream, not the large French Broad River that drains much of the creeks and streams that flow out from the Smokies and the mountains around Asheville, NC. 
 
-```{r, fig.cap="A Channel of the French Broad River"}
+```{r, fig.cap="One Channel of the French Broad River"}
 knitr::include_graphics(here("img", "seven-islands-river.jpeg"))
 ```
 
@@ -141,18 +141,14 @@ While close to Knoxville, not many other destinations or activities are nearby, 
 
 - Near where you started for this hike, just past the bathrooms, a signpost points to the *Hickory Ridge* trail. This densely wooded, steep, relatively short (0.8 miles) loop trail climbs up and then back down the ridge, returning you at its terminus to where the trail started. We think we have never been on this trail and *not* seen deer! It also offers a nice view of the river.
 
-```{r, fig.cap="The Hickory Ridge trail"}
+```{r, fig.cap="The Start of the Hickory Ridge Trail"}
 knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
 ```
 
 - There are several great hikes in addition to this hike and those accessible near its start near the barn; namely, hikes down the *Kelly Lane Greenway* (the *other*, wider, paved path near the barn that is gated to prevent cars from driving on it) to two restored farm buildings that are open to the visitors to the state park: Green House, the home for a family that farmed on this land before its conservation, and Maple Leaf Barn. Finally, pass the Kelly family home and barn, still occupied by the family that sold much but not all of their land that makes up Seven Islands.
 
-```{r, fig.cap="Kelly Barn"}
+```{r, fig.cap="Kelly Barn at Seven Islands State Birding Park"}
 knitr::include_graphics(here("img", "seven-islands-barn.jpeg"))
 ```
 
-- Consider kayaking, canoeing, or paddleboarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville---River Sports Outfitters---rents kayaks and canoes here during the summer. Check their website for details and to make reservations.
-
-```{r, fig.cap="Kelly Barn"}
-knitr::include_graphics(here("img", "seven-islands-kayak.jpg"))
-```
+- Last, consider kayaking, canoeing, or paddleboarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville---River Sports Outfitters---rents kayaks and canoes here during the summer; there is an approximately five-mile trip from the trailhead by the river to a spot downstream. Check their website for details and to make reservations. With much older children, consider paddling further still, even all the way to Knoxville. There is a French Broad River Blueway---like the more familiar greenways, but for rivers---which facilitates access to put-in and take-out spots all along the river, from the Cherokee Dam to Knoxville, where the French Broad and Holston rivers meet, forming the familiar Tennessee River.
