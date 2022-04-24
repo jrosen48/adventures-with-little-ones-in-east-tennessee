@@ -8,7 +8,7 @@ dd <- d %>% filter(str_detect(`Hike Name`, "Seven"))
 ddd <- dd %>% janitor::clean_names()
 ```
 
-```{r, fig.cap="Seven Islands Meadow"}
+```{r, fig.cap="Meadow and Former Farm Pasture at Seven Islands State Birding Park"}
 knitr::include_graphics(here("img", "seven-islands-meadow.jpg"))
 ```
 
@@ -103,7 +103,13 @@ The bridge is not only accessible, but it is also pretty to look at---and, it is
 knitr::include_graphics(here("img", "seven-islands-bridge.jpeg"))
 ```
 
-At **.80** miles, arrive on the island---still on a paved path. The path curves off the bridge and reaches a sign that signifies that here, at last, the paved portion of this trail ends, and the portion of the hike that is on a relatively smooth, flat, but dirt surface begins. We usually turn right at the sign, though you can walk in either direction; our description of the trail proceeds this way.
+At **.80** miles, arrive on the island---named Newman's Island---still on a paved path. 
+
+```{block, type='rmdhistory', echo = TRUE}
+You may be expecting to see, well, seven islands at Seven Islands State Birding Park. But, there are now fewer than that---three or four, depending on who is counting (and how high the water is). This is because in the 1930s, the Tennesee Valley Authority (or, the *TVA*) began to construct dams along the Tennessee River, not far upstream from where you are now standing. That dam is called Cherokee Dam and is around 200 feet high, and more than one mile wide. The construction of the dams caused the water levels to rise, flooding some of what were previously islands.
+```
+
+The path curves off the bridge and reaches a sign that signifies that here, at last, the paved portion of this trail ends, and the portion of the hike that is on a relatively smooth, flat, but dirt surface begins. We usually turn right at the sign, though you can walk in either direction; our description of the trail proceeds this way.
 
 There is a special spot soon after you turn right. It is a Paw Paw grove! Paw paws are a native fruit that is related to bananas. If you are interested in learning more about Paw Paws, check out an excellent podcast on this now uncommon but native fruit by @pawpawpod. 
 
@@ -127,7 +133,7 @@ knitr::include_graphics(here("img", "seven-islands-walk-on-balance-log.jpg"))
 
 At **1.20** miles, arrive at the tip of the island, where the two channels of the river made by the island meet again. The channel on the side along which you have been walking was larger than the channel on the other side; here, the river almost appears to be a small stream, not the large French Broad River that drains much of the creeks and streams that flow out from the Smokies and the mountains around Asheville, NC. 
 
-```{r, fig.cap="The French Broad River"}
+```{r, fig.cap="A Channel of the French Broad River"}
 knitr::include_graphics(here("img", "seven-islands-river.jpeg"))
 ```
 
@@ -141,13 +147,13 @@ While close to Knoxville, not many other destinations or activities are nearby, 
 
 - Near where you started for this hike, just past the bathrooms, there is a signpost pointing to the *Hickory Ridge* trail. This is a densely wooded, steep, relatively short (0.8 miles) loop trail that takes you back to the trailhead. We think we have never been on this trail and *not* seen deer! It also offers a nice view of the river.
 
-```{r, fig.cap="The Trail Toward Hickory Ridge"}
+```{r, fig.cap="The Hickory Ridge trail"}
 knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
 ```
 
 - There are several great hikes in addition to this hike and those accessible near its start near the barn; namely, hikes down the *Kelly Lane Greenway* (the *other*, wider, paved path near the barn that is gated to prevent cars from driving on it) to two restored farm building that are open to the visitors to the state park: Green House, the home for a family that farmed on this land prior to its conservation, and Maple Leaf Barn. Pass the Kelly family home and barn, still occupied by the family that sold much but not all of their land that makes up Seven Islands State Birding Park.
 
-```{r, fig.cap="Seven Islands Meadow"}
+```{r, fig.cap="Kelly Barn"}
 knitr::include_graphics(here("img", "seven-islands-barn.jpeg"))
 ```
 
