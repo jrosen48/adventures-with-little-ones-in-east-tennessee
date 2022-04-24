@@ -49,7 +49,7 @@ knitr::include_graphics(here("output", "seven-islands-loop-map.png"))
 
 If we had to pick one trail to recommend to friends around Knoxville who are new to hiking, it would be this trail. There are more wild locations, more expansive vistas, and locales with more amenities, but few have so many positive attributes in one place: a beautiful location on the French Broad River, views of Mt. LeConte in the Smokies, and several ways to extend the hike. Furthermore, the trail is a 30-minute drive from downtown Knoxville. 
 
-```{block, type='histbox', echo = TRUE}
+```{block, type='rmdhistory', echo = TRUE}
 As of the time of writing, Seven Islands State Birding Park is the second newest state park in Tennessee's state park system. It has a lot of history behind it, much described in an article in the magazine of Tennesee State Parks [@historysevenislands].
 
 In short, what is now the state park was farmland since at least the late 1800s [@kellyhistorical]. A family with the last name of Kelly owned the largest farm---and the part of Seven Islands State Park that is known as Kelly Bend. 
@@ -91,7 +91,7 @@ knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
 
 Walking past the two side trails we mentioned and the bathrooms, continue along the paved path, noticing that the grad of the path starts to decline slightly. You will have walked a total of **.40** miles when the trail begins to flatten---and turn to the right. At this bend in the path, note the bench to catch a quick rest. This is a great spot right at the edge of the forest to view birds. 
 
-```{block, type='scibox', echo = TRUE}
+```{block, type='rmdscience', echo = TRUE}
 According to the naturalists at the state park, over 190 unique species of birds have been identified at Seven Islands State Park [@sevenislandsbirds].
 
 There is a great supporters group, https://friendsofsevenislands.com. They have a bird of the year. For 2022, that is the *Eastern Bluebird*. Eastern Bluebirds are commonly found along pastures and open fields, like the one you just walked along. While many birds stop over at Seven Islands State Birding Park and areas like that on their migratory routes south (in the fall) and north (in the spring), the Eastern Bluebird is a year-round resident. Smaller than another year-round resident---the *Blue Jay*---and with a much smaller beak. The Eastern Bluebird also has a rounded head, whereas the Blue Jay has a *crest*, a pointy tuft of feathers on top of its head.
