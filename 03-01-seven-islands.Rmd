@@ -61,7 +61,7 @@ This trail is excellent for families with young children or for taking older fam
 
 ## Getting There and Parking
 
-The drive from Knoxville is easy. Follow I-40 east, until one leaves the interstate at exit 402 and drives around two miles Midway Road. Here, though brief, the drive can become a bit confusing. Turn left onto Maple Road, staying on this road for just under one mile. Then, turn right onto Kodak Road, turning left onto Kelly Road to arrive at the parking lot. Park in the large lot. We have never had trouble finding a spot even on the busiest of days. The address of the parking lot at Seven Islands is: 
+The drive from Knoxville is easy. Follow I-40 east, until one leaves the interstate at exit 402 and drives around two miles Midway Road. Here, though brief, the drive can become a bit confusing. Turn left onto Maple Road, staying on this road for just under one mile. Then, turn right onto Kodak Road, turning left onto Kelly Road to arrive at the parking lot. Park in the large lot. We have never had trouble finding a spot even on the busiest of days. The address of the parking lot at Seven Islands is: 2809 Kelly Ln., Kodak, TN 37764.
 
 ## Trail Description
 
@@ -151,4 +151,4 @@ knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
 knitr::include_graphics(here("img", "seven-islands-barn.jpeg"))
 ```
 
-- Last, consider kayaking, canoeing, or paddleboarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville---River Sports Outfitters---rents kayaks and canoes here during the summer; there is an approximately five-mile trip from the trailhead by the river to a spot downstream. Check their website for details and to make reservations. With much older children, consider paddling further still, even all the way to Knoxville. There is a French Broad River Blueway---like the more familiar greenways, but for rivers---which facilitates access to put-in and take-out spots all along the river, from the Cherokee Dam to Knoxville, where the French Broad and Holston rivers meet, forming the familiar Tennessee River.
+- Last, consider kayaking, canoeing, or paddleboarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville---River Sports Outfitters---rents kayaks and canoes here during the summer; there is an approximately five-mile trip from the trailhead by the river to a spot downstream. Check their website for details and to make reservations. With much older children, consider paddling further still, even all the way to Knoxville. There is a French Broad River Blueway---like the more familiar greenways, but for rivers---which facilitates access to put-in and take-out spots all along the river. Learn more about the blueway at @frenchbroadblueway.
