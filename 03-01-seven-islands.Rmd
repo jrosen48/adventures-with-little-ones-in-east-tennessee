@@ -79,17 +79,13 @@ Note the trail heading up into the rolling meadows on the right. This trail lead
 
 From the Upland Trail Inner Loop are great views of the third-highest mountain in the Great Smoky Mountains National Park. Mt. LeConte is a great peak to teach kids to identify for two reasons. First, though it is not quite as tall as the higher (well-known) Clingman's Dome (much less well-known) Mt. Guyot, it is arguably the most unique and even special of the mountains peaks in the Smokies [@wise1998natural]. It is also usually much easier to identify than other mountain peaks in the Smokies because it has four subpeaks that make it appear as a crown: Myrtle Point, West Point, Cliff Tops, and High Tops---the last which is the highest of the four. You can see Mt. LeConte on the left side of this image from the Upland Trail Inner Loop--just to the right of the hillside that blocks further views of the mountain range.
 
-```{r, fig.cap="Views of Mt. LeConte from the Ridge of the Meadow"}
-knitr::include_graphics(here("img", "seven-islands-view-of-leconte.jpeg"))
-```
+Note that there are bathrooms on the left just past the barn. They are usually clean, but they are rustic. 
 
-There are bathrooms on the left just past the barn. If you walk past the bathrooms, there is a signpost pointing to the *Hickory Ridge* trail. This is a densely wooded, steep, relatively short (0.8 miles) loop trail that takes you back to the trailhead. We think we have never been on this trail and *not* seen deer! It also offers a nice view of the river.
+Walking past the two side trails we mentioned and the bathrooms, continue along the paved path, noticing that the grad of the path starts to decline slightly. You will have walked a total of **.40** miles when the trail begins to flatten---and turn to the right. At this bend in the path, note the bench to catch a quick rest. This is a great spot right at the edge of the forest to view birds. Much of the time from spring through last summer, see wildflowers in or at the edge of the meadows.
 
 ```{r, fig.cap="The Trail Toward Hickory Ridge"}
-knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
+knitr::include_graphics(here("img", "seven-islands-flowers.jpeg"))
 ```
-
-Walking past the two side trails we mentioned and the bathrooms, continue along the paved path, noticing that the grad of the path starts to decline slightly. You will have walked a total of **.40** miles when the trail begins to flatten---and turn to the right. At this bend in the path, note the bench to catch a quick rest. This is a great spot right at the edge of the forest to view birds. 
 
 ```{block, type='rmdscience', echo = TRUE}
 According to the naturalists at the state park, over 190 unique species of birds have been identified at Seven Islands State Park [@sevenislandsbirds].
@@ -143,6 +139,16 @@ At **1.5** miles, cross under the bridge you walked over earlier. The path winds
 
 While close to Knoxville, not many other destinations or activities are nearby, though there is more than one could do at Seven Islands State Birding Park.
 
-- There are several great hikes in addition to this hike and those accessible near its start near the barn; namely, hikes down the *Kelly Lane Greenway* (the *other*, wider, paved path near the barn that is gated to prevent cars from driving on it) to two restored farm building that are open to the visitors to the state park: Green House, the home for a family that farmed on this land prior to its conservation, and Maple Leaf Barn.
+- Near where you started for this hike, just past the bathrooms, there is a signpost pointing to the *Hickory Ridge* trail. This is a densely wooded, steep, relatively short (0.8 miles) loop trail that takes you back to the trailhead. We think we have never been on this trail and *not* seen deer! It also offers a nice view of the river.
+
+```{r, fig.cap="The Trail Toward Hickory Ridge"}
+knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
+```
+
+- There are several great hikes in addition to this hike and those accessible near its start near the barn; namely, hikes down the *Kelly Lane Greenway* (the *other*, wider, paved path near the barn that is gated to prevent cars from driving on it) to two restored farm building that are open to the visitors to the state park: Green House, the home for a family that farmed on this land prior to its conservation, and Maple Leaf Barn. Pass the Kelly family home and barn, still occupied by the family that sold much but not all of their land that makes up Seven Islands State Birding Park.
+
+```{r, fig.cap="Seven Islands Meadow"}
+knitr::include_graphics(here("img", "seven-islands-barn.jpeg"))
+```
 
 - Consider kayaking, canoeing, or paddleboarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville---River Sports Outfitters---rents kayaks and canoes here during the summer. Check their website for details and to make reservations.
