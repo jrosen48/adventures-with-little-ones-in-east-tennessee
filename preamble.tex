@@ -1,1 +1,25 @@
 \usepackage{booktabs}
+
+\usepackage{color}
+\usepackage{framed}
+\setlength{\fboxsep}{.8em}
+
+\newenvironment{tipbox}{
+  \definecolor{shadecolor}{HTML}{b4b4ff}
+  \color{black}
+  \begin{shaded}}
+ {\end{shaded}}
+ 
+\newenvironment{scibox}{
+  \definecolor{shadecolor}{HTML}{EDBB99}
+  \color{black}
+  \begin{shaded}}
+ {\end{shaded}}
+ 
+\newenvironment{histbox}{
+  \definecolor{shadecolor}{HTML}{A9DFBF}
+  \color{black}
+  \begin{shaded}}
+ {\end{shaded}}
+
+\pagenumbering{gobble}

@@ -1,39 +1,140 @@
-# Seven Islands Island Loop
-
-## Trail Information
-
-### Ratings
+# Seven Islands Loop Trail
 
 ```{r, echo = FALSE, message = FALSE}
-library(tidyverse)
-
 d <- read_csv("trail-info.csv")
 
 dd <- d %>% filter(str_detect(`Hike Name`, "Seven"))
 
-dd %>% 
-    select(c(1, 5:8)) %>% 
-    knitr::kable()
-
 ddd <- dd %>% janitor::clean_names()
 ```
 
-### Basic Characteristics
+```{r, fig.cap="Seven Islands Meadow"}
+knitr::include_graphics(here("img", "seven-islands-meadow.jpg"))
+```
+
+## Basic Information
+
+### Characteristics
 
 Location: `r dd$Location`  
 Region: `r dd$Region`  
-Distance: `r ddd$distance_shorter_option` (mi.)  
-Elevation (Ascend): `r ddd$ascend_shorter_option`  (ft.)  
-Max. Elevation: `r ddd$max_elevation_shorter_option` (ft.)  
+Distance: `r round(ddd$distance_shorter_option, 1)` mi.  (short)
+Ascent: `r ddd$ascend_shorter_option` ft.  (mostly flat)
+Max. Elevation: `r ddd$max_elevation_shorter_option` ft.  
 
-## Overview
+### Highlights
 
-## Map
+- xxx  
+- xxx  
+
+### Ratings
+
+```{r, echo = FALSE, message = FALSE}
+dd %>%
+    select(c(1, 5:8)) %>%
+    kbl() %>%
+    kable_styling()
+```
+
+### Trail Map
 
 ```{r, fig.cap="Seven Islands Loop Trail Map"}
 knitr::include_graphics(here("output", "seven-islands-loop-map.png"))
 ```
 
+## Trail Overview
+
+<insert Katie lead>
+
+If we had to pick one trail to recommend to friends around Knoxville who are new to hiking, it would be this trail. There are more wild locations, more expansive vistas, and locales with more amenities, but few have so many positive attributes in one place: a beautiful location on the French Broad River, views of Mt. LeConte in the Smokies, and several ways to extend the hike. Furthermore, the trail is a 30-minute drive from downtown Knoxville. 
+
+```{block, type='histbox', echo = TRUE}
+As of the time of writing, Seven Islands State Birding Park is the second  newest state park in Tennessee's state park system. Its history is interesting.
+
+
+```
+
+This trail starts at one of two trailheads in Seven Islands State Birding Park: this trailhead is near an open barn at the start of a long, paved trail; it is a good launching off point for hikes in the woods, meadow, and rolling hills. The other trail head is on the French Broad river and is the place to start if paddling on the river. 
+
+As we mentioned, this trail starts on a paved trail. The trail winds down through open meadow land, with a relatively steep and wooded ridge line to the left, and rolling meadows to the right. The paved trail meets a bridge over the French Broad River to an island that is part of the park. Then, the trail loops around the island on a path that is about as flat as one comes in the region. The trail returns to the bridge along the same paved path that you descended on earlier---this time with a climb back to the trailhead.  
+
+This trail is great for families with young children or for taking older family members on what feels like (and is) a real hike, but in a way that will not be too challenging for anyone newer to hiking; there are XXX miles of trails at Seven Islands if you are interested in extending the hike. It is great in all seasons, staying warmer than almost any other trail in this book in the winter. It can be hot in the summer, but the breeze along the river makes the trail a bit cooler than other locations in the Tennessee Valley. This is, clearly, a great place to see birds; deer are easily visible in the meadows, and it is hard not to see giant bass and carp when crossing over to the island on the bridge.
+
+Where does Seven Islands fit with the breathtaking Smoky Mountains and the wild Cumberland Plateau both nearby? Right in between, which is a part of what makes Seven Islands different. This difference means that it is easier to get to than any other hike apart from those within the immediate Knoxville area, and though a short drive from Knoxville, it still feels apart and special. 
+
+## Getting There
+
+The drive from Knoxville is easy, mostly along I-40, until one exits and drives around XX miles on windy surface roads to the trailhead. There are two ways to get to the trailhead from the interstate; when using Google Maps, we seem to be recommended different ways on different days for no clear reason! Both ways (along XXX and along XXX) take about the same amount of time and so it is hard to choose wrong. 
+
+Park in the large parking lot. Even on the busiest of days, we have never had trouble finding a spot. 
+
 ## Trail Description
 
+Start at the barn beside the parking area. Note the native landscape and birdfeeders---here is a great place to see birds, but it is far from the only spot where you will see them. 
+
+Note the trail heading up into the rolling meadows on the right. This trail leads to the Upland Trail Inner Loop, a 1.2 mile trail that connects back with the path that we will be on. It also offers the option to connect to the Upland Trail Outer Loop, which further extends the hike.
+
+From the Upland Trail Inner Loop are great views of the third-highest mountain in the Great Smoky Mountains National Park. Mt. LeConte is a great peak to teach kids to identify for two reasons. First, though it is not quite as tall as the higher (well-known) Clingman's Dome (much less well-known) Mt. Guyot, it is arguably the most unique and even special of the mountains peaks in the Smokies [@wise1998natural]. It is also usually much easier to identify than other mountain peaks in the Smokies because it has four subpeaks that make it appear as a crown: Myrtle Point, West Point, Cliff Tops, and High Tops, the last which is the highest of the four. You can see Mt. LeConte in the left side of this image from the Upland Trail Inner Loop--just to the right of hillside that blocks further views of the mountain range.
+
+```{r, fig.cap="Views of Mt. LeConte from the Ridge of the Meadow"}
+knitr::include_graphics(here("img", "seven-islands-view-of-leconte.jpeg"))
+```
+
+There are bathrooms on the left just past the barn. If you walk past the bathrooms, there is a signpost pointing to the *Hickory Ridge* trail. This is a densely wooded, steep, relatively short (0.8 miles) loop trail that takes you back to the trailhead. We think we have never been on this trail and *not* seen deer! It also offers a nice view of the river.
+
+```{r, fig.cap="The Trail Toward Hickory Ridge"}
+knitr::include_graphics(here("img", "seven-islands-hickory.jpg"))
+```
+
+Walking past the two side trails we mentioned and the bathrooms, continue along the paved path, noticing that the grad of the path starts to decline slightly. You will have walked a total of **.40** miles when the trail will begin to flatten---and turn to the right. At this bend in the path, note the bench to catch a quick rest. This is a great spot right at the edge of the forest to view birds. 
+
+```{block, type='scibox', echo = TRUE}
+According to the naturalists at the state park, over 190 unique species of birds have been identified at Seven Islands State Park [@sevenislandsbirds].
+
+There is a great supporters group, https://friendsofsevenislands.com. They have a bird of the year. For 2022, that is the Eastern Bluebird. 
+
+```
+
+The path continues on a more or less flat but gently winding path toward a key point, the bridge crossing the French Broad River at **0.70**. Built in 2019, the bridge---like the path---is compliant with guidance in the *Americans with Disabilities Act* (ADA) on accessible design; in this case, a path that is accessible by individuals who might find it difficult or not possible to walk on a rocky, unimproved surface. 
+
+The bridge is not only accessible, it is pretty to look at---and, it is quite long: around 400 feet. The bridge is designed to allow you to pause and view the river and the birds. There are numerous small overlooks along the course of the bridge. In addition to spotting birds around or in the river, when the water is clear, fish are usually able to be spotted, angling their bodies (and mouths) upstream amidst the marine plants to catch food.
+
+At **.80** miles, arrive on the island---still on a paved path. The path curves off the bridge and reaches a sign that signifies that here, at last, the paved portion of this trail ends, and the portion of the hike that is on a relatively smooth, flat, but dirt surface begins. We usually turn right at the sign, though you can walk in either direction; our description of the trail proceeds this way.
+
+There is a special spot soon after you turn right. It is a paw paw grove! Paw paws are a native fruit that is related to bananas. If you are interested in learning more about Paw Paws, check out an excellent podcast on this uncommon, but native fruit by @pawpawpod. 
+
+```{r, fig.cap="Paw Paws growing on the island"}
+knitr::include_graphics(here("img", "seven-islands-paw-paw.jpeg"))
+```
+
+The path here is near the water, and this area and the river beside it are nearly always tranquil.
+
+```{r, fig.cap="On the Island"}
+knitr::include_graphics(here("img", "seven-islands-on-the-loop.jpg"))
+```
+
+Note that there are several benches and a number of short, unofficial (sometimes called "social") paths that lead to the river. 
+
+Continue on to a spot that can be fun with younger children---a stick house at **1.0** miles that has stood the test of time, at least for several years. 
+
+```{r, fig.cap="Balance Log"}
+knitr::include_graphics(here("img", "seven-islands-walk-on-balance-log.jpg"))
+```
+
+At **1.20** miles, arrive at the tip of the island, where the two channels of the river made by the island meet again. The channel on the side along which you have been walking was larger than the channel on the other side; here, the river almost appears to be a small stream, not the large French Broad river that drains much of the creeks and streams that flow out from the Smokies and the mountains around Asheville, NC. 
+
+```{r, fig.cap="The French Broad River"}
+knitr::include_graphics(here("img", "seven-islands-river.jpeg"))
+```
+
+There are often pretty wildfires in the spring and late summer along this part of the trail. 
+
+At **1.5** miles, cross under the bridge you walked over earlier. The path winds back up to the sign you met earlier---and, to the paved path. Walk back over the bridge, along the mostly flat, winding part of the path, and up what is now an incline back to the barn and restrooms at **2.40** miles. Here, you have the chance to add a few additional short hikes, or to stop and grab a bit to eat before heading home.
+
 ## Nearby
+
+While close to Knoxville, not many other destinations or activities are nearby, though there is more than one could do at Seven Islands State Birding Park.
+
+- There are several great hikes in addition to this hike and those accessible near its start near the barn; namely, hikes down the *Kelly Lane Greenway* (the *other*, wider, paved path near the barn that is gated to prevent cars from driving on it) to two restored farm building that are open to the visitors to the state park: Green House, the home for a family that farmed on this land prior to its conservation, and Maple Leaf Barn.
+
+- Consider kayaking, canoeing, or paddle boarding; there is a great place to put in, one down a short side road near the entrance (called Seven Islands Landing). Also, a local retailer and supporter of lovers of the outdoors in Knoxville, River Sports Outfiiters, rents kayaks and canoes here during the summer. Check their website for details and to make reservations.
