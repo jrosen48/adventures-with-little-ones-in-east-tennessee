@@ -15,6 +15,8 @@ include_roads <- TRUE
 loop_trail <- FALSE
 turn_around_is_end <- FALSE
 
+### need to make it end at Debord Falls
+
 t <- create_and_save_trailmap_sp(
     my_name = my_name,
     file_name = file_name, 

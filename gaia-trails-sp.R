@@ -58,7 +58,7 @@ create_and_save_trailmap_sp <- function(my_name,
     
     shp <- st_read(f, layer = "routes")
     
-    shp = elevation_add(shp) # possibly cut
+    # shp = elevation_add(shp) # possibly cut
     
     ff <- here::here("data", "raw", "tn-state-parks", "TDEC_Public_Trails", "TDEC_Public_Trails.shp")
     
@@ -112,7 +112,7 @@ create_and_save_trailmap_sp <- function(my_name,
     # 
     # names(v) <- c("x", "y")
     
-    t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
+    # t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
     
     my_markers <- tribble(
         ~label, ~Y,  ~X,

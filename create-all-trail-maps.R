@@ -5,7 +5,7 @@ library(ggmap)
 library(osmdata)
 library(geosphere)
 library(ggsn)
-library(slopes)
+library(slopes) # # install.packages("remotes")
 library(showtext)
 library(cowplot)
 library(here)
@@ -13,10 +13,12 @@ library(ggspatial)
 library(terra)
 library(ggrepel)
 library(ggsflabel) # devtools::install_github("yutannihilation/ggsflabel")
+# library(sysfonts)
+# library(showtext)
 
 set.seed(20210122)
 
-source("gaia-trails-sp.R")
+# source("gaia-trails-sp.R")
 source("gaia-trails.R")
 
 # tn valley

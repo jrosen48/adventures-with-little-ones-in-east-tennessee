@@ -1,37 +1,37 @@
-# combine this and the next function into one
-find_cumulative_distance_for_one_point <- function(markers, t, index) {
-    
-    one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
-    
-    all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
-    
-    nearest_point <- st_nearest_points(all_points, one_point) %>%
-        st_cast("POINT") %>%
-        st_coordinates() %>%
-        as_tibble() %>%
-        slice(1)
-    
-    left_join(nearest_point, t) %>%
-        pull(cumulative_distance_mi)
-    
-}
-
-find_elev_for_one_point <- function(markers, t, index) {
-    
-    one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
-    
-    all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
-    
-    nearest_point <- st_nearest_points(all_points, one_point) %>%
-        st_cast("POINT") %>%
-        st_coordinates() %>%
-        as_tibble() %>%
-        slice(1)
-    
-    left_join(nearest_point, t) %>%
-        pull(elev)
-    
-}
+# # combine this and the next function into one
+# find_cumulative_distance_for_one_point <- function(markers, t, index) {
+#     
+#     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
+#     
+#     all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
+#     
+#     nearest_point <- st_nearest_points(all_points, one_point) %>%
+#         st_cast("POINT") %>%
+#         st_coordinates() %>%
+#         as_tibble() %>%
+#         slice(1)
+#     
+#     left_join(nearest_point, t) %>%
+#         pull(cumulative_distance_mi)
+#     
+# }
+# 
+# find_elev_for_one_point <- function(markers, t, index) {
+#     
+#     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
+#     
+#     all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
+#     
+#     nearest_point <- st_nearest_points(all_points, one_point) %>%
+#         st_cast("POINT") %>%
+#         st_coordinates() %>%
+#         as_tibble() %>%
+#         slice(1)
+#     
+#     left_join(nearest_point, t) %>%
+#         pull(elev)
+#     
+# }
 
 create_and_save_trailmap <- function(my_name,
                                      file_name, 
@@ -57,7 +57,7 @@ create_and_save_trailmap <- function(my_name,
     
     shp <- st_read(f, layer = "routes")
     
-    shp = elevation_add(shp) # possibly cut
+    #shp = elevation_add(shp) # possibly cut
     
     t <-
         st_coordinates(shp) %>% 
@@ -107,7 +107,7 @@ create_and_save_trailmap <- function(my_name,
     # 
     # names(v) <- c("x", "y")
     
-    t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
+    # t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
     
     my_markers <- tribble(
         ~label, ~Y,  ~X,
@@ -233,41 +233,42 @@ create_and_save_trailmap <- function(my_name,
 
     p_path <- ggmap(m) +
         # additional details
-        geom_sf(data = water_lines, size = .75, color = "lightblue", inherit.aes = FALSE) +
-        geom_sf(data = trails, size = .625, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
+        geom_sf(data = water_lines, size = 1.25, color = "lightblue", inherit.aes = FALSE) +
+        geom_sf(data = trails, size = 1.25, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
         geom_sf(data = footpaths, size = 1.25, color = "lightgray", inherit.aes = FALSE) +
         {if(include_roads)geom_sf(data = roads, color = "purple", inherit.aes = FALSE, alpha = .5)}+
         geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
         geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
         geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
         # trail
-        geom_sf(data = shp, size = .75, linetype = "dashed", color = "white", inherit.aes = FALSE) +
-        geom_sf(data = shp, size = 1.35, color = "red", inherit.aes = FALSE) +
+        # geom_sf(data = shp, size = 1.25, linetype = "dashed", color = "white", inherit.aes = FALSE) +
+        geom_sf(data = shp, size = 3, color = "red", inherit.aes = FALSE) +
         # trail details
         geom_point(data = markers,
-                   size = 2,
+                   size = 2.5,
                    aes(x = X,
                        y = Y),
                    color = "black") +
-        # geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-        #                           min.segment.length = 0,
-        #            family = "special", color = "black", size = 3) +
+        geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
+                                  min.segment.length = 0,
+                   family = "special", color = "black", size = 3) +
         ggrepel::geom_label_repel(data = markers,
                                   aes(x = X,
                                       y = Y,
                                       label = label),
                                   alpha = .8,
                                   box.padding = .75,
-                                  size = 3.5,
+                                  size = 16,
                                   min.segment.length = 0,
                                   family = "special") +
         labs(title = my_name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
-        annotation_scale(location = "tl", unit_category = "imperial", style = "ticks")  +
+        annotation_scale(location = "tl", unit_category = "imperial", style = "ticks", text_cex = 2)  +
         annotation_north_arrow(location = "br", which_north = "true",
-                               height = unit(1.0, "cm"),
-                               width = unit(1.0, "cm")) +
+                               height = unit(.75, "cm"),
+                               width = unit(.75, "cm"),
+                               style = north_arrow_orienteering(text_size = 20)) +
         xlab(NULL) + 
         ylab(NULL)
 
