@@ -123,7 +123,7 @@ create_and_save_trailmap <- function(my_name,
         ~label, ~Y,  ~X,
         "Turn-around spot", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
-
+    
     if (loop_trail == TRUE) {
         markers <- bind_rows(my_markers_loop, markers) # could add end, but probably better this way
     } else {
@@ -133,7 +133,7 @@ create_and_save_trailmap <- function(my_name,
     if (turn_around_is_end == TRUE) {
         markers <- bind_rows(markers, my_markers_turn_around)
     }
-
+    
     # markers <- markers %>% 
     #     mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
     #                map_dbl(find_cumulative_distance_for_one_point, markers = markers, t = t))
@@ -144,7 +144,7 @@ create_and_save_trailmap <- function(my_name,
     
     my_ymin <- min(t$elev * 3.28084) - 200
     my_ymax <- max(t$elev * 3.28084) + 200
-
+    
     highway = opq(as.vector(bb)) %>% 
         add_osm_feature("highway") %>% 
         osmdata_sf()
@@ -155,22 +155,22 @@ create_and_save_trailmap <- function(my_name,
         filter(highway %in% c("path","bridleway"))
     
     # labeling other trails
-
+    
     ## not sure why this is necessary for L1 later 
     
     trails_coords <- st_coordinates(trails) %>% as_tibble()
-
+    
     trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
-
+    
     trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
-
+    
     trails_coords <- filter(trails_coords,
                             X > bb[1, 1] & X < bb[1, 2] &
                                 Y > bb[2, 1] & Y < bb[2, 2])
-
+    
     trails_coords <- group_by(trails_coords, L1) %>%
         filter(row_number()==ceiling(n()/2))
-
+    
     trails_coords <- trails_coords %>% select(X, Y, L1, name) %>% ungroup()
     
     # labeling roads
@@ -187,8 +187,8 @@ create_and_save_trailmap <- function(my_name,
     road_coords <- road_coords %>% left_join(select(trails, L1, name))
     
     road_coords <- filter(road_coords, 
-                            X > bb[1, 1] & X < bb[1, 2] &
-                                Y > bb[2, 1] & Y < bb[2, 2]) 
+                          X > bb[1, 1] & X < bb[1, 2] &
+                              Y > bb[2, 1] & Y < bb[2, 2]) 
     
     road_coords <- group_by(road_coords, L1) %>% 
         filter(row_number()==ceiling(n()/2))
@@ -230,13 +230,13 @@ create_and_save_trailmap <- function(my_name,
     
     # sites_poly = tourism_poly %>% 
     #     filter(tourism %in% c("picnic_site", "camp_site"))
-
+    
     p_path <- ggmap(m) +
         # additional details
         geom_sf(data = water_lines, size = 1.25, color = "lightblue", inherit.aes = FALSE) +
-        geom_sf(data = trails, size = 1.25, color = "#ededed", inherit.aes = FALSE, linetype = 5) +
-        geom_sf(data = footpaths, size = 1.25, color = "lightgray", inherit.aes = FALSE) +
-        {if(include_roads)geom_sf(data = roads, color = "purple", inherit.aes = FALSE, alpha = .5)}+
+        geom_sf(data = trails, size = 1.25, color = "white", inherit.aes = FALSE, linetype = 5) +
+        geom_sf(data = footpaths, size = 1.25, color = "white", inherit.aes = FALSE) +
+        {if(include_roads)geom_sf(data = roads, color = "gray20", inherit.aes = FALSE, alpha = 1)}+
         geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
         geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
         geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
@@ -249,29 +249,45 @@ create_and_save_trailmap <- function(my_name,
                    aes(x = X,
                        y = Y),
                    color = "black") +
+        # geom_text_repel(data = road_coords, aes(x = X, y = Y, label = name),
+        #                 min.segment.length = 0,
+        #                 alpha = .60,
+        #                 family = "special", color = "black", size = 12,
+        #                 arrow = arrow(length = unit(0.015, "npc")),
+        #                 segment.linetype = .65,
+        #                 segment.alpha = .65,
+        #                 box.padding = 1) +
         geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-                                  min.segment.length = 0,
-                   family = "special", color = "black", size = 3) +
-        ggrepel::geom_label_repel(data = markers,
-                                  aes(x = X,
-                                      y = Y,
-                                      label = label),
-                                  alpha = .8,
-                                  box.padding = .75,
-                                  size = 16,
-                                  min.segment.length = 0,
-                                  family = "special") +
+                        min.segment.length = 0,
+                        alpha = .60,
+                        family = "special", color = "black", size = 12,
+                        arrow = arrow(length = unit(0.015, "npc")),
+                        segment.linetype = .65,
+                        segment.alpha = .65,
+                        box.padding = 1) +
+        geom_label_repel(data = markers,
+                         aes(x = X,
+                             y = Y,
+                             label = label),
+                         alpha = .9,
+                         box.padding = .33,
+                         size = 16,
+                         min.segment.length = 0,
+                         segment.color = NA,
+                         # arrow = arrow(length = unit(0.025, "npc")),
+                         family = "special") +
         labs(title = my_name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
-        annotation_scale(location = "tl", unit_category = "imperial", style = "ticks", text_cex = 2)  +
+        annotation_scale(location = "tr", unit_category = "imperial", style = "ticks", text_cex = 2)  +
         annotation_north_arrow(location = "br", which_north = "true",
                                height = unit(.75, "cm"),
                                width = unit(.75, "cm"),
                                style = north_arrow_orienteering(text_size = 20)) +
         xlab(NULL) + 
-        ylab(NULL)
-
+        ylab(NULL) +
+        theme(text = element_text(size = 32))
+    
     p_path
     
     return(p_path)
