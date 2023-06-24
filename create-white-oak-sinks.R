@@ -8,9 +8,7 @@ fig_width = 8.92
 min_distance_space = 35
 
 my_markers <- tribble(
-    ~label, ~Y,  ~X,
-    "Lynn Camp Falls (Turn-Around)", 35.61596,-83.66135,
-    "Indian Flats Falls (Longer Option)", 35.59244, -83.63291
+    ~label, ~Y,  ~X
 )
 
 loop_trail <- TRUE
@@ -30,7 +28,8 @@ t <- create_and_save_trailmap(
     markers = my_markers,
     loop_trail = loop_trail,
     turn_around_is_end = turn_around_is_end,
-    include_roads = TRUE)
+    include_roads = TRUE,
+    is_track = TRUE)
 
 t
 

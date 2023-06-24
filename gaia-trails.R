@@ -45,6 +45,7 @@ create_and_save_trailmap <- function(my_name,
                                      min_distance_space = 35,
                                      markers = NULL,
                                      loop_trail = TRUE,
+                                     is_track = FALSE,
                                      turn_around_is_end = TRUE,
                                      include_roads = FALSE) {
     
@@ -55,8 +56,11 @@ create_and_save_trailmap <- function(my_name,
     f <- here::here("data", "raw", "gaia", 
                     file_name)
     
-    shp <- st_read(f, layer = "routes")
-    #shp <- st_read(f, layer = "tracks")
+    if (is_track == TRUE) {
+        shp <- st_read(f, layer = "tracks")
+    } else {
+        shp <- st_read(f, layer = "routes")
+    }
     
     t <-
         st_coordinates(shp) %>% 

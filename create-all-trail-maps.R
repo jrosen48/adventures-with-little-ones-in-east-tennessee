@@ -18,7 +18,7 @@ library(ggsflabel) # devtools::install_github("yutannihilation/ggsflabel")
 
 set.seed(20210122)
 
-# source("gaia-trails-sp.R")
+source("gaia-trails-sp.R")
 source("gaia-trails.R")
 
 # tn valley
