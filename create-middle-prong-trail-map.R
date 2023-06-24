@@ -1,4 +1,4 @@
-my_name = "Middle Prong Trail" 
+my_name = "Middle Prong Trail to Lynn Camp Prong" 
 file_name = "middle-prong.gpx"
 lon_multiplier = .7
 lat_multiplier = .7

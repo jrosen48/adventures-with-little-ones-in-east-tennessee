@@ -56,12 +56,13 @@ create_and_save_trailmap <- function(my_name,
                     file_name)
     
     shp <- st_read(f, layer = "routes")
-    
-    #shp = elevation_add(shp) # possibly cut
+    #shp <- st_read(f, layer = "tracks")
     
     t <-
         st_coordinates(shp) %>% 
         as_tibble()
+    
+    print(t)
     
     dist_matrix <- distm(t[, c(1, 2)]) %>% 
         as_tibble()
@@ -153,6 +154,8 @@ create_and_save_trailmap <- function(my_name,
     
     trails = highway_lines %>% 
         filter(highway %in% c("path","bridleway"))
+    
+    # return(trails)
     
     # labeling other trails
     
@@ -257,14 +260,22 @@ create_and_save_trailmap <- function(my_name,
         #                 segment.linetype = .65,
         #                 segment.alpha = .65,
         #                 box.padding = 1) +
-        geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-                        min.segment.length = 0,
-                        alpha = .60,
-                        family = "special", color = "black", size = 12,
-                        arrow = arrow(length = unit(0.015, "npc")),
-                        segment.linetype = .65,
-                        segment.alpha = .65,
-                        box.padding = 1) +
+        # geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
+        #                 min.segment.length = 0,
+        #                 alpha = .60,
+    #                 family = "special", color = "black", size = 12,
+    #                 arrow = arrow(length = unit(0.015, "npc")),
+    #                 segment.linetype = .65,
+    #                 segment.alpha = .65,
+    #                 box.padding = 1) +
+    geom_sf_text_repel(data = trails, inherit.aes = FALSE, aes(label = name),
+                       alpha = .60,
+                       family = "special", color = "black", size = 12,
+                       min.segment.length = 0,
+                       arrow = arrow(length = unit(0.015, "npc")),
+                       segment.linetype = .65,
+                       segment.alpha = .65,
+                       box.padding = 1) + 
         geom_label_repel(data = markers,
                          aes(x = X,
                              y = Y,

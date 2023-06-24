@@ -64,6 +64,8 @@ create_and_save_trailmap_sp <- function(my_name,
     
     my_additional_trails <- st_read(ff)
     
+    # return(my_additional_trails)
+    
     t <-
         st_coordinates(shp) %>% 
         as_tibble()
@@ -96,6 +98,8 @@ create_and_save_trailmap_sp <- function(my_name,
     bb[2, 2] <- max(t$Y) - lat_multiplier*(min(t$Y) - max(t$Y))# ymax - how far north
     
     m <- get_stamenmap(bb, maptype = "terrain", zoom = zoom)
+    
+    # return(m)
     
     mile_markers <- mile_markers %>% 
         mutate(mile_marker = ifelse(mile_marker == 0, NA, str_c("Mile: ", mile_marker)))
@@ -164,12 +168,16 @@ create_and_save_trailmap_sp <- function(my_name,
     ## not sure why this is necessary for L1 later 
     
     # return(trails)
+    
+    trails_coords <- st_coordinates(trails) %>% as_tibble()
+    
+    # print(trails_coords)
     # 
-    # trails_coords <- st_coordinates(trails) %>% as_tibble()
+    # # trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
+    # # 
+    # # trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
     # 
-    # trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
-    # 
-    # trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
+    #return(trails_coords)
     # 
     # trails_coords <- filter(trails_coords,
     #                         X > bb[1, 1] & X < bb[1, 2] &
@@ -251,26 +259,41 @@ create_and_save_trailmap_sp <- function(my_name,
         geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
         geom_sf(data = my_additional_trails, inherit.aes = FALSE, size = .75, linetype = "dashed", color = "white") +
         # trail
-        geom_sf(data = shp, size = .75, linetype = "dashed", color = "white", inherit.aes = FALSE) +
-        geom_sf(data = shp, size = 1.35, color = "red", inherit.aes = FALSE) +
+        # geom_sf(data = shp, size = .75, linetype = "dashed", color = "white", inherit.aes = FALSE) +
+        geom_sf(data = shp, size = 3, color = "red", inherit.aes = FALSE) +
         # trail details
         geom_point(data = markers,
                    size = 2,
                    aes(x = X,
                        y = Y),
                    color = "black") +
-        # geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-        #                           min.segment.length = 0,
-        #            family = "special", color = "black", size = 3) +
-        ggrepel::geom_label_repel(data = markers,
-                                  aes(x = X,
-                                      y = Y,
-                                      label = label),
-                                  alpha = .8,
-                                  box.padding = .75,
-                                  size = 3.5,
-                                  min.segment.length = 0,
-                                  family = "special") +
+        geom_sf_text_repel(data = my_additional_trails, inherit.aes = FALSE, aes(label = TR_NAME),
+                           alpha = .60,
+                           family = "special", color = "black", size = 12,
+                           min.segment.length = 0,
+                           arrow = arrow(length = unit(0.015, "npc")),
+                           segment.linetype = .65,
+                           segment.alpha = .65,
+                           box.padding = 1) + 
+        # geom_text_repel(data = trails, aes(x = X, y = Y, label = name),
+        #                 min.segment.length = 0,
+        #                 alpha = .60,
+        #                 family = "special", color = "black", size = 12,
+        #                 arrow = arrow(length = unit(0.015, "npc")),
+        #                 segment.linetype = .65,
+        #                 segment.alpha = .65,
+        #                 box.padding = 1) +
+        geom_label_repel(data = markers,
+                         aes(x = X,
+                             y = Y,
+                             label = label),
+                         alpha = .9,
+                         box.padding = .33,
+                         size = 16,
+                         min.segment.length = 0,
+                         segment.color = NA,
+                         # arrow = arrow(length = unit(0.025, "npc")),
+                         family = "special") +
         labs(title = my_name) +
         theme_minimal() +
         theme(text = element_text(family = "special")) +
