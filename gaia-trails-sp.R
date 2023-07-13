@@ -267,7 +267,7 @@ create_and_save_trailmap_sp <- function(my_name,
                    aes(x = X,
                        y = Y),
                    color = "black") +
-        geom_sf_text_repel(data = my_additional_trails, inherit.aes = FALSE, aes(label = TR_NAME),
+        geom_sf_label_repel(data = my_additional_trails, inherit.aes = FALSE, aes(label = TR_NAME),
                            alpha = .60,
                            family = "special", color = "black", size = 12,
                            min.segment.length = 0,

@@ -1,38 +1,3 @@
-# # combine this and the next function into one
-# find_cumulative_distance_for_one_point <- function(markers, t, index) {
-#     
-#     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
-#     
-#     all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
-#     
-#     nearest_point <- st_nearest_points(all_points, one_point) %>%
-#         st_cast("POINT") %>%
-#         st_coordinates() %>%
-#         as_tibble() %>%
-#         slice(1)
-#     
-#     left_join(nearest_point, t) %>%
-#         pull(cumulative_distance_mi)
-#     
-# }
-# 
-# find_elev_for_one_point <- function(markers, t, index) {
-#     
-#     one_point <- st_point(as.matrix(markers[index, c(3, 2)]))
-#     
-#     all_points <- st_multipoint(as.matrix(t[, c(1:2)]))
-#     
-#     nearest_point <- st_nearest_points(all_points, one_point) %>%
-#         st_cast("POINT") %>%
-#         st_coordinates() %>%
-#         as_tibble() %>%
-#         slice(1)
-#     
-#     left_join(nearest_point, t) %>%
-#         pull(elev)
-#     
-# }
-
 create_and_save_trailmap <- function(my_name,
                                      file_name, 
                                      lon_multiplier = .5,
@@ -47,7 +12,10 @@ create_and_save_trailmap <- function(my_name,
                                      loop_trail = TRUE,
                                      is_track = FALSE,
                                      turn_around_is_end = TRUE,
-                                     include_roads = FALSE) {
+                                     include_roads = FALSE,
+                                     keep_roads = NULL,
+                                     keep_trails = NULL,
+                                     is_state_park = FALSE) {
     
     font_add_google("Special Elite", family = "special")
     
@@ -55,6 +23,10 @@ create_and_save_trailmap <- function(my_name,
     
     f <- here::here("data", "raw", "gaia", 
                     file_name)
+    
+    ff <- here::here("data", "raw", "tn-state-parks", "TDEC_Public_Trails", "TDEC_Public_Trails.shp")
+    
+    my_additional_trails <- st_read(ff)
     
     if (is_track == TRUE) {
         shp <- st_read(f, layer = "tracks")
@@ -65,8 +37,6 @@ create_and_save_trailmap <- function(my_name,
     t <-
         st_coordinates(shp) %>% 
         as_tibble()
-    
-    print(t)
     
     dist_matrix <- distm(t[, c(1, 2)]) %>% 
         as_tibble()
@@ -103,16 +73,8 @@ create_and_save_trailmap <- function(my_name,
     t <- t %>%
         bind_cols(mile_markers) # removed for now
     
-    # print(count(t, L1))
-    
     total_long <- bb[1, 2] - bb[1, 1]
     total_lat <- bb[2, 1] - bb[2, 2]
-    
-    # v <- c(bb[1, 2] + total_long/lon_denom, bb[2, 1] - total_lat/lat_denom)
-    # 
-    # names(v) <- c("x", "y")
-    
-    # t$elev <- st_coordinates(shp) %>% as_tibble() %>% pull(Z)
     
     my_markers <- tribble(
         ~label, ~Y,  ~X,
@@ -121,12 +83,12 @@ create_and_save_trailmap <- function(my_name,
     
     my_markers_loop <- tribble(
         ~label, ~Y,  ~X,
-        "Start/end (and parking)", pull(t[1, "Y"]), pull(t[1, "X"]), 
+        "Start/End (and Parking)", pull(t[1, "Y"]), pull(t[1, "X"]), 
     )
     
     my_markers_turn_around <- tribble(
         ~label, ~Y,  ~X,
-        "Turn-around spot", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
+        "Turn-Around", pull(t[nrow(t) - 1, "Y"]), pull(t[nrow(t) - 1, "X"]),
     )
     
     if (loop_trail == TRUE) {
@@ -139,17 +101,6 @@ create_and_save_trailmap <- function(my_name,
         markers <- bind_rows(markers, my_markers_turn_around)
     }
     
-    # markers <- markers %>% 
-    #     mutate(cumulative_distance_mi = seq(nrow(markers)) %>% 
-    #                map_dbl(find_cumulative_distance_for_one_point, markers = markers, t = t))
-    # 
-    # markers <- markers %>% 
-    #     mutate(elev = seq(nrow(markers)) %>% 
-    #                map_dbl(find_elev_for_one_point, markers = markers, t = t))
-    
-    my_ymin <- min(t$elev * 3.28084) - 200
-    my_ymax <- max(t$elev * 3.28084) + 200
-    
     highway = opq(as.vector(bb)) %>% 
         add_osm_feature("highway") %>% 
         osmdata_sf()
@@ -159,15 +110,20 @@ create_and_save_trailmap <- function(my_name,
     trails = highway_lines %>% 
         filter(highway %in% c("path","bridleway"))
     
-    # return(trails)
-    
     # labeling other trails
-    
-    ## not sure why this is necessary for L1 later 
     
     trails_coords <- st_coordinates(trails) %>% as_tibble()
     
     trails <- trails %>% mutate(L1 = unique(trails_coords$L1))
+    
+    trails <- trails %>% 
+        mutate(my_index = 1:nrow(.))
+    
+    if(is.null(keep_trails)) {
+        keep_trails <- seq(1, nrow(trails))
+    } else {
+        keep_trails <- keep_trails
+    }
     
     trails_coords <- trails_coords %>% left_join(select(trails, L1, name))
     
@@ -190,6 +146,15 @@ create_and_save_trailmap <- function(my_name,
     road_coords <- st_coordinates(roads) %>% as_tibble()
     
     roads <- roads %>% mutate(L1 = unique(road_coords$L1))
+    
+    roads <- roads %>% 
+        mutate(my_index = 1:nrow(.))
+    
+    if(is.null(keep_roads)) {
+        keep_roads <- seq(1, nrow(roads))   
+    } else {
+        keep_roads <- keep_roads
+    }
     
     road_coords <- road_coords %>% left_join(select(trails, L1, name))
     
@@ -232,66 +197,18 @@ create_and_save_trailmap <- function(my_name,
     parking_poly = st_transform(parking$osm_polygons)
     building_poly = st_transform(building$osm_polygons)
     tourism_poly = st_transform(tourism$osm_polygons)
-    # return(highway_lines)
-    # trails_points = st_transform(highway_lines$osm_points)
-    
-    # sites_poly = tourism_poly %>% 
-    #     filter(tourism %in% c("picnic_site", "camp_site"))
     
     p_path <- ggmap(m) +
+        
         # additional details
         geom_sf(data = water_lines, size = 1.25, color = "lightblue", inherit.aes = FALSE) +
         geom_sf(data = trails, size = 1.25, color = "white", inherit.aes = FALSE, linetype = 5) +
-        geom_sf(data = footpaths, size = 1.25, color = "white", inherit.aes = FALSE) +
-        {if(include_roads)geom_sf(data = roads, color = "gray20", inherit.aes = FALSE, alpha = 1)}+
+        {if(!is_state_park)geom_sf(data = footpaths, size = 1.25, color = "white", inherit.aes = FALSE)}+
+        {if(include_roads)geom_sf(data = roads, color = "gray35", inherit.aes = FALSE, alpha = 1, linewidth = 1.25)}+
         geom_sf(data = parking_poly, color = "darkgreen", inherit.aes = FALSE) +
         geom_sf(data = building_poly, color = "darkred", inherit.aes = FALSE) +
-        geom_sf(data = tourism_poly, color = "grey30", inherit.aes = FALSE) +
-        # trail
-        # geom_sf(data = shp, size = 1.25, linetype = "dashed", color = "white", inherit.aes = FALSE) +
-        geom_sf(data = shp, size = 3, color = "red", inherit.aes = FALSE) +
-        # trail details
-        geom_point(data = markers,
-                   size = 2.5,
-                   aes(x = X,
-                       y = Y),
-                   color = "black") +
-        # geom_text_repel(data = road_coords, aes(x = X, y = Y, label = name),
-        #                 min.segment.length = 0,
-        #                 alpha = .60,
-        #                 family = "special", color = "black", size = 12,
-        #                 arrow = arrow(length = unit(0.015, "npc")),
-        #                 segment.linetype = .65,
-        #                 segment.alpha = .65,
-        #                 box.padding = 1) +
-        # geom_text_repel(data = trails_coords, aes(x = X, y = Y, label = name),
-        #                 min.segment.length = 0,
-        #                 alpha = .60,
-    #                 family = "special", color = "black", size = 12,
-    #                 arrow = arrow(length = unit(0.015, "npc")),
-    #                 segment.linetype = .65,
-    #                 segment.alpha = .65,
-    #                 box.padding = 1) +
-    geom_sf_text_repel(data = trails, inherit.aes = FALSE, aes(label = name),
-                       alpha = .60,
-                       family = "special", color = "black", size = 12,
-                       min.segment.length = 0,
-                       arrow = arrow(length = unit(0.015, "npc")),
-                       segment.linetype = .65,
-                       segment.alpha = .65,
-                       box.padding = 1) + 
-        geom_label_repel(data = markers,
-                         aes(x = X,
-                             y = Y,
-                             label = label),
-                         alpha = .9,
-                         box.padding = .33,
-                         size = 16,
-                         min.segment.length = 0,
-                         segment.color = NA,
-                         # arrow = arrow(length = unit(0.025, "npc")),
-                         family = "special") +
-        labs(title = my_name) +
+        geom_sf(data = tourism_poly, color = "grey35", inherit.aes = FALSE) +
+        
         theme_minimal() +
         theme(text = element_text(family = "special")) +
         annotation_scale(location = "tr", unit_category = "imperial", style = "ticks", text_cex = 2)  +
@@ -301,10 +218,48 @@ create_and_save_trailmap <- function(my_name,
                                style = north_arrow_orienteering(text_size = 20)) +
         xlab(NULL) + 
         ylab(NULL) +
-        theme(text = element_text(size = 32))
+        theme(text = element_text(size = 32)) +
+        
+        # for state parks
+        geom_sf(data = my_additional_trails, inherit.aes = FALSE, size = .75, linetype = "dashed", color = "white") +
+        geom_sf_text_repel(data = my_additional_trails, inherit.aes = FALSE, aes(label = TR_NAME),
+                           alpha = .60,
+                           family = "special", color = "black", size = 12) + 
+        
+        # for national and maybe for others parks
+        geom_sf_text_repel(data = filter(roads, my_index %in% keep_roads),
+                           inherit.aes = FALSE, aes(label = name),
+                           alpha = .70,
+                           family = "special", color = "black", size = 12) + 
+        geom_sf_text_repel(data = filter(trails, my_index %in% keep_trails),
+                           inherit.aes = FALSE, aes(label = name),
+                           alpha = .70,
+                           family = "special", color = "black", size = 12) +
+    
+        # trail
+        geom_sf(data = shp, linewidth = 1.5, color = "red", inherit.aes = FALSE) +
+        
+        # additional stuff
+        geom_point(data = markers,
+                   size = 2,
+                   aes(x = X,
+                       y = Y),
+                   color = "black") +
+        geom_label_repel(data = markers,
+                         aes(x = X,
+                             y = Y,
+                             label = label),
+                         alpha = .7,
+                         box.padding = .33,
+                         size = 14,
+                         min.segment.length = 0,
+                         segment.color = NA,
+                         arrow = arrow(length = unit(0.01, "npc")),
+                         family = "special") +
+        labs(title = my_name)
     
     p_path
     
-    return(p_path)
+    return(list(p_path, roads, trails))
     
 }
